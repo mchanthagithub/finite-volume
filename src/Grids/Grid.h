@@ -32,16 +32,19 @@ public:
   Eigen::VectorXd pressureBCValue;
 
   // Tells if cell has a BC and its type
-  // Vector that is numCells in length, with each vector element being a matrix that is (1+numElementFaces)x2 in size
+  // Vector that is numCells in length, with each vector element being a matrix that is (1+numElementFaces)x3 in size
   // First element of each row and column is either 0 or 1: 0 for no BCs at all, 1 for BCs
-  // Second through numElementFaces+1 element in first column is the type of BC for that face:
-  // 0 = no BC, 1 = Dirichlet u, 2 = Neumann u, 3 = D v, 4 = N v, 5 = D pressure, 6 = N pressure
-  // Second through numElementFace+1 is the BC number for that face, which are used to index into BCValue vectors
+  // 2nd through numElementFaces+1 element in 1st column is the type of u BC for that face: 0 = no BC, positive = Dirichlet, negative = Neumann
+  //  "                       "            in 2nd column is type of v BC, and 3rd column is type of pressure BC\
+  // For example a value of 2 in the first column second row would mean the south cell face has a dirichlet condition
+  // listed second in the uVelBCValue vector
   std::vector<Eigen::MatrixXi> cellBCTypes;
 
   // Maps the local corner node IDs to global node IDs
+  // Size of (number of nodes per cell) x number of cells
   Eigen::MatrixXi cornerMap;
   // Maps the local side ID to global side ID
+  // Size of (number of faces per cell) x number of cells
   Eigen::MatrixXi faceMap;
 
   // Global number of cells, faces and corners

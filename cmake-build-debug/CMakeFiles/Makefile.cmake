@@ -15,7 +15,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "src/include/eigen/Eigen3ConfigVersion.cmake"
   "src/include/eigen/Eigen3Targets.cmake"
   "../src/CMakeLists.txt"
+  "../src/DiffusionOperators/CMakeLists.txt"
   "../src/Grids/CMakeLists.txt"
+  "../src/OutputUtilities/CMakeLists.txt"
   "/home/maytee/software/clion-2018.1/bin/cmake/share/cmake-3.10/Modules/CMakeCInformation.cmake"
   "/home/maytee/software/clion-2018.1/bin/cmake/share/cmake-3.10/Modules/CMakeCXXInformation.cmake"
   "/home/maytee/software/clion-2018.1/bin/cmake/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake"
@@ -48,6 +50,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/Grids/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/OutputUtilities/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/DiffusionOperators/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

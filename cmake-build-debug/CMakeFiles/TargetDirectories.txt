@@ -5,3 +5,7 @@
 /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir
 /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/Grids/CMakeFiles/rebuild_cache.dir
 /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/Grids/CMakeFiles/edit_cache.dir
+/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/OutputUtilities/CMakeFiles/rebuild_cache.dir
+/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/OutputUtilities/CMakeFiles/edit_cache.dir
+/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/DiffusionOperators/CMakeFiles/rebuild_cache.dir
+/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/DiffusionOperators/CMakeFiles/edit_cache.dir

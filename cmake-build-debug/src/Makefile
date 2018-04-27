@@ -179,6 +179,33 @@ Grids/Grid.cpp.s:
 	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/Grids/Grid.cpp.s
 .PHONY : Grids/Grid.cpp.s
 
+OutputUtilities/OutputUtilities.o: OutputUtilities/OutputUtilities.cpp.o
+
+.PHONY : OutputUtilities/OutputUtilities.o
+
+# target to build an object file
+OutputUtilities/OutputUtilities.cpp.o:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/OutputUtilities/OutputUtilities.cpp.o
+.PHONY : OutputUtilities/OutputUtilities.cpp.o
+
+OutputUtilities/OutputUtilities.i: OutputUtilities/OutputUtilities.cpp.i
+
+.PHONY : OutputUtilities/OutputUtilities.i
+
+# target to preprocess a source file
+OutputUtilities/OutputUtilities.cpp.i:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/OutputUtilities/OutputUtilities.cpp.i
+.PHONY : OutputUtilities/OutputUtilities.cpp.i
+
+OutputUtilities/OutputUtilities.s: OutputUtilities/OutputUtilities.cpp.s
+
+.PHONY : OutputUtilities/OutputUtilities.s
+
+# target to generate assembly for a file
+OutputUtilities/OutputUtilities.cpp.s:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/OutputUtilities/OutputUtilities.cpp.s
+.PHONY : OutputUtilities/OutputUtilities.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -221,6 +248,9 @@ help:
 	@echo "... Grids/Grid.o"
 	@echo "... Grids/Grid.i"
 	@echo "... Grids/Grid.s"
+	@echo "... OutputUtilities/OutputUtilities.o"
+	@echo "... OutputUtilities/OutputUtilities.i"
+	@echo "... OutputUtilities/OutputUtilities.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
