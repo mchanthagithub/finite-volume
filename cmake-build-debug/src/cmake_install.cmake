@@ -42,6 +42,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/Grids/cmake_install.cmake")
   include("/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/OutputUtilities/cmake_install.cmake")
   include("/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/DiffusionOperators/cmake_install.cmake")
+  include("/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/AdvectionOperators/cmake_install.cmake")
 
 endif()
 

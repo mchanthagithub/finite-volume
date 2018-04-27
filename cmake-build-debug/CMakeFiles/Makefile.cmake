@@ -14,6 +14,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "src/include/eigen/Eigen3Config.cmake"
   "src/include/eigen/Eigen3ConfigVersion.cmake"
   "src/include/eigen/Eigen3Targets.cmake"
+  "../src/AdvectionOperators/CMakeLists.txt"
   "../src/CMakeLists.txt"
   "../src/DiffusionOperators/CMakeLists.txt"
   "../src/Grids/CMakeLists.txt"
@@ -52,6 +53,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "src/Grids/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/OutputUtilities/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/DiffusionOperators/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/AdvectionOperators/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

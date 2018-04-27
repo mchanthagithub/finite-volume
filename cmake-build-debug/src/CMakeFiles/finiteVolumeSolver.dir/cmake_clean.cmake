@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/finiteVolumeSolver.dir/Grids/Grid.cpp.o"
   "CMakeFiles/finiteVolumeSolver.dir/Grids/CartesianGrid.cpp.o"
   "CMakeFiles/finiteVolumeSolver.dir/OutputUtilities/OutputUtilities.cpp.o"
+  "CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.o"
+  "CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o"
   "../bin/finiteVolumeSolver.pdb"
   "../bin/finiteVolumeSolver"
 )

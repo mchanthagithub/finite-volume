@@ -153,12 +153,62 @@ src/CMakeFiles/finiteVolumeSolver.dir/OutputUtilities/OutputUtilities.cpp.o.prov
 src/CMakeFiles/finiteVolumeSolver.dir/OutputUtilities/OutputUtilities.cpp.o.provides.build: src/CMakeFiles/finiteVolumeSolver.dir/OutputUtilities/OutputUtilities.cpp.o
 
 
+src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.o: src/CMakeFiles/finiteVolumeSolver.dir/flags.make
+src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.o: ../src/AdvectionOperators/AdvectionOperator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.o"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/src/AdvectionOperators/AdvectionOperator.cpp
+
+src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.i"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maytee/Documents/2.29/finiteVolumeSolver/src/AdvectionOperators/AdvectionOperator.cpp > CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.i
+
+src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.s"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maytee/Documents/2.29/finiteVolumeSolver/src/AdvectionOperators/AdvectionOperator.cpp -o CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.s
+
+src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.o.requires
+
+src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.o.provides: src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.o.provides.build
+.PHONY : src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.o.provides
+
+src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.o.provides.build: src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.o
+
+
+src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o: src/CMakeFiles/finiteVolumeSolver.dir/flags.make
+src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o: ../src/AdvectionOperators/AdvectionUpwind.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/src/AdvectionOperators/AdvectionUpwind.cpp
+
+src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.i"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maytee/Documents/2.29/finiteVolumeSolver/src/AdvectionOperators/AdvectionUpwind.cpp > CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.i
+
+src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.s"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maytee/Documents/2.29/finiteVolumeSolver/src/AdvectionOperators/AdvectionUpwind.cpp -o CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.s
+
+src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o.requires
+
+src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o.provides: src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o.provides.build
+.PHONY : src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o.provides
+
+src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o.provides.build: src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o
+
+
 # Object files for target finiteVolumeSolver
 finiteVolumeSolver_OBJECTS = \
 "CMakeFiles/finiteVolumeSolver.dir/main.cpp.o" \
 "CMakeFiles/finiteVolumeSolver.dir/Grids/Grid.cpp.o" \
 "CMakeFiles/finiteVolumeSolver.dir/Grids/CartesianGrid.cpp.o" \
-"CMakeFiles/finiteVolumeSolver.dir/OutputUtilities/OutputUtilities.cpp.o"
+"CMakeFiles/finiteVolumeSolver.dir/OutputUtilities/OutputUtilities.cpp.o" \
+"CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.o" \
+"CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o"
 
 # External object files for target finiteVolumeSolver
 finiteVolumeSolver_EXTERNAL_OBJECTS =
@@ -167,9 +217,11 @@ bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/main.cpp.o
 bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/Grids/Grid.cpp.o
 bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/Grids/CartesianGrid.cpp.o
 bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/OutputUtilities/OutputUtilities.cpp.o
+bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.o
+bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o
 bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/build.make
 bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ../bin/finiteVolumeSolver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable ../bin/finiteVolumeSolver"
 	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/finiteVolumeSolver.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -181,6 +233,8 @@ src/CMakeFiles/finiteVolumeSolver.dir/requires: src/CMakeFiles/finiteVolumeSolve
 src/CMakeFiles/finiteVolumeSolver.dir/requires: src/CMakeFiles/finiteVolumeSolver.dir/Grids/Grid.cpp.o.requires
 src/CMakeFiles/finiteVolumeSolver.dir/requires: src/CMakeFiles/finiteVolumeSolver.dir/Grids/CartesianGrid.cpp.o.requires
 src/CMakeFiles/finiteVolumeSolver.dir/requires: src/CMakeFiles/finiteVolumeSolver.dir/OutputUtilities/OutputUtilities.cpp.o.requires
+src/CMakeFiles/finiteVolumeSolver.dir/requires: src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.o.requires
+src/CMakeFiles/finiteVolumeSolver.dir/requires: src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o.requires
 
 .PHONY : src/CMakeFiles/finiteVolumeSolver.dir/requires
 

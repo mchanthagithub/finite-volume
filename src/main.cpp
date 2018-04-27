@@ -3,6 +3,7 @@
 #include "Grids/Grid.h"
 #include "Grids/CartesianGrid.h"
 #include "OutputUtilities/OutputUtilities.h"
+#include "AdvectionOperators/AdvectionUpwind.h"
 #include <Eigen/Core>
 
 int main() {
@@ -18,7 +19,8 @@ int main() {
   newCartesianGrid.setInitialValues();
 
   // Calculate advection terms
-
+  AdvectionUpwind advectionObj;
+  advectionObj.calculateAdvectionFluxesCartesian(newCartesianGrid);
 
   OutputUtilities output;
   output.writeCartesianCellDataToVTU(newCartesianGrid,"/home/maytee/Documents/2.29/finiteVolumeSolver/cellData.vtu");

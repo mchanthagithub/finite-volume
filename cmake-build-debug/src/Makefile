@@ -125,6 +125,60 @@ finiteVolumeSolver/fast:
 	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/build
 .PHONY : finiteVolumeSolver/fast
 
+AdvectionOperators/AdvectionOperator.o: AdvectionOperators/AdvectionOperator.cpp.o
+
+.PHONY : AdvectionOperators/AdvectionOperator.o
+
+# target to build an object file
+AdvectionOperators/AdvectionOperator.cpp.o:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.o
+.PHONY : AdvectionOperators/AdvectionOperator.cpp.o
+
+AdvectionOperators/AdvectionOperator.i: AdvectionOperators/AdvectionOperator.cpp.i
+
+.PHONY : AdvectionOperators/AdvectionOperator.i
+
+# target to preprocess a source file
+AdvectionOperators/AdvectionOperator.cpp.i:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.i
+.PHONY : AdvectionOperators/AdvectionOperator.cpp.i
+
+AdvectionOperators/AdvectionOperator.s: AdvectionOperators/AdvectionOperator.cpp.s
+
+.PHONY : AdvectionOperators/AdvectionOperator.s
+
+# target to generate assembly for a file
+AdvectionOperators/AdvectionOperator.cpp.s:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.s
+.PHONY : AdvectionOperators/AdvectionOperator.cpp.s
+
+AdvectionOperators/AdvectionUpwind.o: AdvectionOperators/AdvectionUpwind.cpp.o
+
+.PHONY : AdvectionOperators/AdvectionUpwind.o
+
+# target to build an object file
+AdvectionOperators/AdvectionUpwind.cpp.o:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o
+.PHONY : AdvectionOperators/AdvectionUpwind.cpp.o
+
+AdvectionOperators/AdvectionUpwind.i: AdvectionOperators/AdvectionUpwind.cpp.i
+
+.PHONY : AdvectionOperators/AdvectionUpwind.i
+
+# target to preprocess a source file
+AdvectionOperators/AdvectionUpwind.cpp.i:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.i
+.PHONY : AdvectionOperators/AdvectionUpwind.cpp.i
+
+AdvectionOperators/AdvectionUpwind.s: AdvectionOperators/AdvectionUpwind.cpp.s
+
+.PHONY : AdvectionOperators/AdvectionUpwind.s
+
+# target to generate assembly for a file
+AdvectionOperators/AdvectionUpwind.cpp.s:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.s
+.PHONY : AdvectionOperators/AdvectionUpwind.cpp.s
+
 Grids/CartesianGrid.o: Grids/CartesianGrid.cpp.o
 
 .PHONY : Grids/CartesianGrid.o
@@ -242,6 +296,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... finiteVolumeSolver"
+	@echo "... AdvectionOperators/AdvectionOperator.o"
+	@echo "... AdvectionOperators/AdvectionOperator.i"
+	@echo "... AdvectionOperators/AdvectionOperator.s"
+	@echo "... AdvectionOperators/AdvectionUpwind.o"
+	@echo "... AdvectionOperators/AdvectionUpwind.i"
+	@echo "... AdvectionOperators/AdvectionUpwind.s"
 	@echo "... Grids/CartesianGrid.o"
 	@echo "... Grids/CartesianGrid.i"
 	@echo "... Grids/CartesianGrid.s"
