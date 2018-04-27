@@ -1,0 +1,7 @@
+-I/home/maytee/Documents/2.29/finiteVolumeSolver/src/eigen
+-I/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/eigen
+-I/usr/include/qt4
+-DNDEBUG
+-o
+/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/eigen/demos/mandelbrot/mandelbrot.moc
+/home/maytee/Documents/2.29/finiteVolumeSolver/src/eigen/demos/mandelbrot/mandelbrot.h

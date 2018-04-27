@@ -1,0 +1,16 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/maytee/Documents/2.29/finiteVolumeSolver/src/eigen/unsupported/test/cxx11_tensor_sugar.cpp"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"BuildUnsupported"
+		],
+		"name" : "cxx11_tensor_sugar"
+	}
+}

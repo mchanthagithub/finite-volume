@@ -1,0 +1,16 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/maytee/Documents/2.29/finiteVolumeSolver/src/include/eigen/unsupported/test/minres.cpp"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"BuildUnsupported"
+		],
+		"name" : "minres_2"
+	}
+}
