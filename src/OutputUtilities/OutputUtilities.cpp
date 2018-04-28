@@ -37,6 +37,17 @@ void OutputUtilities::writeCartesianCellDataToVTU(Grid &grid, std::string fileNa
       outputFp<<"    9\n";
   outputFp<<"    </DataArray>\n";
   outputFp<<"   </Cells>\n";
+  outputFp<<"   <CellData Vectors=\"vectors\">\n";
+  Eigen::VectorXd cellVelocities;
+  cellVelocities.setZero(grid.numCells*2);
+  for(int ii = 0; ii < grid.numCells; ii++)
+  {
+    cellVelocities(ii*2) = grid.uVel(ii);
+    cellVelocities(ii*2+1) = grid.vVel(ii);
+  }
+  std::string cellVelocitiesOutputStr = writeCellVector(cellVelocities, grid.nDim,"cellCenteredVelocity");
+  outputFp<<cellVelocitiesOutputStr;
+  outputFp<<"   </CellData>\n";
   outputFp<<"  </Piece>\n";
   outputFp<<" </UnstructuredGrid>\n";
   outputFp<<"</VTKFile>\n";
@@ -103,7 +114,6 @@ void OutputUtilities::writeCartesianFaceDataToVTU(CartesianGrid &grid, std::stri
     faceCtr++;
   }
 
-  std::cout<<"FACECTR: "<<faceCtr<<" TOTALNUMFACES: "<<numFaces<<std::endl;
   outputFp<<"    </DataArray>\n";
   outputFp<<"    <DataArray type=\"Int32\" Name=\"offsets\" format=\"ascii\">\n";
   for(int ii = 0; ii < numFaces;ii++)
@@ -119,4 +129,21 @@ void OutputUtilities::writeCartesianFaceDataToVTU(CartesianGrid &grid, std::stri
   outputFp<<"</VTKFile>\n";
 
   outputFp.close();
+}
+
+std::string OutputUtilities::writeCellScalar(Eigen::VectorXd inputVector)
+{
+
+}
+
+std::string OutputUtilities::writeCellVector(Eigen::VectorXd inputVector, int nDim, std::string inputString)
+{
+  std::string outputStr;
+  outputStr = "<DataArray type=\"Float32\" Name=\""+inputString+"\" NumberOfComponents=\"3\" format=\"ascii\">\n";
+  for(int ii = 0; ii < inputVector.size()/nDim; ii++)
+  {
+    outputStr += std::to_string(inputVector(ii*nDim))+" "+std::to_string(inputVector(ii*nDim+1))+" 0.0\n";
+  }
+  outputStr += "</DataArray>\n";
+  return outputStr;
 }

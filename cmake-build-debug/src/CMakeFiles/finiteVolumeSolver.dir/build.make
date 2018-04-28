@@ -201,6 +201,78 @@ src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o.p
 src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o.provides.build: src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o
 
 
+src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.o: src/CMakeFiles/finiteVolumeSolver.dir/flags.make
+src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.o: ../src/TimeIntegrators/TimeIntegrator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.o"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/src/TimeIntegrators/TimeIntegrator.cpp
+
+src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.i"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maytee/Documents/2.29/finiteVolumeSolver/src/TimeIntegrators/TimeIntegrator.cpp > CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.i
+
+src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.s"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maytee/Documents/2.29/finiteVolumeSolver/src/TimeIntegrators/TimeIntegrator.cpp -o CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.s
+
+src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.o.requires
+
+src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.o.provides: src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.o.provides.build
+.PHONY : src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.o.provides
+
+src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.o.provides.build: src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.o
+
+
+src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/ForwardEuler.cpp.o: src/CMakeFiles/finiteVolumeSolver.dir/flags.make
+src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/ForwardEuler.cpp.o: ../src/TimeIntegrators/ForwardEuler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/ForwardEuler.cpp.o"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/ForwardEuler.cpp.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/src/TimeIntegrators/ForwardEuler.cpp
+
+src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/ForwardEuler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/ForwardEuler.cpp.i"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maytee/Documents/2.29/finiteVolumeSolver/src/TimeIntegrators/ForwardEuler.cpp > CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/ForwardEuler.cpp.i
+
+src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/ForwardEuler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/ForwardEuler.cpp.s"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maytee/Documents/2.29/finiteVolumeSolver/src/TimeIntegrators/ForwardEuler.cpp -o CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/ForwardEuler.cpp.s
+
+src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/ForwardEuler.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/ForwardEuler.cpp.o.requires
+
+src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/ForwardEuler.cpp.o.provides: src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/ForwardEuler.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/ForwardEuler.cpp.o.provides.build
+.PHONY : src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/ForwardEuler.cpp.o.provides
+
+src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/ForwardEuler.cpp.o.provides.build: src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/ForwardEuler.cpp.o
+
+
+src/CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.o: src/CMakeFiles/finiteVolumeSolver.dir/flags.make
+src/CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.o: ../src/Grids/PlottingGrid.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.o"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/src/Grids/PlottingGrid.cpp
+
+src/CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.i"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maytee/Documents/2.29/finiteVolumeSolver/src/Grids/PlottingGrid.cpp > CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.i
+
+src/CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.s"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maytee/Documents/2.29/finiteVolumeSolver/src/Grids/PlottingGrid.cpp -o CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.s
+
+src/CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.o.requires
+
+src/CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.o.provides: src/CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.o.provides.build
+.PHONY : src/CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.o.provides
+
+src/CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.o.provides.build: src/CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.o
+
+
 # Object files for target finiteVolumeSolver
 finiteVolumeSolver_OBJECTS = \
 "CMakeFiles/finiteVolumeSolver.dir/main.cpp.o" \
@@ -208,7 +280,10 @@ finiteVolumeSolver_OBJECTS = \
 "CMakeFiles/finiteVolumeSolver.dir/Grids/CartesianGrid.cpp.o" \
 "CMakeFiles/finiteVolumeSolver.dir/OutputUtilities/OutputUtilities.cpp.o" \
 "CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.o" \
-"CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o"
+"CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o" \
+"CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.o" \
+"CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/ForwardEuler.cpp.o" \
+"CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.o"
 
 # External object files for target finiteVolumeSolver
 finiteVolumeSolver_EXTERNAL_OBJECTS =
@@ -219,9 +294,12 @@ bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/Grids/CartesianGri
 bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/OutputUtilities/OutputUtilities.cpp.o
 bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.o
 bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o
+bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.o
+bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/ForwardEuler.cpp.o
+bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.o
 bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/build.make
 bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable ../bin/finiteVolumeSolver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable ../bin/finiteVolumeSolver"
 	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/finiteVolumeSolver.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -235,6 +313,9 @@ src/CMakeFiles/finiteVolumeSolver.dir/requires: src/CMakeFiles/finiteVolumeSolve
 src/CMakeFiles/finiteVolumeSolver.dir/requires: src/CMakeFiles/finiteVolumeSolver.dir/OutputUtilities/OutputUtilities.cpp.o.requires
 src/CMakeFiles/finiteVolumeSolver.dir/requires: src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.o.requires
 src/CMakeFiles/finiteVolumeSolver.dir/requires: src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o.requires
+src/CMakeFiles/finiteVolumeSolver.dir/requires: src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.o.requires
+src/CMakeFiles/finiteVolumeSolver.dir/requires: src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/ForwardEuler.cpp.o.requires
+src/CMakeFiles/finiteVolumeSolver.dir/requires: src/CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.o.requires
 
 .PHONY : src/CMakeFiles/finiteVolumeSolver.dir/requires
 

@@ -28,28 +28,28 @@ The CXX compiler identification is GNU, found in "/home/maytee/Documents/2.29/fi
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2fe67/fast"
-/usr/bin/make -f CMakeFiles/cmTC_2fe67.dir/build.make CMakeFiles/cmTC_2fe67.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_b74ce/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b74ce.dir/build.make CMakeFiles/cmTC_b74ce.dir/build
 make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2fe67.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_2fe67.dir/testCCompiler.c.o   -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_2fe67
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2fe67.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_2fe67.dir/testCCompiler.c.o  -o cmTC_2fe67 
+Building C object CMakeFiles/cmTC_b74ce.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_b74ce.dir/testCCompiler.c.o   -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_b74ce
+/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b74ce.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_b74ce.dir/testCCompiler.c.o  -o cmTC_b74ce 
 make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f1d46/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f1d46.dir/build.make CMakeFiles/cmTC_f1d46.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_3e99a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3e99a.dir/build.make CMakeFiles/cmTC_3e99a.dir/build
 make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f1d46.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_f1d46.dir/CMakeCCompilerABI.c.o   -c /home/maytee/software/clion-2018.1/bin/cmake/share/cmake-3.10/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_f1d46
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f1d46.dir/link.txt --verbose=1
-/usr/bin/cc     -v CMakeFiles/cmTC_f1d46.dir/CMakeCCompilerABI.c.o  -o cmTC_f1d46 
+Building C object CMakeFiles/cmTC_3e99a.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_3e99a.dir/CMakeCCompilerABI.c.o   -c /home/maytee/software/clion-2018.1/bin/cmake/share/cmake-3.10/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_3e99a
+/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3e99a.dir/link.txt --verbose=1
+/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_3e99a.dir/CMakeCCompilerABI.c.o  -o cmTC_3e99a 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/6/lto-wrapper
@@ -59,9 +59,9 @@ Thread model: posix
 gcc version 6.2.0 20161018 (Ubuntu 6.2.0-7ubuntu11) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/6/:/usr/lib/gcc/x86_64-linux-gnu/6/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/6/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/6/:/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/6/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/6/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f1d46' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/6/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/6/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/6/lto-wrapper -plugin-opt=-fresolution=/tmp/cc3cZ2az.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_f1d46 /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/6/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/6 -L/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/6/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/6/../../.. CMakeFiles/cmTC_f1d46.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/6/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f1d46' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_3e99a' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/6/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/6/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/6/lto-wrapper -plugin-opt=-fresolution=/tmp/ccBoj24Z.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_3e99a /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/6/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/6 -L/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/6/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/6/../../.. CMakeFiles/cmTC_3e99a.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/6/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_3e99a' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -69,14 +69,14 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_f1d46/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_f1d46.dir/build.make CMakeFiles/cmTC_f1d46.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_3e99a/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_3e99a.dir/build.make CMakeFiles/cmTC_3e99a.dir/build]
   ignore line: [make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_f1d46.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_f1d46.dir/CMakeCCompilerABI.c.o   -c /home/maytee/software/clion-2018.1/bin/cmake/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_f1d46]
-  ignore line: [/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f1d46.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_f1d46.dir/CMakeCCompilerABI.c.o  -o cmTC_f1d46 ]
+  ignore line: [Building C object CMakeFiles/cmTC_3e99a.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_3e99a.dir/CMakeCCompilerABI.c.o   -c /home/maytee/software/clion-2018.1/bin/cmake/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_3e99a]
+  ignore line: [/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3e99a.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_3e99a.dir/CMakeCCompilerABI.c.o  -o cmTC_3e99a ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/6/lto-wrapper]
@@ -86,13 +86,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 6.2.0 20161018 (Ubuntu 6.2.0-7ubuntu11) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/6/:/usr/lib/gcc/x86_64-linux-gnu/6/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/6/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/6/:/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/6/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/6/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f1d46' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/6/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/6/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/6/lto-wrapper -plugin-opt=-fresolution=/tmp/cc3cZ2az.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_f1d46 /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/6/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/6 -L/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/6/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/6/../../.. CMakeFiles/cmTC_f1d46.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/6/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_3e99a' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/6/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/6/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/6/lto-wrapper -plugin-opt=-fresolution=/tmp/ccBoj24Z.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_3e99a /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/6/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/6 -L/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/6/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/6/../../.. CMakeFiles/cmTC_3e99a.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/6/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/6/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/6/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/6/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc3cZ2az.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccBoj24Z.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -105,13 +105,14 @@ Parsed C implicit link information from above output:
     arg [elf_x86_64] ==> ignore
     arg [--hash-style=gnu] ==> ignore
     arg [--as-needed] ==> ignore
+    arg [-export-dynamic] ==> ignore
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-pie] ==> ignore
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_f1d46] ==> ignore
+    arg [cmTC_3e99a] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/6/crtbeginS.o] ==> ignore
@@ -123,7 +124,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/6/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/6/../../..]
-    arg [CMakeFiles/cmTC_f1d46.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_3e99a.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -153,14 +154,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_3e01d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_3e01d.dir/build.make CMakeFiles/cmTC_3e01d.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_83bcb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_83bcb.dir/build.make CMakeFiles/cmTC_83bcb.dir/build
 make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3e01d.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_3e01d.dir/feature_tests.c.o   -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_3e01d
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3e01d.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_3e01d.dir/feature_tests.c.o  -o cmTC_3e01d 
+Building C object CMakeFiles/cmTC_83bcb.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_83bcb.dir/feature_tests.c.o   -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_83bcb
+/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_83bcb.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_83bcb.dir/feature_tests.c.o  -o cmTC_83bcb 
 make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -173,14 +174,14 @@ make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_40ff0/fast"
-/usr/bin/make -f CMakeFiles/cmTC_40ff0.dir/build.make CMakeFiles/cmTC_40ff0.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_3f71a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3f71a.dir/build.make CMakeFiles/cmTC_3f71a.dir/build
 make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_40ff0.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_40ff0.dir/feature_tests.c.o   -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_40ff0
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_40ff0.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_40ff0.dir/feature_tests.c.o  -o cmTC_40ff0 
+Building C object CMakeFiles/cmTC_3f71a.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_3f71a.dir/feature_tests.c.o   -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_3f71a
+/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3f71a.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_3f71a.dir/feature_tests.c.o  -o cmTC_3f71a 
 make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -193,14 +194,14 @@ make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_63095/fast"
-/usr/bin/make -f CMakeFiles/cmTC_63095.dir/build.make CMakeFiles/cmTC_63095.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_dccba/fast"
+/usr/bin/make -f CMakeFiles/cmTC_dccba.dir/build.make CMakeFiles/cmTC_dccba.dir/build
 make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_63095.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_63095.dir/feature_tests.c.o   -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_63095
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_63095.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_63095.dir/feature_tests.c.o  -o cmTC_63095 
+Building C object CMakeFiles/cmTC_dccba.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_dccba.dir/feature_tests.c.o   -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_dccba
+/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dccba.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_dccba.dir/feature_tests.c.o  -o cmTC_dccba 
 make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -211,28 +212,28 @@ make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_803f1/fast"
-/usr/bin/make -f CMakeFiles/cmTC_803f1.dir/build.make CMakeFiles/cmTC_803f1.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_cdb98/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cdb98.dir/build.make CMakeFiles/cmTC_cdb98.dir/build
 make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_803f1.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_803f1.dir/testCXXCompiler.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_803f1
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_803f1.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_803f1.dir/testCXXCompiler.cxx.o  -o cmTC_803f1 
+Building CXX object CMakeFiles/cmTC_cdb98.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_cdb98.dir/testCXXCompiler.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_cdb98
+/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cdb98.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_cdb98.dir/testCXXCompiler.cxx.o  -o cmTC_cdb98 
 make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f0bb8/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f0bb8.dir/build.make CMakeFiles/cmTC_f0bb8.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_ab0ca/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ab0ca.dir/build.make CMakeFiles/cmTC_ab0ca.dir/build
 make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f0bb8.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTC_f0bb8.dir/CMakeCXXCompilerABI.cpp.o -c /home/maytee/software/clion-2018.1/bin/cmake/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_f0bb8
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f0bb8.dir/link.txt --verbose=1
-/usr/bin/c++      -v CMakeFiles/cmTC_f0bb8.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_f0bb8 
+Building CXX object CMakeFiles/cmTC_ab0ca.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_ab0ca.dir/CMakeCXXCompilerABI.cpp.o -c /home/maytee/software/clion-2018.1/bin/cmake/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_ab0ca
+/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ab0ca.dir/link.txt --verbose=1
+/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_ab0ca.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_ab0ca 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/6/lto-wrapper
@@ -242,9 +243,9 @@ Thread model: posix
 gcc version 6.2.0 20161018 (Ubuntu 6.2.0-7ubuntu11) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/6/:/usr/lib/gcc/x86_64-linux-gnu/6/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/6/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/6/:/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/6/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/6/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f0bb8' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/6/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/6/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/6/lto-wrapper -plugin-opt=-fresolution=/tmp/ccEn7C1R.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_f0bb8 /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/6/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/6 -L/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/6/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/6/../../.. CMakeFiles/cmTC_f0bb8.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/6/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f0bb8' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_ab0ca' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/6/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/6/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/6/lto-wrapper -plugin-opt=-fresolution=/tmp/ccoy2IRn.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ab0ca /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/6/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/6 -L/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/6/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/6/../../.. CMakeFiles/cmTC_ab0ca.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/6/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_ab0ca' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -252,14 +253,14 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_f0bb8/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_f0bb8.dir/build.make CMakeFiles/cmTC_f0bb8.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_ab0ca/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_ab0ca.dir/build.make CMakeFiles/cmTC_ab0ca.dir/build]
   ignore line: [make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_f0bb8.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_f0bb8.dir/CMakeCXXCompilerABI.cpp.o -c /home/maytee/software/clion-2018.1/bin/cmake/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_f0bb8]
-  ignore line: [/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f0bb8.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_f0bb8.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_f0bb8 ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_ab0ca.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_ab0ca.dir/CMakeCXXCompilerABI.cpp.o -c /home/maytee/software/clion-2018.1/bin/cmake/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_ab0ca]
+  ignore line: [/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ab0ca.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_ab0ca.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_ab0ca ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/6/lto-wrapper]
@@ -269,13 +270,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 6.2.0 20161018 (Ubuntu 6.2.0-7ubuntu11) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/6/:/usr/lib/gcc/x86_64-linux-gnu/6/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/6/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/6/:/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/6/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/6/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f0bb8' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/6/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/6/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/6/lto-wrapper -plugin-opt=-fresolution=/tmp/ccEn7C1R.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_f0bb8 /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/6/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/6 -L/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/6/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/6/../../.. CMakeFiles/cmTC_f0bb8.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/6/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_ab0ca' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/6/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/6/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/6/lto-wrapper -plugin-opt=-fresolution=/tmp/ccoy2IRn.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ab0ca /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/6/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/6 -L/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/6/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/6/../../.. CMakeFiles/cmTC_ab0ca.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/6/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/6/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/6/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/6/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccEn7C1R.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccoy2IRn.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -288,13 +289,14 @@ Parsed CXX implicit link information from above output:
     arg [elf_x86_64] ==> ignore
     arg [--hash-style=gnu] ==> ignore
     arg [--as-needed] ==> ignore
+    arg [-export-dynamic] ==> ignore
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-pie] ==> ignore
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_f0bb8] ==> ignore
+    arg [cmTC_ab0ca] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/6/crtbeginS.o] ==> ignore
@@ -306,7 +308,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/6/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/6/../../..]
-    arg [CMakeFiles/cmTC_f0bb8.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_ab0ca.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -334,14 +336,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
 Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5ee0d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5ee0d.dir/build.make CMakeFiles/cmTC_5ee0d.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_a591e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a591e.dir/build.make CMakeFiles/cmTC_a591e.dir/build
 make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_5ee0d.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_5ee0d.dir/feature_tests.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_5ee0d
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ee0d.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_5ee0d.dir/feature_tests.cxx.o  -o cmTC_5ee0d 
+Building CXX object CMakeFiles/cmTC_a591e.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_a591e.dir/feature_tests.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_a591e
+/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a591e.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_a591e.dir/feature_tests.cxx.o  -o cmTC_a591e 
 make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -407,14 +409,14 @@ make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_8b636/fast"
-/usr/bin/make -f CMakeFiles/cmTC_8b636.dir/build.make CMakeFiles/cmTC_8b636.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_cf01c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cf01c.dir/build.make CMakeFiles/cmTC_cf01c.dir/build
 make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_8b636.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_8b636.dir/feature_tests.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_8b636
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8b636.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_8b636.dir/feature_tests.cxx.o  -o cmTC_8b636 
+Building CXX object CMakeFiles/cmTC_cf01c.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_cf01c.dir/feature_tests.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_cf01c
+/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cf01c.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_cf01c.dir/feature_tests.cxx.o  -o cmTC_cf01c 
 make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -480,14 +482,14 @@ make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_98c69/fast"
-/usr/bin/make -f CMakeFiles/cmTC_98c69.dir/build.make CMakeFiles/cmTC_98c69.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_e69fc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e69fc.dir/build.make CMakeFiles/cmTC_e69fc.dir/build
 make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_98c69.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_98c69.dir/feature_tests.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_98c69
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_98c69.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_98c69.dir/feature_tests.cxx.o  -o cmTC_98c69 
+Building CXX object CMakeFiles/cmTC_e69fc.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_e69fc.dir/feature_tests.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_e69fc
+/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e69fc.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_e69fc.dir/feature_tests.cxx.o  -o cmTC_e69fc 
 make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -553,14 +555,14 @@ make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2e486/fast"
-/usr/bin/make -f CMakeFiles/cmTC_2e486.dir/build.make CMakeFiles/cmTC_2e486.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_8f132/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8f132.dir/build.make CMakeFiles/cmTC_8f132.dir/build
 make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_2e486.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_2e486.dir/feature_tests.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_2e486
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2e486.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_2e486.dir/feature_tests.cxx.o  -o cmTC_2e486 
+Building CXX object CMakeFiles/cmTC_8f132.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_8f132.dir/feature_tests.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_8f132
+/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8f132.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_8f132.dir/feature_tests.cxx.o  -o cmTC_8f132 
 make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -621,768 +623,3 @@ make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake
     Feature record: CXX_FEATURE:0cxx_variable_templates
     Feature record: CXX_FEATURE:0cxx_variadic_macros
     Feature record: CXX_FEATURE:0cxx_variadic_templates
-Performing C++ SOURCE FILE Test standard_math_library_linked_to_automatically succeeded with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_28456/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_28456.dir/build.make CMakeFiles/cmTC_28456.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_28456.dir/src.cxx.o
-/usr/bin/c++    -Dstandard_math_library_linked_to_automatically   -o CMakeFiles/cmTC_28456.dir/src.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_28456
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_28456.dir/link.txt --verbose=1
-/usr/bin/c++   -Dstandard_math_library_linked_to_automatically    -rdynamic CMakeFiles/cmTC_28456.dir/src.cxx.o  -o cmTC_28456 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-Source file was:
-#include<cmath>
-int main() { std::sin(0.0); std::log(0.0f); }
-Performing C++ SOURCE FILE Test COMPILER_SUPPORT_WERROR succeeded with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_78780/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_78780.dir/build.make CMakeFiles/cmTC_78780.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_78780.dir/src.cxx.o
-/usr/bin/c++    -DCOMPILER_SUPPORT_WERROR   -Werror -o CMakeFiles/cmTC_78780.dir/src.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_78780
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_78780.dir/link.txt --verbose=1
-/usr/bin/c++   -DCOMPILER_SUPPORT_WERROR    -rdynamic CMakeFiles/cmTC_78780.dir/src.cxx.o  -o cmTC_78780 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-Source file was:
-int main() { return 0; }
-Performing C++ SOURCE FILE Test COMPILER_SUPPORT_pedantic succeeded with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_43aeb/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_43aeb.dir/build.make CMakeFiles/cmTC_43aeb.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_43aeb.dir/src.cxx.o
-/usr/bin/c++    -DCOMPILER_SUPPORT_pedantic -Werror   -pedantic -o CMakeFiles/cmTC_43aeb.dir/src.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_43aeb
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_43aeb.dir/link.txt --verbose=1
-/usr/bin/c++   -DCOMPILER_SUPPORT_pedantic -Werror    -rdynamic CMakeFiles/cmTC_43aeb.dir/src.cxx.o  -o cmTC_43aeb 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-Source file was:
-int main() { return 0; }
-Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Wall succeeded with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_76214/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_76214.dir/build.make CMakeFiles/cmTC_76214.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_76214.dir/src.cxx.o
-/usr/bin/c++    -pedantic -DCOMPILER_SUPPORT_Wall -Werror   -Wall -o CMakeFiles/cmTC_76214.dir/src.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_76214
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_76214.dir/link.txt --verbose=1
-/usr/bin/c++   -pedantic -DCOMPILER_SUPPORT_Wall -Werror    -rdynamic CMakeFiles/cmTC_76214.dir/src.cxx.o  -o cmTC_76214 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-Source file was:
-int main() { return 0; }
-Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Wextra succeeded with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_9a6b1/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_9a6b1.dir/build.make CMakeFiles/cmTC_9a6b1.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_9a6b1.dir/src.cxx.o
-/usr/bin/c++    -pedantic -Wall -DCOMPILER_SUPPORT_Wextra -Werror   -Wextra -o CMakeFiles/cmTC_9a6b1.dir/src.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_9a6b1
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9a6b1.dir/link.txt --verbose=1
-/usr/bin/c++   -pedantic -Wall -DCOMPILER_SUPPORT_Wextra -Werror    -rdynamic CMakeFiles/cmTC_9a6b1.dir/src.cxx.o  -o cmTC_9a6b1 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-Source file was:
-int main() { return 0; }
-Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Wundef succeeded with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_fbbe9/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_fbbe9.dir/build.make CMakeFiles/cmTC_fbbe9.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_fbbe9.dir/src.cxx.o
-/usr/bin/c++    -pedantic -Wall -Wextra -DCOMPILER_SUPPORT_Wundef -Werror   -Wundef -o CMakeFiles/cmTC_fbbe9.dir/src.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_fbbe9
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fbbe9.dir/link.txt --verbose=1
-/usr/bin/c++   -pedantic -Wall -Wextra -DCOMPILER_SUPPORT_Wundef -Werror    -rdynamic CMakeFiles/cmTC_fbbe9.dir/src.cxx.o  -o cmTC_fbbe9 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-Source file was:
-int main() { return 0; }
-Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Wcastalign succeeded with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_2d651/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_2d651.dir/build.make CMakeFiles/cmTC_2d651.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_2d651.dir/src.cxx.o
-/usr/bin/c++    -pedantic -Wall -Wextra -Wundef -DCOMPILER_SUPPORT_Wcastalign -Werror   -Wcast-align -o CMakeFiles/cmTC_2d651.dir/src.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_2d651
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2d651.dir/link.txt --verbose=1
-/usr/bin/c++   -pedantic -Wall -Wextra -Wundef -DCOMPILER_SUPPORT_Wcastalign -Werror    -rdynamic CMakeFiles/cmTC_2d651.dir/src.cxx.o  -o cmTC_2d651 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-Source file was:
-int main() { return 0; }
-Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Wcharsubscripts succeeded with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_3eb44/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_3eb44.dir/build.make CMakeFiles/cmTC_3eb44.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_3eb44.dir/src.cxx.o
-/usr/bin/c++    -pedantic -Wall -Wextra -Wundef -Wcast-align -DCOMPILER_SUPPORT_Wcharsubscripts -Werror   -Wchar-subscripts -o CMakeFiles/cmTC_3eb44.dir/src.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_3eb44
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3eb44.dir/link.txt --verbose=1
-/usr/bin/c++   -pedantic -Wall -Wextra -Wundef -Wcast-align -DCOMPILER_SUPPORT_Wcharsubscripts -Werror    -rdynamic CMakeFiles/cmTC_3eb44.dir/src.cxx.o  -o cmTC_3eb44 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-Source file was:
-int main() { return 0; }
-Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Wnonvirtualdtor succeeded with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_683c7/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_683c7.dir/build.make CMakeFiles/cmTC_683c7.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_683c7.dir/src.cxx.o
-/usr/bin/c++    -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -DCOMPILER_SUPPORT_Wnonvirtualdtor -Werror   -Wnon-virtual-dtor -o CMakeFiles/cmTC_683c7.dir/src.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_683c7
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_683c7.dir/link.txt --verbose=1
-/usr/bin/c++   -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -DCOMPILER_SUPPORT_Wnonvirtualdtor -Werror    -rdynamic CMakeFiles/cmTC_683c7.dir/src.cxx.o  -o cmTC_683c7 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-Source file was:
-int main() { return 0; }
-Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Wunusedlocaltypedefs succeeded with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_4c7d5/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_4c7d5.dir/build.make CMakeFiles/cmTC_4c7d5.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_4c7d5.dir/src.cxx.o
-/usr/bin/c++    -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -DCOMPILER_SUPPORT_Wunusedlocaltypedefs -Werror   -Wunused-local-typedefs -o CMakeFiles/cmTC_4c7d5.dir/src.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_4c7d5
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4c7d5.dir/link.txt --verbose=1
-/usr/bin/c++   -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -DCOMPILER_SUPPORT_Wunusedlocaltypedefs -Werror    -rdynamic CMakeFiles/cmTC_4c7d5.dir/src.cxx.o  -o cmTC_4c7d5 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-Source file was:
-int main() { return 0; }
-Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Wpointerarith succeeded with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_37580/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_37580.dir/build.make CMakeFiles/cmTC_37580.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_37580.dir/src.cxx.o
-/usr/bin/c++    -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -DCOMPILER_SUPPORT_Wpointerarith -Werror   -Wpointer-arith -o CMakeFiles/cmTC_37580.dir/src.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_37580
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_37580.dir/link.txt --verbose=1
-/usr/bin/c++   -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -DCOMPILER_SUPPORT_Wpointerarith -Werror    -rdynamic CMakeFiles/cmTC_37580.dir/src.cxx.o  -o cmTC_37580 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-Source file was:
-int main() { return 0; }
-Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Wwritestrings succeeded with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_bf71b/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_bf71b.dir/build.make CMakeFiles/cmTC_bf71b.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_bf71b.dir/src.cxx.o
-/usr/bin/c++    -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -DCOMPILER_SUPPORT_Wwritestrings -Werror   -Wwrite-strings -o CMakeFiles/cmTC_bf71b.dir/src.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_bf71b
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bf71b.dir/link.txt --verbose=1
-/usr/bin/c++   -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -DCOMPILER_SUPPORT_Wwritestrings -Werror    -rdynamic CMakeFiles/cmTC_bf71b.dir/src.cxx.o  -o cmTC_bf71b 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-Source file was:
-int main() { return 0; }
-Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Wformatsecurity succeeded with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_b7d3a/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_b7d3a.dir/build.make CMakeFiles/cmTC_b7d3a.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_b7d3a.dir/src.cxx.o
-/usr/bin/c++    -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -DCOMPILER_SUPPORT_Wformatsecurity -Werror   -Wformat-security -o CMakeFiles/cmTC_b7d3a.dir/src.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_b7d3a
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b7d3a.dir/link.txt --verbose=1
-/usr/bin/c++   -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -DCOMPILER_SUPPORT_Wformatsecurity -Werror    -rdynamic CMakeFiles/cmTC_b7d3a.dir/src.cxx.o  -o cmTC_b7d3a 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-Source file was:
-int main() { return 0; }
-Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Wlogicalop succeeded with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_0b405/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_0b405.dir/build.make CMakeFiles/cmTC_0b405.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_0b405.dir/src.cxx.o
-/usr/bin/c++    -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -DCOMPILER_SUPPORT_Wlogicalop -Werror   -Wlogical-op -o CMakeFiles/cmTC_0b405.dir/src.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_0b405
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0b405.dir/link.txt --verbose=1
-/usr/bin/c++   -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -DCOMPILER_SUPPORT_Wlogicalop -Werror    -rdynamic CMakeFiles/cmTC_0b405.dir/src.cxx.o  -o cmTC_0b405 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-Source file was:
-int main() { return 0; }
-Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Wdoublepromotion succeeded with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_59e44/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_59e44.dir/build.make CMakeFiles/cmTC_59e44.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_59e44.dir/src.cxx.o
-/usr/bin/c++    -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -DCOMPILER_SUPPORT_Wdoublepromotion -Werror   -Wdouble-promotion -o CMakeFiles/cmTC_59e44.dir/src.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_59e44
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_59e44.dir/link.txt --verbose=1
-/usr/bin/c++   -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -DCOMPILER_SUPPORT_Wdoublepromotion -Werror    -rdynamic CMakeFiles/cmTC_59e44.dir/src.cxx.o  -o cmTC_59e44 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-Source file was:
-int main() { return 0; }
-Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Wnopsabi succeeded with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_efe45/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_efe45.dir/build.make CMakeFiles/cmTC_efe45.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_efe45.dir/src.cxx.o
-/usr/bin/c++    -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -DCOMPILER_SUPPORT_Wnopsabi -Werror   -Wno-psabi -o CMakeFiles/cmTC_efe45.dir/src.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_efe45
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_efe45.dir/link.txt --verbose=1
-/usr/bin/c++   -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -DCOMPILER_SUPPORT_Wnopsabi -Werror    -rdynamic CMakeFiles/cmTC_efe45.dir/src.cxx.o  -o cmTC_efe45 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-Source file was:
-int main() { return 0; }
-Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Wnovariadicmacros succeeded with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_04469/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_04469.dir/build.make CMakeFiles/cmTC_04469.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_04469.dir/src.cxx.o
-/usr/bin/c++    -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -DCOMPILER_SUPPORT_Wnovariadicmacros -Werror   -Wno-variadic-macros -o CMakeFiles/cmTC_04469.dir/src.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_04469
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_04469.dir/link.txt --verbose=1
-/usr/bin/c++   -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -DCOMPILER_SUPPORT_Wnovariadicmacros -Werror    -rdynamic CMakeFiles/cmTC_04469.dir/src.cxx.o  -o cmTC_04469 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-Source file was:
-int main() { return 0; }
-Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Wnolonglong succeeded with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_27c13/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_27c13.dir/build.make CMakeFiles/cmTC_27c13.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_27c13.dir/src.cxx.o
-/usr/bin/c++    -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -DCOMPILER_SUPPORT_Wnolonglong -Werror   -Wno-long-long -o CMakeFiles/cmTC_27c13.dir/src.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_27c13
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_27c13.dir/link.txt --verbose=1
-/usr/bin/c++   -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -DCOMPILER_SUPPORT_Wnolonglong -Werror    -rdynamic CMakeFiles/cmTC_27c13.dir/src.cxx.o  -o cmTC_27c13 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-Source file was:
-int main() { return 0; }
-Performing C++ SOURCE FILE Test COMPILER_SUPPORT_fnochecknew succeeded with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_2c65c/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_2c65c.dir/build.make CMakeFiles/cmTC_2c65c.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_2c65c.dir/src.cxx.o
-/usr/bin/c++    -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -DCOMPILER_SUPPORT_fnochecknew -Werror   -fno-check-new -o CMakeFiles/cmTC_2c65c.dir/src.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_2c65c
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2c65c.dir/link.txt --verbose=1
-/usr/bin/c++   -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -DCOMPILER_SUPPORT_fnochecknew -Werror    -rdynamic CMakeFiles/cmTC_2c65c.dir/src.cxx.o  -o cmTC_2c65c 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-Source file was:
-int main() { return 0; }
-Performing C++ SOURCE FILE Test COMPILER_SUPPORT_fnocommon succeeded with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_45b65/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_45b65.dir/build.make CMakeFiles/cmTC_45b65.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_45b65.dir/src.cxx.o
-/usr/bin/c++    -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -DCOMPILER_SUPPORT_fnocommon -Werror   -fno-common -o CMakeFiles/cmTC_45b65.dir/src.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_45b65
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_45b65.dir/link.txt --verbose=1
-/usr/bin/c++   -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -DCOMPILER_SUPPORT_fnocommon -Werror    -rdynamic CMakeFiles/cmTC_45b65.dir/src.cxx.o  -o cmTC_45b65 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-Source file was:
-int main() { return 0; }
-Performing C++ SOURCE FILE Test COMPILER_SUPPORT_fstrictaliasing succeeded with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_25f03/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_25f03.dir/build.make CMakeFiles/cmTC_25f03.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_25f03.dir/src.cxx.o
-/usr/bin/c++    -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -DCOMPILER_SUPPORT_fstrictaliasing -Werror   -fstrict-aliasing -o CMakeFiles/cmTC_25f03.dir/src.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_25f03
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_25f03.dir/link.txt --verbose=1
-/usr/bin/c++   -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -DCOMPILER_SUPPORT_fstrictaliasing -Werror    -rdynamic CMakeFiles/cmTC_25f03.dir/src.cxx.o  -o cmTC_25f03 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-Source file was:
-int main() { return 0; }
-Performing C++ SOURCE FILE Test COMPILER_SUPPORT_ansi succeeded with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_abbec/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_abbec.dir/build.make CMakeFiles/cmTC_abbec.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_abbec.dir/src.cxx.o
-/usr/bin/c++    -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -DCOMPILER_SUPPORT_ansi -Werror   -ansi -o CMakeFiles/cmTC_abbec.dir/src.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_abbec
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_abbec.dir/link.txt --verbose=1
-/usr/bin/c++   -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -DCOMPILER_SUPPORT_ansi -Werror    -rdynamic CMakeFiles/cmTC_abbec.dir/src.cxx.o  -o cmTC_abbec 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-Source file was:
-int main() { return 0; }
-Performing C++ SOURCE FILE Test COMPILER_SUPPORT_OPENMP succeeded with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_65f0a/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_65f0a.dir/build.make CMakeFiles/cmTC_65f0a.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_65f0a.dir/src.cxx.o
-/usr/bin/c++    -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -ansi -DCOMPILER_SUPPORT_OPENMP   -fopenmp -o CMakeFiles/cmTC_65f0a.dir/src.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_65f0a
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_65f0a.dir/link.txt --verbose=1
-/usr/bin/c++   -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -ansi -DCOMPILER_SUPPORT_OPENMP    -rdynamic CMakeFiles/cmTC_65f0a.dir/src.cxx.o  -o cmTC_65f0a 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-Source file was:
-int main() { return 0; }
-Performing C++ SOURCE FILE Test EIGEN_COMPILER_SUPPORT_CPP11 succeeded with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_5c2ed/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_5c2ed.dir/build.make CMakeFiles/cmTC_5c2ed.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_5c2ed.dir/src.cxx.o
-/usr/bin/c++    -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -ansi -O1 -g1 -DEIGEN_COMPILER_SUPPORT_CPP11   -std=c++11 -o CMakeFiles/cmTC_5c2ed.dir/src.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_5c2ed
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5c2ed.dir/link.txt --verbose=1
-/usr/bin/c++   -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -ansi -O1 -g1 -DEIGEN_COMPILER_SUPPORT_CPP11    -rdynamic CMakeFiles/cmTC_5c2ed.dir/src.cxx.o  -o cmTC_5c2ed 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-Source file was:
-int main() { return 0; }
-Determining if the Q_WS_X11 exist passed with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_a0da6/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_a0da6.dir/build.make CMakeFiles/cmTC_a0da6.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_a0da6.dir/CheckSymbolExists.cxx.o
-/usr/bin/c++   -I/usr/include/qt4  -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -ansi -O1 -g1    -o CMakeFiles/cmTC_a0da6.dir/CheckSymbolExists.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
-Linking CXX executable cmTC_a0da6
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a0da6.dir/link.txt --verbose=1
-/usr/bin/c++   -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -ansi -O1 -g1     -rdynamic CMakeFiles/cmTC_a0da6.dir/CheckSymbolExists.cxx.o  -o cmTC_a0da6 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-File /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
-/* */
-#include <QtCore/qglobal.h>
-
-int main(int argc, char** argv)
-{
-  (void)argv;
-#ifndef Q_WS_X11
-  return ((int*)(&Q_WS_X11))[argc];
-#else
-  (void)argc;
-  return 0;
-#endif
-}
-
-Performing C++ SOURCE FILE Test EIGEN_COMPILER_SUPPORT_CXX11 succeeded with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_35a93/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_35a93.dir/build.make CMakeFiles/cmTC_35a93.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_35a93.dir/src.cxx.o
-/usr/bin/c++    -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -ansi -DEIGEN_COMPILER_SUPPORT_CXX11   -std=c++11 -o CMakeFiles/cmTC_35a93.dir/src.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_35a93
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_35a93.dir/link.txt --verbose=1
-/usr/bin/c++   -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -ansi -DEIGEN_COMPILER_SUPPORT_CXX11    -rdynamic CMakeFiles/cmTC_35a93.dir/src.cxx.o  -o cmTC_35a93 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-Source file was:
-int main() { return 0; }
-Compiling the Fortran compiler identification source file "CMakeFortranCompilerId.F" succeeded.
-Compiler: /usr/bin/gfortran 
-Build flags: 
-Id flags: -v 
-
-The output was:
-0
-Driving: /usr/bin/gfortran -v CMakeFortranCompilerId.F -l gfortran -l m -shared-libgcc
-Using built-in specs.
-COLLECT_GCC=/usr/bin/gfortran
-COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/6/lto-wrapper
-Target: x86_64-linux-gnu
-Configured with: ../src/configure -v --with-pkgversion='Ubuntu 6.2.0-7ubuntu11' --with-bugurl=file:///usr/share/doc/gcc-6/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-6 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-6-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-6-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-6-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
-Thread model: posix
-gcc version 6.2.0 20161018 (Ubuntu 6.2.0-7ubuntu11) 
-COLLECT_GCC_OPTIONS='-v' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/6/f951 CMakeFortranCompilerId.F -ffixed-form -cpp=/tmp/ccLkYWFj.f90 -quiet -v -imultiarch x86_64-linux-gnu CMakeFortranCompilerId.F -quiet -dumpbase CMakeFortranCompilerId.F -mtune=generic -march=x86-64 -auxbase CMakeFortranCompilerId -version -fintrinsic-modules-path /usr/lib/gcc/x86_64-linux-gnu/6/finclude -o /tmp/cc2TbFYl.s
-GNU Fortran (Ubuntu 6.2.0-7ubuntu11) version 6.2.0 20161018 (x86_64-linux-gnu)
-	compiled by GNU C version 6.2.0 20161018, GMP version 6.1.1, MPFR version 3.1.5, MPC version 1.0.3, isl version 0.15
-GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
-ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/6/../../../../x86_64-linux-gnu/include"
-#include "..." search starts here:
-#include <...> search starts here:
- /usr/lib/gcc/x86_64-linux-gnu/6/finclude
- /usr/lib/gcc/x86_64-linux-gnu/6/include
- /usr/local/include
- /usr/lib/gcc/x86_64-linux-gnu/6/include-fixed
- /usr/include/x86_64-linux-gnu
- /usr/include
-End of search list.
-GNU Fortran2008 (Ubuntu 6.2.0-7ubuntu11) version 6.2.0 20161018 (x86_64-linux-gnu)
-	compiled by GNU C version 6.2.0 20161018, GMP version 6.1.1, MPFR version 3.1.5, MPC version 1.0.3, isl version 0.15
-GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-COLLECT_GCC_OPTIONS='-v' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- as -v --64 -o /tmp/ccTsQpko.o /tmp/cc2TbFYl.s
-GNU assembler version 2.27 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.27
-Reading specs from /usr/lib/gcc/x86_64-linux-gnu/6/libgfortran.spec
-rename spec lib to liborig
-COLLECT_GCC_OPTIONS='-v' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/6/:/usr/lib/gcc/x86_64-linux-gnu/6/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/6/:/usr/lib/gcc/x86_64-linux-gnu/
-LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/6/:/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/6/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/6/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/6/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/6/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/6/lto-wrapper -plugin-opt=-fresolution=/tmp/ccXqKUGq.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lquadmath -plugin-opt=-pass-through=-lm -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/6/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/6 -L/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/6/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/6/../../.. /tmp/ccTsQpko.o -lgfortran -lm -lgcc_s -lgcc -lquadmath -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/6/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-
-
-Compilation of the Fortran compiler identification source "CMakeFortranCompilerId.F" produced "a.out"
-
-The Fortran compiler identification is GNU, found in "/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/3.10.2/CompilerIdFortran/a.out"
-
-Determining if the Fortran compiler works passed with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_180fc/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_180fc.dir/build.make CMakeFiles/cmTC_180fc.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building Fortran object CMakeFiles/cmTC_180fc.dir/testFortranCompiler.f.o
-/usr/bin/gfortran    -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/testFortranCompiler.f -o CMakeFiles/cmTC_180fc.dir/testFortranCompiler.f.o
-Linking Fortran executable cmTC_180fc
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_180fc.dir/link.txt --verbose=1
-/usr/bin/gfortran      CMakeFiles/cmTC_180fc.dir/testFortranCompiler.f.o  -o cmTC_180fc 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-
-Detecting Fortran compiler ABI info compiled with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_32a4e/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_32a4e.dir/build.make CMakeFiles/cmTC_32a4e.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building Fortran object CMakeFiles/cmTC_32a4e.dir/CMakeFortranCompilerABI.F.o
-/usr/bin/gfortran    -c /home/maytee/software/clion-2018.1/bin/cmake/share/cmake-3.10/Modules/CMakeFortranCompilerABI.F -o CMakeFiles/cmTC_32a4e.dir/CMakeFortranCompilerABI.F.o
-Linking Fortran executable cmTC_32a4e
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_32a4e.dir/link.txt --verbose=1
-/usr/bin/gfortran   -v   CMakeFiles/cmTC_32a4e.dir/CMakeFortranCompilerABI.F.o  -o cmTC_32a4e 
-Driving: /usr/bin/gfortran -v CMakeFiles/cmTC_32a4e.dir/CMakeFortranCompilerABI.F.o -o cmTC_32a4e -l gfortran -l m -shared-libgcc
-Using built-in specs.
-COLLECT_GCC=/usr/bin/gfortran
-COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/6/lto-wrapper
-Target: x86_64-linux-gnu
-Configured with: ../src/configure -v --with-pkgversion='Ubuntu 6.2.0-7ubuntu11' --with-bugurl=file:///usr/share/doc/gcc-6/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-6 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-6-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-6-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-6-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
-Thread model: posix
-gcc version 6.2.0 20161018 (Ubuntu 6.2.0-7ubuntu11) 
-Reading specs from /usr/lib/gcc/x86_64-linux-gnu/6/libgfortran.spec
-rename spec lib to liborig
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_32a4e' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/6/:/usr/lib/gcc/x86_64-linux-gnu/6/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/6/:/usr/lib/gcc/x86_64-linux-gnu/
-LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/6/:/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/6/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/6/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_32a4e' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/6/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/6/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/6/lto-wrapper -plugin-opt=-fresolution=/tmp/ccm221cm.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lquadmath -plugin-opt=-pass-through=-lm -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_32a4e /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/6/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/6 -L/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/6/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/6/../../.. CMakeFiles/cmTC_32a4e.dir/CMakeFortranCompilerABI.F.o -lgfortran -lm -lgcc_s -lgcc -lquadmath -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/6/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_32a4e' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-
-Parsed Fortran implicit link information from above output:
-  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp]
-  ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_32a4e/fast"]
-  ignore line: [make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_32a4e.dir/build.make CMakeFiles/cmTC_32a4e.dir/build]
-  ignore line: [make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building Fortran object CMakeFiles/cmTC_32a4e.dir/CMakeFortranCompilerABI.F.o]
-  ignore line: [/usr/bin/gfortran    -c /home/maytee/software/clion-2018.1/bin/cmake/share/cmake-3.10/Modules/CMakeFortranCompilerABI.F -o CMakeFiles/cmTC_32a4e.dir/CMakeFortranCompilerABI.F.o]
-  ignore line: [Linking Fortran executable cmTC_32a4e]
-  ignore line: [/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_32a4e.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/gfortran   -v   CMakeFiles/cmTC_32a4e.dir/CMakeFortranCompilerABI.F.o  -o cmTC_32a4e ]
-  ignore line: [Driving: /usr/bin/gfortran -v CMakeFiles/cmTC_32a4e.dir/CMakeFortranCompilerABI.F.o -o cmTC_32a4e -l gfortran -l m -shared-libgcc]
-  ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/usr/bin/gfortran]
-  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/6/lto-wrapper]
-  ignore line: [Target: x86_64-linux-gnu]
-  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 6.2.0-7ubuntu11' --with-bugurl=file:///usr/share/doc/gcc-6/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-6 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-6-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-6-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-6-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
-  ignore line: [Thread model: posix]
-  ignore line: [gcc version 6.2.0 20161018 (Ubuntu 6.2.0-7ubuntu11) ]
-  ignore line: [Reading specs from /usr/lib/gcc/x86_64-linux-gnu/6/libgfortran.spec]
-  ignore line: [rename spec lib to liborig]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_32a4e' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/6/:/usr/lib/gcc/x86_64-linux-gnu/6/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/6/:/usr/lib/gcc/x86_64-linux-gnu/]
-  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/6/:/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/6/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/6/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_32a4e' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/6/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/6/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/6/lto-wrapper -plugin-opt=-fresolution=/tmp/ccm221cm.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lquadmath -plugin-opt=-pass-through=-lm -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_32a4e /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/6/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/6 -L/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/6/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/6/../../.. CMakeFiles/cmTC_32a4e.dir/CMakeFortranCompilerABI.F.o -lgfortran -lm -lgcc_s -lgcc -lquadmath -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/6/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crtn.o]
-    arg [/usr/lib/gcc/x86_64-linux-gnu/6/collect2] ==> ignore
-    arg [-plugin] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/6/liblto_plugin.so] ==> ignore
-    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/6/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccm221cm.res] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-    arg [-plugin-opt=-pass-through=-lquadmath] ==> ignore
-    arg [-plugin-opt=-pass-through=-lm] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-    arg [-plugin-opt=-pass-through=-lc] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-    arg [--sysroot=/] ==> ignore
-    arg [--build-id] ==> ignore
-    arg [--eh-frame-hdr] ==> ignore
-    arg [-m] ==> ignore
-    arg [elf_x86_64] ==> ignore
-    arg [--hash-style=gnu] ==> ignore
-    arg [--as-needed] ==> ignore
-    arg [-dynamic-linker] ==> ignore
-    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
-    arg [-pie] ==> ignore
-    arg [-znow] ==> ignore
-    arg [-zrelro] ==> ignore
-    arg [-o] ==> ignore
-    arg [cmTC_32a4e] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crti.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/6/crtbeginS.o] ==> ignore
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/6] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/6]
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu]
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/6/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/6/../../../../lib]
-    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
-    arg [-L/lib/../lib] ==> dir [/lib/../lib]
-    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
-    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/6/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/6/../../..]
-    arg [CMakeFiles/cmTC_32a4e.dir/CMakeFortranCompilerABI.F.o] ==> ignore
-    arg [-lgfortran] ==> lib [gfortran]
-    arg [-lm] ==> lib [m]
-    arg [-lgcc_s] ==> lib [gcc_s]
-    arg [-lgcc] ==> lib [gcc]
-    arg [-lquadmath] ==> lib [quadmath]
-    arg [-lm] ==> lib [m]
-    arg [-lgcc_s] ==> lib [gcc_s]
-    arg [-lgcc] ==> lib [gcc]
-    arg [-lc] ==> lib [c]
-    arg [-lgcc_s] ==> lib [gcc_s]
-    arg [-lgcc] ==> lib [gcc]
-    arg [/usr/lib/gcc/x86_64-linux-gnu/6/crtendS.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu/crtn.o] ==> ignore
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/6] ==> [/usr/lib/gcc/x86_64-linux-gnu/6]
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/6/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/6/../../../../lib] ==> [/usr/lib]
-  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
-  collapse library dir [/lib/../lib] ==> [/lib]
-  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
-  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/6/../../..] ==> [/usr/lib]
-  implicit libs: [gfortran;m;gcc_s;gcc;quadmath;m;gcc_s;gcc;c;gcc_s;gcc]
-  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/6;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
-  implicit fwks: []
-
-
-Determining if the Fortran compiler supports Fortran 90 passed with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_e3bdb/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_e3bdb.dir/build.make CMakeFiles/cmTC_e3bdb.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building Fortran object CMakeFiles/cmTC_e3bdb.dir/testFortranCompilerF90.f90.o
-/usr/bin/gfortran    -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/testFortranCompilerF90.f90 -o CMakeFiles/cmTC_e3bdb.dir/testFortranCompilerF90.f90.o
-Linking Fortran executable cmTC_e3bdb
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e3bdb.dir/link.txt --verbose=1
-/usr/bin/gfortran      CMakeFiles/cmTC_e3bdb.dir/testFortranCompilerF90.f90.o  -o cmTC_e3bdb 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-
-Performing C++ SOURCE FILE Test SUPERLU_HAS_GLOBAL_MEM_USAGE_T succeeded with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_f44b5/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_f44b5.dir/build.make CMakeFiles/cmTC_f44b5.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f44b5.dir/src.cxx.o
-/usr/bin/c++   -I/usr/include/superlu  -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -ansi -DSUPERLU_HAS_GLOBAL_MEM_USAGE_T   -o CMakeFiles/cmTC_f44b5.dir/src.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
-/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx:6:15: warning: unused variable ‘mem’ [-Wunused-variable]
-   mem_usage_t mem;
-               ^~~
-Linking CXX executable cmTC_f44b5
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f44b5.dir/link.txt --verbose=1
-/usr/bin/c++   -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -ansi -DSUPERLU_HAS_GLOBAL_MEM_USAGE_T    -rdynamic CMakeFiles/cmTC_f44b5.dir/src.cxx.o  -o cmTC_f44b5 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-Source file was:
-
-typedef int int_t;
-#include <supermatrix.h>
-#include <slu_util.h>
-int main() {
-  mem_usage_t mem;
-  return 0;
-}
-Performing C++ SOURCE FILE Test SUPERLU_HAS_CLEAN_ENUMS succeeded with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_ce345/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_ce345.dir/build.make CMakeFiles/cmTC_ce345.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_ce345.dir/src.cxx.o
-/usr/bin/c++   -I/usr/include/superlu  -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -ansi -DSUPERLU_HAS_CLEAN_ENUMS   -o CMakeFiles/cmTC_ce345.dir/src.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_ce345
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ce345.dir/link.txt --verbose=1
-/usr/bin/c++   -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -ansi -DSUPERLU_HAS_CLEAN_ENUMS    -rdynamic CMakeFiles/cmTC_ce345.dir/src.cxx.o  -o cmTC_ce345 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-Source file was:
-
-typedef int int_t;
-#include <supermatrix.h>
-#include <superlu_enum_consts.h>
-int main() {
-  return SLU_SINGLE;
-}
-Performing C++ SOURCE FILE Test COMPILER_SUPPORT_FASTMATH succeeded with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_68f94/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_68f94.dir/build.make CMakeFiles/cmTC_68f94.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_68f94.dir/src.cxx.o
-/usr/bin/c++    -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -ansi -DCOMPILER_SUPPORT_FASTMATH   -ffast-math -o CMakeFiles/cmTC_68f94.dir/src.cxx.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_68f94
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_68f94.dir/link.txt --verbose=1
-/usr/bin/c++   -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wdouble-promotion -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -ansi -DCOMPILER_SUPPORT_FASTMATH    -rdynamic CMakeFiles/cmTC_68f94.dir/src.cxx.o  -o cmTC_68f94 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-Source file was:
-int main() { return 0; }
-Determining if the include file pthread.h exists passed with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_cb6ce/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_cb6ce.dir/build.make CMakeFiles/cmTC_cb6ce.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_cb6ce.dir/CheckIncludeFile.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_cb6ce.dir/CheckIncludeFile.c.o   -c /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_cb6ce
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cb6ce.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_cb6ce.dir/CheckIncludeFile.c.o  -o cmTC_cb6ce 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-
-Determining if the function pthread_create exists in the pthread passed with the following output:
-Change Dir: /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_31c14/fast"
-make[1]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_31c14.dir/build.make CMakeFiles/cmTC_31c14.dir/build
-make[2]: Entering directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_31c14.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_31c14.dir/CheckFunctionExists.c.o   -c /home/maytee/software/clion-2018.1/bin/cmake/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_31c14
-/home/maytee/software/clion-2018.1/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31c14.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_31c14.dir/CheckFunctionExists.c.o  -o cmTC_31c14 -lpthread 
-make[2]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-make[1]: Leaving directory '/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles/CMakeTmp'
-
-

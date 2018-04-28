@@ -12,7 +12,16 @@
 class AdvectionUpwind : public AdvectionOperator{
 public:
     void calculateAdvectionFluxesCartesian(CartesianGrid &grid);
+
+    // Calculate cell-averaged velocities at element centers
     void calculateInterpolationValues(CartesianGrid& grid);
+
+    // Apply Dirichlet BCs to interpolated face values; should be called in calculateInterpolationValues
+    void applyDirichletBCs(CartesianGrid &grid);
+
+    void clearData();
+    // Apply Neumann BCs
+    //void applyNeumannBCs(CartesianGrid& grid);
 };
 
 

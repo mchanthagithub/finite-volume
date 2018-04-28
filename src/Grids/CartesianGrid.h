@@ -35,7 +35,8 @@ class CartesianGrid : public Grid
 {
 public:
     // Takes number of elements in X and Y and length of X and Y sides
-    CartesianGrid(int Nx, int Ny, double Lx, double Ly);
+    CartesianGrid();
+    CartesianGrid(int Nx, int Ny, double Lx, double Ly, double smallX, double smallY);
     void setVariableSizes(int nCells, int nFaces, int nCorners);
     void generateMesh();
 
@@ -48,6 +49,8 @@ public:
     double Ly;
     double delX;
     double delY;
+    double minX;
+    double minY;
 };
 
 

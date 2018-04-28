@@ -5,6 +5,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/finiteVolumeSolver.dir/OutputUtilities/OutputUtilities.cpp.o"
   "CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.o"
   "CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o"
+  "CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.o"
+  "CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/ForwardEuler.cpp.o"
+  "CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.o"
   "../bin/finiteVolumeSolver.pdb"
   "../bin/finiteVolumeSolver"
 )
