@@ -8,6 +8,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.o"
   "CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/ForwardEuler.cpp.o"
   "CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.o"
+  "CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionOperator.cpp.o"
+  "CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.o"
+  "CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.o"
+  "CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.o"
   "../bin/finiteVolumeSolver.pdb"
   "../bin/finiteVolumeSolver"
 )

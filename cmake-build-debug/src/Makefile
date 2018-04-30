@@ -179,6 +179,60 @@ AdvectionOperators/AdvectionUpwind.cpp.s:
 	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.s
 .PHONY : AdvectionOperators/AdvectionUpwind.cpp.s
 
+CalculusFunctions/CalculusFunctions.o: CalculusFunctions/CalculusFunctions.cpp.o
+
+.PHONY : CalculusFunctions/CalculusFunctions.o
+
+# target to build an object file
+CalculusFunctions/CalculusFunctions.cpp.o:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.o
+.PHONY : CalculusFunctions/CalculusFunctions.cpp.o
+
+CalculusFunctions/CalculusFunctions.i: CalculusFunctions/CalculusFunctions.cpp.i
+
+.PHONY : CalculusFunctions/CalculusFunctions.i
+
+# target to preprocess a source file
+CalculusFunctions/CalculusFunctions.cpp.i:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.i
+.PHONY : CalculusFunctions/CalculusFunctions.cpp.i
+
+CalculusFunctions/CalculusFunctions.s: CalculusFunctions/CalculusFunctions.cpp.s
+
+.PHONY : CalculusFunctions/CalculusFunctions.s
+
+# target to generate assembly for a file
+CalculusFunctions/CalculusFunctions.cpp.s:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.s
+.PHONY : CalculusFunctions/CalculusFunctions.cpp.s
+
+DiffusionOperators/DiffusionOperator.o: DiffusionOperators/DiffusionOperator.cpp.o
+
+.PHONY : DiffusionOperators/DiffusionOperator.o
+
+# target to build an object file
+DiffusionOperators/DiffusionOperator.cpp.o:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionOperator.cpp.o
+.PHONY : DiffusionOperators/DiffusionOperator.cpp.o
+
+DiffusionOperators/DiffusionOperator.i: DiffusionOperators/DiffusionOperator.cpp.i
+
+.PHONY : DiffusionOperators/DiffusionOperator.i
+
+# target to preprocess a source file
+DiffusionOperators/DiffusionOperator.cpp.i:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionOperator.cpp.i
+.PHONY : DiffusionOperators/DiffusionOperator.cpp.i
+
+DiffusionOperators/DiffusionOperator.s: DiffusionOperators/DiffusionOperator.cpp.s
+
+.PHONY : DiffusionOperators/DiffusionOperator.s
+
+# target to generate assembly for a file
+DiffusionOperators/DiffusionOperator.cpp.s:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionOperator.cpp.s
+.PHONY : DiffusionOperators/DiffusionOperator.cpp.s
+
 Grids/CartesianGrid.o: Grids/CartesianGrid.cpp.o
 
 .PHONY : Grids/CartesianGrid.o
@@ -287,6 +341,60 @@ OutputUtilities/OutputUtilities.cpp.s:
 	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/OutputUtilities/OutputUtilities.cpp.s
 .PHONY : OutputUtilities/OutputUtilities.cpp.s
 
+PressureOperators/ExplicitPressure.o: PressureOperators/ExplicitPressure.cpp.o
+
+.PHONY : PressureOperators/ExplicitPressure.o
+
+# target to build an object file
+PressureOperators/ExplicitPressure.cpp.o:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.o
+.PHONY : PressureOperators/ExplicitPressure.cpp.o
+
+PressureOperators/ExplicitPressure.i: PressureOperators/ExplicitPressure.cpp.i
+
+.PHONY : PressureOperators/ExplicitPressure.i
+
+# target to preprocess a source file
+PressureOperators/ExplicitPressure.cpp.i:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.i
+.PHONY : PressureOperators/ExplicitPressure.cpp.i
+
+PressureOperators/ExplicitPressure.s: PressureOperators/ExplicitPressure.cpp.s
+
+.PHONY : PressureOperators/ExplicitPressure.s
+
+# target to generate assembly for a file
+PressureOperators/ExplicitPressure.cpp.s:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.s
+.PHONY : PressureOperators/ExplicitPressure.cpp.s
+
+PressureOperators/PressureOperator.o: PressureOperators/PressureOperator.cpp.o
+
+.PHONY : PressureOperators/PressureOperator.o
+
+# target to build an object file
+PressureOperators/PressureOperator.cpp.o:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.o
+.PHONY : PressureOperators/PressureOperator.cpp.o
+
+PressureOperators/PressureOperator.i: PressureOperators/PressureOperator.cpp.i
+
+.PHONY : PressureOperators/PressureOperator.i
+
+# target to preprocess a source file
+PressureOperators/PressureOperator.cpp.i:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.i
+.PHONY : PressureOperators/PressureOperator.cpp.i
+
+PressureOperators/PressureOperator.s: PressureOperators/PressureOperator.cpp.s
+
+.PHONY : PressureOperators/PressureOperator.s
+
+# target to generate assembly for a file
+PressureOperators/PressureOperator.cpp.s:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.s
+.PHONY : PressureOperators/PressureOperator.cpp.s
+
 TimeIntegrators/ForwardEuler.o: TimeIntegrators/ForwardEuler.cpp.o
 
 .PHONY : TimeIntegrators/ForwardEuler.o
@@ -383,6 +491,12 @@ help:
 	@echo "... AdvectionOperators/AdvectionUpwind.o"
 	@echo "... AdvectionOperators/AdvectionUpwind.i"
 	@echo "... AdvectionOperators/AdvectionUpwind.s"
+	@echo "... CalculusFunctions/CalculusFunctions.o"
+	@echo "... CalculusFunctions/CalculusFunctions.i"
+	@echo "... CalculusFunctions/CalculusFunctions.s"
+	@echo "... DiffusionOperators/DiffusionOperator.o"
+	@echo "... DiffusionOperators/DiffusionOperator.i"
+	@echo "... DiffusionOperators/DiffusionOperator.s"
 	@echo "... Grids/CartesianGrid.o"
 	@echo "... Grids/CartesianGrid.i"
 	@echo "... Grids/CartesianGrid.s"
@@ -395,6 +509,12 @@ help:
 	@echo "... OutputUtilities/OutputUtilities.o"
 	@echo "... OutputUtilities/OutputUtilities.i"
 	@echo "... OutputUtilities/OutputUtilities.s"
+	@echo "... PressureOperators/ExplicitPressure.o"
+	@echo "... PressureOperators/ExplicitPressure.i"
+	@echo "... PressureOperators/ExplicitPressure.s"
+	@echo "... PressureOperators/PressureOperator.o"
+	@echo "... PressureOperators/PressureOperator.i"
+	@echo "... PressureOperators/PressureOperator.s"
 	@echo "... TimeIntegrators/ForwardEuler.o"
 	@echo "... TimeIntegrators/ForwardEuler.i"
 	@echo "... TimeIntegrators/ForwardEuler.s"

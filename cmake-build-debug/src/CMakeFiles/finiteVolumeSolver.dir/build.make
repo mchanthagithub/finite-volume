@@ -273,6 +273,102 @@ src/CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.o.provides: src/CMa
 src/CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.o.provides.build: src/CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.o
 
 
+src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionOperator.cpp.o: src/CMakeFiles/finiteVolumeSolver.dir/flags.make
+src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionOperator.cpp.o: ../src/DiffusionOperators/DiffusionOperator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionOperator.cpp.o"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionOperator.cpp.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/src/DiffusionOperators/DiffusionOperator.cpp
+
+src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionOperator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionOperator.cpp.i"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maytee/Documents/2.29/finiteVolumeSolver/src/DiffusionOperators/DiffusionOperator.cpp > CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionOperator.cpp.i
+
+src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionOperator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionOperator.cpp.s"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maytee/Documents/2.29/finiteVolumeSolver/src/DiffusionOperators/DiffusionOperator.cpp -o CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionOperator.cpp.s
+
+src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionOperator.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionOperator.cpp.o.requires
+
+src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionOperator.cpp.o.provides: src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionOperator.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionOperator.cpp.o.provides.build
+.PHONY : src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionOperator.cpp.o.provides
+
+src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionOperator.cpp.o.provides.build: src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionOperator.cpp.o
+
+
+src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.o: src/CMakeFiles/finiteVolumeSolver.dir/flags.make
+src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.o: ../src/PressureOperators/PressureOperator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.o"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/src/PressureOperators/PressureOperator.cpp
+
+src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.i"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maytee/Documents/2.29/finiteVolumeSolver/src/PressureOperators/PressureOperator.cpp > CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.i
+
+src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.s"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maytee/Documents/2.29/finiteVolumeSolver/src/PressureOperators/PressureOperator.cpp -o CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.s
+
+src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.o.requires
+
+src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.o.provides: src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.o.provides.build
+.PHONY : src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.o.provides
+
+src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.o.provides.build: src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.o
+
+
+src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.o: src/CMakeFiles/finiteVolumeSolver.dir/flags.make
+src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.o: ../src/PressureOperators/ExplicitPressure.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.o"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/src/PressureOperators/ExplicitPressure.cpp
+
+src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.i"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maytee/Documents/2.29/finiteVolumeSolver/src/PressureOperators/ExplicitPressure.cpp > CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.i
+
+src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.s"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maytee/Documents/2.29/finiteVolumeSolver/src/PressureOperators/ExplicitPressure.cpp -o CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.s
+
+src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.o.requires
+
+src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.o.provides: src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.o.provides.build
+.PHONY : src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.o.provides
+
+src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.o.provides.build: src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.o
+
+
+src/CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.o: src/CMakeFiles/finiteVolumeSolver.dir/flags.make
+src/CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.o: ../src/CalculusFunctions/CalculusFunctions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.o"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/src/CalculusFunctions/CalculusFunctions.cpp
+
+src/CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.i"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maytee/Documents/2.29/finiteVolumeSolver/src/CalculusFunctions/CalculusFunctions.cpp > CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.i
+
+src/CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.s"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maytee/Documents/2.29/finiteVolumeSolver/src/CalculusFunctions/CalculusFunctions.cpp -o CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.s
+
+src/CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.o.requires
+
+src/CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.o.provides: src/CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.o.provides.build
+.PHONY : src/CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.o.provides
+
+src/CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.o.provides.build: src/CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.o
+
+
 # Object files for target finiteVolumeSolver
 finiteVolumeSolver_OBJECTS = \
 "CMakeFiles/finiteVolumeSolver.dir/main.cpp.o" \
@@ -283,7 +379,11 @@ finiteVolumeSolver_OBJECTS = \
 "CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o" \
 "CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.o" \
 "CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/ForwardEuler.cpp.o" \
-"CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.o"
+"CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.o" \
+"CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionOperator.cpp.o" \
+"CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.o" \
+"CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.o" \
+"CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.o"
 
 # External object files for target finiteVolumeSolver
 finiteVolumeSolver_EXTERNAL_OBJECTS =
@@ -297,9 +397,13 @@ bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators
 bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.o
 bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/ForwardEuler.cpp.o
 bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.o
+bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionOperator.cpp.o
+bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.o
+bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.o
+bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.o
 bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/build.make
 bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable ../bin/finiteVolumeSolver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable ../bin/finiteVolumeSolver"
 	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/finiteVolumeSolver.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -316,6 +420,10 @@ src/CMakeFiles/finiteVolumeSolver.dir/requires: src/CMakeFiles/finiteVolumeSolve
 src/CMakeFiles/finiteVolumeSolver.dir/requires: src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.o.requires
 src/CMakeFiles/finiteVolumeSolver.dir/requires: src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/ForwardEuler.cpp.o.requires
 src/CMakeFiles/finiteVolumeSolver.dir/requires: src/CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.o.requires
+src/CMakeFiles/finiteVolumeSolver.dir/requires: src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionOperator.cpp.o.requires
+src/CMakeFiles/finiteVolumeSolver.dir/requires: src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.o.requires
+src/CMakeFiles/finiteVolumeSolver.dir/requires: src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.o.requires
+src/CMakeFiles/finiteVolumeSolver.dir/requires: src/CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.o.requires
 
 .PHONY : src/CMakeFiles/finiteVolumeSolver.dir/requires
 

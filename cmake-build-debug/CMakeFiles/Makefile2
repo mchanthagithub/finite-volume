@@ -69,6 +69,8 @@ src/all: src/OutputUtilities/all
 src/all: src/DiffusionOperators/all
 src/all: src/AdvectionOperators/all
 src/all: src/TimeIntegrators/all
+src/all: src/CalculusFunctions/all
+src/all: src/PressureOperators/all
 
 .PHONY : src/all
 
@@ -79,6 +81,8 @@ src/clean: src/OutputUtilities/clean
 src/clean: src/DiffusionOperators/clean
 src/clean: src/AdvectionOperators/clean
 src/clean: src/TimeIntegrators/clean
+src/clean: src/CalculusFunctions/clean
+src/clean: src/PressureOperators/clean
 
 .PHONY : src/clean
 
@@ -88,6 +92,8 @@ src/preinstall: src/OutputUtilities/preinstall
 src/preinstall: src/DiffusionOperators/preinstall
 src/preinstall: src/AdvectionOperators/preinstall
 src/preinstall: src/TimeIntegrators/preinstall
+src/preinstall: src/CalculusFunctions/preinstall
+src/preinstall: src/PressureOperators/preinstall
 
 .PHONY : src/preinstall
 
@@ -98,7 +104,7 @@ src/preinstall: src/TimeIntegrators/preinstall
 src/CMakeFiles/finiteVolumeSolver.dir/all:
 	$(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/depend
 	$(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target finiteVolumeSolver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14 "Built target finiteVolumeSolver"
 .PHONY : src/CMakeFiles/finiteVolumeSolver.dir/all
 
 # Include target in all.
@@ -108,7 +114,7 @@ all: src/CMakeFiles/finiteVolumeSolver.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/finiteVolumeSolver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/finiteVolumeSolver.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles 0
 .PHONY : src/CMakeFiles/finiteVolumeSolver.dir/rule
@@ -217,6 +223,42 @@ src/TimeIntegrators/clean:
 src/TimeIntegrators/preinstall:
 
 .PHONY : src/TimeIntegrators/preinstall
+
+#=============================================================================
+# Directory level rules for directory src/CalculusFunctions
+
+# Convenience name for "all" pass in the directory.
+src/CalculusFunctions/all:
+
+.PHONY : src/CalculusFunctions/all
+
+# Convenience name for "clean" pass in the directory.
+src/CalculusFunctions/clean:
+
+.PHONY : src/CalculusFunctions/clean
+
+# Convenience name for "preinstall" pass in the directory.
+src/CalculusFunctions/preinstall:
+
+.PHONY : src/CalculusFunctions/preinstall
+
+#=============================================================================
+# Directory level rules for directory src/PressureOperators
+
+# Convenience name for "all" pass in the directory.
+src/PressureOperators/all:
+
+.PHONY : src/PressureOperators/all
+
+# Convenience name for "clean" pass in the directory.
+src/PressureOperators/clean:
+
+.PHONY : src/PressureOperators/clean
+
+# Convenience name for "preinstall" pass in the directory.
+src/PressureOperators/preinstall:
+
+.PHONY : src/PressureOperators/preinstall
 
 #=============================================================================
 # Special targets to cleanup operation of make.

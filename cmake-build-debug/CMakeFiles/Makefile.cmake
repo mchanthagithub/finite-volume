@@ -16,9 +16,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "src/include/eigen/Eigen3Targets.cmake"
   "../src/AdvectionOperators/CMakeLists.txt"
   "../src/CMakeLists.txt"
+  "../src/CalculusFunctions/CMakeLists.txt"
   "../src/DiffusionOperators/CMakeLists.txt"
   "../src/Grids/CMakeLists.txt"
   "../src/OutputUtilities/CMakeLists.txt"
+  "../src/PressureOperators/CMakeLists.txt"
   "../src/TimeIntegrators/CMakeLists.txt"
   "/home/maytee/software/clion-2018.1/bin/cmake/share/cmake-3.10/Modules/CMakeCInformation.cmake"
   "/home/maytee/software/clion-2018.1/bin/cmake/share/cmake-3.10/Modules/CMakeCXXInformation.cmake"
@@ -56,6 +58,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "src/DiffusionOperators/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/AdvectionOperators/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/TimeIntegrators/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/CalculusFunctions/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/PressureOperators/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

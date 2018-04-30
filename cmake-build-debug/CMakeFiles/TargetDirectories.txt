@@ -13,3 +13,7 @@
 /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/AdvectionOperators/CMakeFiles/edit_cache.dir
 /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/TimeIntegrators/CMakeFiles/rebuild_cache.dir
 /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/TimeIntegrators/CMakeFiles/edit_cache.dir
+/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/CalculusFunctions/CMakeFiles/rebuild_cache.dir
+/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/CalculusFunctions/CMakeFiles/edit_cache.dir
+/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/PressureOperators/CMakeFiles/rebuild_cache.dir
+/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/PressureOperators/CMakeFiles/edit_cache.dir

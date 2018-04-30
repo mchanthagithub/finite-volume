@@ -5,7 +5,7 @@
 		<Option title="Project"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\Grids\;CMake Files\src\OutputUtilities\;CMake Files\src\DiffusionOperators\;CMake Files\src\AdvectionOperators\;CMake Files\src\TimeIntegrators\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\src\;CMake Files\cmake-build-debug\src\include\;CMake Files\cmake-build-debug\src\include\eigen\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\Grids\;CMake Files\src\OutputUtilities\;CMake Files\src\DiffusionOperators\;CMake Files\src\AdvectionOperators\;CMake Files\src\TimeIntegrators\;CMake Files\src\CalculusFunctions\;CMake Files\src\PressureOperators\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\src\;CMake Files\cmake-build-debug\src\include\;CMake Files\cmake-build-debug\src\include\eigen\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug"/>
@@ -98,6 +98,18 @@
 		<Unit filename="/home/maytee/Documents/2.29/finiteVolumeSolver/src/AdvectionOperators/AdvectionUpwind.h">
 			<Option target="finiteVolumeSolver"/>
 		</Unit>
+		<Unit filename="/home/maytee/Documents/2.29/finiteVolumeSolver/src/CalculusFunctions/CalculusFunctions.cpp">
+			<Option target="finiteVolumeSolver"/>
+		</Unit>
+		<Unit filename="/home/maytee/Documents/2.29/finiteVolumeSolver/src/CalculusFunctions/CalculusFunctions.h">
+			<Option target="finiteVolumeSolver"/>
+		</Unit>
+		<Unit filename="/home/maytee/Documents/2.29/finiteVolumeSolver/src/DiffusionOperators/DiffusionOperator.cpp">
+			<Option target="finiteVolumeSolver"/>
+		</Unit>
+		<Unit filename="/home/maytee/Documents/2.29/finiteVolumeSolver/src/DiffusionOperators/DiffusionOperator.h">
+			<Option target="finiteVolumeSolver"/>
+		</Unit>
 		<Unit filename="/home/maytee/Documents/2.29/finiteVolumeSolver/src/Grids/CartesianGrid.cpp">
 			<Option target="finiteVolumeSolver"/>
 		</Unit>
@@ -120,6 +132,18 @@
 			<Option target="finiteVolumeSolver"/>
 		</Unit>
 		<Unit filename="/home/maytee/Documents/2.29/finiteVolumeSolver/src/OutputUtilities/OutputUtilities.h">
+			<Option target="finiteVolumeSolver"/>
+		</Unit>
+		<Unit filename="/home/maytee/Documents/2.29/finiteVolumeSolver/src/PressureOperators/ExplicitPressure.cpp">
+			<Option target="finiteVolumeSolver"/>
+		</Unit>
+		<Unit filename="/home/maytee/Documents/2.29/finiteVolumeSolver/src/PressureOperators/ExplicitPressure.h">
+			<Option target="finiteVolumeSolver"/>
+		</Unit>
+		<Unit filename="/home/maytee/Documents/2.29/finiteVolumeSolver/src/PressureOperators/PressureOperator.cpp">
+			<Option target="finiteVolumeSolver"/>
+		</Unit>
+		<Unit filename="/home/maytee/Documents/2.29/finiteVolumeSolver/src/PressureOperators/PressureOperator.h">
 			<Option target="finiteVolumeSolver"/>
 		</Unit>
 		<Unit filename="/home/maytee/Documents/2.29/finiteVolumeSolver/src/TimeIntegrators/ForwardEuler.cpp">
@@ -157,6 +181,12 @@
 		</Unit>
 		<Unit filename="/home/maytee/Documents/2.29/finiteVolumeSolver/src/TimeIntegrators/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\TimeIntegrators\"/>
+		</Unit>
+		<Unit filename="/home/maytee/Documents/2.29/finiteVolumeSolver/src/CalculusFunctions/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\CalculusFunctions\"/>
+		</Unit>
+		<Unit filename="/home/maytee/Documents/2.29/finiteVolumeSolver/src/PressureOperators/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\PressureOperators\"/>
 		</Unit>
 		<Unit filename="/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/include/eigen/Eigen3Config.cmake">
 			<Option virtualFolder="CMake Files\cmake-build-debug\src\include\eigen\"/>

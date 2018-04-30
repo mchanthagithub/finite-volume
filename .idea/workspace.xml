@@ -12,75 +12,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f98b5831-ca57-466b-a0d8-e90ba7e88387" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Grids/PlottingGrid.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Grids/PlottingGrid.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TimeIntegrators/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TimeIntegrators/ForwardEuler.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TimeIntegrators/ForwardEuler.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TimeIntegrators/TimeIntegrator.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TimeIntegrators/TimeIntegrator.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CalculusFunctions/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CalculusFunctions/CalculusFunctions.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CalculusFunctions/CalculusFunctions.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DiffusionOperators/DiffusionOperator.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DiffusionOperators/DiffusionOperator.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PressureOperators/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PressureOperators/ExplicitPressure.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PressureOperators/ExplicitPressure.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PressureOperators/PressureOperator.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PressureOperators/PressureOperator.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cellData.vtu" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.2/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.2/CMakeDetermineCompilerABI_Fortran.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.2/CMakeFortranCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.2/CompilerIdFortran/CMakeFortranCompilerId.F" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.10.2/CompilerIdFortran/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/finiteVolumeSolver.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/finiteVolumeSolver.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/finiteVolumeSolver.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/finiteVolumeSolver.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/finiteVolumeSolver.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/finiteVolumeSolver.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/finiteVolumeSolver.dir/progress.make" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/solver.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/solver.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/solver.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/solver.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/solver.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/solver.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/solver.dir/progress.make" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Project.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Project.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/bin/finiteVolumeSolver" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/bin/finiteVolumeSolver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionOperator.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/Grids/CartesianGrid.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/Grids/CartesianGrid.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/OutputUtilities/OutputUtilities.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/OutputUtilities/OutputUtilities.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/cmake_install.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/finiteVolumeSolver.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/finiteVolumeSolver.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceData.vtu" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdvectionOperators/AdvectionOperator.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdvectionOperators/AdvectionOperator.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdvectionOperators/AdvectionUpwind.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdvectionOperators/AdvectionUpwind.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdvectionOperators/AdvectionUpwind.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdvectionOperators/AdvectionUpwind.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Grids/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grids/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Grids/CartesianGrid.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grids/CartesianGrid.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Grids/CartesianGrid.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grids/CartesianGrid.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Grids/Grid.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grids/Grid.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OutputUtilities/OutputUtilities.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/OutputUtilities/OutputUtilities.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OutputUtilities/OutputUtilities.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/OutputUtilities/OutputUtilities.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.vtu" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TimeIntegrators/ForwardEuler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/TimeIntegrators/ForwardEuler.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -95,12 +55,12 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-45">
-              <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+            <state relative-caret-position="215">
+              <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
               <folding>
                 <element signature="e#52#71#0" expanded="true" />
               </folding>
@@ -108,47 +68,65 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OutputUtilities.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OutputUtilities/OutputUtilities.cpp">
+      <file leaf-file-name="ExplicitPressure.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PressureOperators/ExplicitPressure.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="116" selection-start-line="116" selection-end-line="116" />
+            <state relative-caret-position="120">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CartesianGrid.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Grids/CartesianGrid.cpp">
+      <file leaf-file-name="ExplicitPressure.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PressureOperators/ExplicitPressure.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="131" column="6" selection-start-line="131" selection-start-column="6" selection-end-line="131" selection-end-column="6" />
+            <state relative-caret-position="133">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdvectionUpwind.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AdvectionOperators/AdvectionUpwind.cpp">
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="290" selection-start-line="290" selection-end-line="290" />
+            <state relative-caret-position="150">
+              <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CartesianGrid.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Grids/CartesianGrid.h">
+      <file leaf-file-name="CalculusFunctions.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/CalculusFunctions/CalculusFunctions.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+            <state relative-caret-position="268">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Grid.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Grids/Grid.h">
+      <file leaf-file-name="CalculusFunctions.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CalculusFunctions/CalculusFunctions.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="44" selection-start-line="44" selection-end-line="44" />
+            <state relative-caret-position="165">
+              <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdvectionOperator.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AdvectionOperators/AdvectionOperator.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ForwardEuler.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TimeIntegrators/ForwardEuler.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -178,9 +156,7 @@
         <option value="$PROJECT_DIR$/src/AdvectionOperators/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/Grids/Grid.h" />
         <option value="$PROJECT_DIR$/src/TimeIntegrator/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/src/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/TimeIntegrators/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/src/TimeIntegrators/ForwardEuler.cpp" />
         <option value="$PROJECT_DIR$/src/TimeIntegrators/TimeIntegrator.h" />
         <option value="$PROJECT_DIR$/src/TimeIntegrators/ForwardEuler.h" />
         <option value="$PROJECT_DIR$/src/OutputUtilities/OutputUtilities.h" />
@@ -193,6 +169,16 @@
         <option value="$PROJECT_DIR$/src/OutputUtilities/OutputUtilities.cpp" />
         <option value="$PROJECT_DIR$/src/Grids/CartesianGrid.cpp" />
         <option value="$PROJECT_DIR$/src/main.cpp" />
+        <option value="$PROJECT_DIR$/src/TimeIntegrators/ForwardEuler.cpp" />
+        <option value="$PROJECT_DIR$/src/PressureOperators/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/src/PressureOperators/PressureOperator.cpp" />
+        <option value="$PROJECT_DIR$/src/PressureOperators/PressureOperator.h" />
+        <option value="$PROJECT_DIR$/src/PressureOperators/ExplicitPressure.h" />
+        <option value="$PROJECT_DIR$/src/PressureOperators/ExplicitPressure.cpp" />
+        <option value="$PROJECT_DIR$/src/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/src/CalculusFunctions/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/src/CalculusFunctions/CalculusFunctions.h" />
+        <option value="$PROJECT_DIR$/src/CalculusFunctions/CalculusFunctions.cpp" />
       </list>
     </option>
   </component>
@@ -204,10 +190,10 @@
   </component>
   <component name="OCFindUsagesOptions" text="false" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="244" />
-    <option name="y" value="230" />
+    <option name="x" value="177" />
+    <option name="y" value="82" />
     <option name="width" value="1639" />
-    <option name="height" value="750" />
+    <option name="height" value="662" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -237,19 +223,7 @@
               <item name="finiteVolumeSolver" type="b2602c69:ProjectViewProjectNode" />
               <item name="finiteVolumeSolver" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Grids" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="finiteVolumeSolver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="finiteVolumeSolver" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="OutputUtilities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="finiteVolumeSolver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="finiteVolumeSolver" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="TimeIntegrators" type="462c0819:PsiDirectoryNode" />
+              <item name="CalculusFunctions" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -469,36 +443,57 @@
       <workItem from="1524803986913" duration="11973000" />
       <workItem from="1524858195550" duration="599000" />
       <workItem from="1524878884442" duration="31000" />
-      <workItem from="1524878933946" duration="24486000" />
+      <workItem from="1524878933946" duration="24689000" />
+      <workItem from="1524928462650" duration="6000" />
+      <workItem from="1524928491412" duration="858000" />
+      <workItem from="1525044819977" duration="6033000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53269000" />
+    <option name="totallyTimeSpent" value="60369000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="244" y="230" width="1639" height="750" extended-state="0" />
+    <frame x="177" y="82" width="1639" height="662" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2495424" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2495424" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" weight="0.2650231" />
-      <window_info anchor="bottom" id="CMake" order="7" weight="0.32976827" />
+      <window_info anchor="bottom" id="CMake" order="7" visible="true" weight="0.32976827" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3266564" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39753467" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="CMake" order="10" visible="true" weight="0.32976827" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -512,6 +507,13 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Grids/Grid.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -585,22 +587,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AdvectionOperators/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cellData.vtu">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/include/eigen/Eigen/src/Core/AssignEvaluator.h">
       <provider selected="true" editor-type-id="text-editor">
@@ -651,23 +643,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TimeIntegrators/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TimeIntegrators/TimeIntegrator.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TimeIntegrators/CMakeLists.txt" />
     <entry file="file://$PROJECT_DIR$/src/include/eigen/Eigen/src/Core/CommaInitializer.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -675,13 +651,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TimeIntegrators/TimeIntegrator.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TimeIntegrators/TimeIntegrator.h" />
     <entry file="file://$PROJECT_DIR$/src/OutputUtilities/OutputUtilities.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -689,44 +659,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Grids/Grid.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TimeIntegrators/ForwardEuler.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TimeIntegrators/ForwardEuler.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="100" selection-start-line="14" selection-start-column="100" selection-end-line="14" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Grids/PlottingGrid.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Grids/PlottingGrid.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdvectionOperators/AdvectionOperator.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Grids/PlottingGrid.h" />
     <entry file="file://$PROJECT_DIR$/src/AdvectionOperators/AdvectionUpwind.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -741,48 +674,151 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Grids/Grid.h">
+    <entry file="file://$PROJECT_DIR$/src/OutputUtilities/OutputUtilities.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        <state relative-caret-position="1890">
+          <caret line="126" selection-start-line="126" selection-end-line="126" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdvectionOperators/AdvectionUpwind.cpp">
+    <entry file="file://$PROJECT_DIR$/src/Grids/Grid.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="290" selection-start-line="290" selection-end-line="290" />
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Grids/CartesianGrid.h">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Grids/CartesianGrid.cpp">
+    <entry file="file://$PROJECT_DIR$/src/DiffusionOperators/DiffusionOperator.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DiffusionOperators/DiffusionOperator.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdvectionOperators/AdvectionUpwind.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="131" column="6" selection-start-line="131" selection-start-column="6" selection-end-line="131" selection-end-column="6" />
+        <state relative-caret-position="870">
+          <caret line="59" column="32" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OutputUtilities/OutputUtilities.cpp">
+    <entry file="file://$PROJECT_DIR$/src/Grids/Grid.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="116" selection-start-line="116" selection-end-line="116" />
+        <state relative-caret-position="690">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TimeIntegrators/ForwardEuler.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TimeIntegrators/ForwardEuler.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-45">
-          <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+        <state relative-caret-position="215">
+          <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
           <folding>
             <element signature="e#52#71#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PressureOperators/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="48" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Grids/CartesianGrid.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="109" column="13" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PressureOperators/PressureOperator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
+          <folding>
+            <element signature="e#111#132#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PressureOperators/PressureOperator.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CalculusFunctions/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdvectionOperators/AdvectionOperator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PressureOperators/ExplicitPressure.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PressureOperators/ExplicitPressure.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CalculusFunctions/CalculusFunctions.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CalculusFunctions/CalculusFunctions.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
         </state>
       </provider>
     </entry>
