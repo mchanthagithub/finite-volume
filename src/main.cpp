@@ -4,6 +4,7 @@
 #include "Grids/CartesianGrid.h"
 #include "OutputUtilities/OutputUtilities.h"
 #include "AdvectionOperators/AdvectionUpwind.h"
+#include "DiffusionOperators/DiffusionCentral.h"
 #include "TimeIntegrators/TimeIntegrator.h"
 #include "TimeIntegrators/ForwardEuler.h"
 #include <Eigen/Core>
@@ -12,12 +13,12 @@ int main() {
   std::cout << "Hello, World!" << std::endl;
 
   // Generate and initialize grid
-  int numX = 30;
-  int numY = 30;
+  int numX = 20;
+  int numY = 20;
   double minX = 0.0;
   double minY = 0.0;
-  double Lx = 2.0;
-  double Ly = 2.0;
+  double Lx = 3.0;
+  double Ly = 3.0;
   CartesianGrid grid(numX,numY,Lx,Ly, minX,minY);
   CartesianGrid plottingGrid(numX-1,numY-1,Lx-grid.delX,Ly-grid.delY,grid.delX,grid.delY);
   // Set BCs on grid
@@ -26,8 +27,14 @@ int main() {
   // Initialize values on grid
   grid.setInitialValues();
 
+  // Interpolate velocity values
+  InterpolateUpwind interpObj;
+
   // Calculate advection terms
   AdvectionUpwind advectionObj;
+
+  // Calculate diffusion terms
+  DiffusionCentral diffusionObj;
 
   double finalTime = 4.0;
   double delT = 0.001;
@@ -43,8 +50,14 @@ int main() {
   ForwardEuler integrator;
   while(totalTime < finalTime)
   {
+    interpObj.clearData();
+    interpObj.interpolateVelocities(grid);
+
     advectionObj.clearData();
-    advectionObj.calculateAdvectionFluxesCartesian(grid);
+    advectionObj.calculateAdvectionFluxesCartesian(grid,interpObj);
+
+    diffusionObj.clearData();
+    //diffusionObj.calculateDiffusionFluxesCartesian(grid);
     Eigen::VectorXd oldVelocities;
     Eigen::VectorXd newVelocities;
     oldVelocities.setZero(grid.numCells*grid.nDim);
@@ -55,15 +68,17 @@ int main() {
       oldVelocities(ii*2+1) = grid.vVel(ii);
     }
     Eigen::VectorXd newPressure;
-    newPressure.setZero(grid.numCells);
+    newPressure.setZero(grid.numCells*grid.nDim);
     Eigen::VectorXd fluxTerms;
     fluxTerms.setZero(grid.numCells*grid.nDim);
     for(int ii = 0; ii < grid.numCells; ii++)
     {
       fluxTerms(ii*2) = advectionObj.totalCellAdvectionFlux(ii,0);
       fluxTerms(ii*2+1) = advectionObj.totalCellAdvectionFlux(ii,1);
+      //fluxTerms(ii*2) += diffusionObj.totalCellDiffusionFlux(ii,0);
+      //fluxTerms(ii*2+1) += diffusionObj.totalCellDiffusionFlux(ii,1);
     }
-    integrator.integrate(delT,grid,oldVelocities,newVelocities,grid.pressure,newPressure,fluxTerms);
+    integrator.integrate(delT,grid,oldVelocities,newVelocities,newPressure,newPressure,fluxTerms);
     /*
     std::cout<<"Old velocities: "<<std::endl;
     std::cout<<oldVelocities<<std::endl;

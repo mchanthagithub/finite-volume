@@ -31,6 +31,9 @@ public:
   Eigen::VectorXd vVelBCValue;
   Eigen::VectorXd pressureBCValue;
 
+  std::vector<Eigen::VectorXd> uVelNeumannBCValue;
+  std::vector<Eigen::VectorXd> vVelNeumannBCValue;
+
 
   // Tells if cell has a velocity BC
   Eigen::VectorXi cellHasVelocityBC;

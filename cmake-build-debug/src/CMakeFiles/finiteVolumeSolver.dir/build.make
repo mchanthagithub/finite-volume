@@ -369,6 +369,78 @@ src/CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.o.
 src/CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.o.provides.build: src/CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.o
 
 
+src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionCentral.cpp.o: src/CMakeFiles/finiteVolumeSolver.dir/flags.make
+src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionCentral.cpp.o: ../src/DiffusionOperators/DiffusionCentral.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionCentral.cpp.o"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionCentral.cpp.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/src/DiffusionOperators/DiffusionCentral.cpp
+
+src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionCentral.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionCentral.cpp.i"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maytee/Documents/2.29/finiteVolumeSolver/src/DiffusionOperators/DiffusionCentral.cpp > CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionCentral.cpp.i
+
+src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionCentral.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionCentral.cpp.s"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maytee/Documents/2.29/finiteVolumeSolver/src/DiffusionOperators/DiffusionCentral.cpp -o CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionCentral.cpp.s
+
+src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionCentral.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionCentral.cpp.o.requires
+
+src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionCentral.cpp.o.provides: src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionCentral.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionCentral.cpp.o.provides.build
+.PHONY : src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionCentral.cpp.o.provides
+
+src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionCentral.cpp.o.provides.build: src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionCentral.cpp.o
+
+
+src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolationOperator.cpp.o: src/CMakeFiles/finiteVolumeSolver.dir/flags.make
+src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolationOperator.cpp.o: ../src/InterpolationOperators/InterpolationOperator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolationOperator.cpp.o"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolationOperator.cpp.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/src/InterpolationOperators/InterpolationOperator.cpp
+
+src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolationOperator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolationOperator.cpp.i"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maytee/Documents/2.29/finiteVolumeSolver/src/InterpolationOperators/InterpolationOperator.cpp > CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolationOperator.cpp.i
+
+src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolationOperator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolationOperator.cpp.s"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maytee/Documents/2.29/finiteVolumeSolver/src/InterpolationOperators/InterpolationOperator.cpp -o CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolationOperator.cpp.s
+
+src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolationOperator.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolationOperator.cpp.o.requires
+
+src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolationOperator.cpp.o.provides: src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolationOperator.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolationOperator.cpp.o.provides.build
+.PHONY : src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolationOperator.cpp.o.provides
+
+src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolationOperator.cpp.o.provides.build: src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolationOperator.cpp.o
+
+
+src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateUpwind.cpp.o: src/CMakeFiles/finiteVolumeSolver.dir/flags.make
+src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateUpwind.cpp.o: ../src/InterpolationOperators/InterpolateUpwind.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateUpwind.cpp.o"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateUpwind.cpp.o -c /home/maytee/Documents/2.29/finiteVolumeSolver/src/InterpolationOperators/InterpolateUpwind.cpp
+
+src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateUpwind.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateUpwind.cpp.i"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maytee/Documents/2.29/finiteVolumeSolver/src/InterpolationOperators/InterpolateUpwind.cpp > CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateUpwind.cpp.i
+
+src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateUpwind.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateUpwind.cpp.s"
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maytee/Documents/2.29/finiteVolumeSolver/src/InterpolationOperators/InterpolateUpwind.cpp -o CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateUpwind.cpp.s
+
+src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateUpwind.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateUpwind.cpp.o.requires
+
+src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateUpwind.cpp.o.provides: src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateUpwind.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateUpwind.cpp.o.provides.build
+.PHONY : src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateUpwind.cpp.o.provides
+
+src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateUpwind.cpp.o.provides.build: src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateUpwind.cpp.o
+
+
 # Object files for target finiteVolumeSolver
 finiteVolumeSolver_OBJECTS = \
 "CMakeFiles/finiteVolumeSolver.dir/main.cpp.o" \
@@ -383,7 +455,10 @@ finiteVolumeSolver_OBJECTS = \
 "CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionOperator.cpp.o" \
 "CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.o" \
 "CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.o" \
-"CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.o"
+"CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.o" \
+"CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionCentral.cpp.o" \
+"CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolationOperator.cpp.o" \
+"CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateUpwind.cpp.o"
 
 # External object files for target finiteVolumeSolver
 finiteVolumeSolver_EXTERNAL_OBJECTS =
@@ -401,9 +476,12 @@ bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators
 bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.o
 bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.o
 bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.o
+bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionCentral.cpp.o
+bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolationOperator.cpp.o
+bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateUpwind.cpp.o
 bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/build.make
 bin/finiteVolumeSolver: src/CMakeFiles/finiteVolumeSolver.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable ../bin/finiteVolumeSolver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable ../bin/finiteVolumeSolver"
 	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/finiteVolumeSolver.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -424,6 +502,9 @@ src/CMakeFiles/finiteVolumeSolver.dir/requires: src/CMakeFiles/finiteVolumeSolve
 src/CMakeFiles/finiteVolumeSolver.dir/requires: src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.o.requires
 src/CMakeFiles/finiteVolumeSolver.dir/requires: src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.o.requires
 src/CMakeFiles/finiteVolumeSolver.dir/requires: src/CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.o.requires
+src/CMakeFiles/finiteVolumeSolver.dir/requires: src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionCentral.cpp.o.requires
+src/CMakeFiles/finiteVolumeSolver.dir/requires: src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolationOperator.cpp.o.requires
+src/CMakeFiles/finiteVolumeSolver.dir/requires: src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateUpwind.cpp.o.requires
 
 .PHONY : src/CMakeFiles/finiteVolumeSolver.dir/requires
 

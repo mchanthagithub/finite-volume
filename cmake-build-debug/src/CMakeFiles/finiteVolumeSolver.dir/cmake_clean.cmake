@@ -12,6 +12,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.o"
   "CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.o"
   "CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.o"
+  "CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionCentral.cpp.o"
+  "CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolationOperator.cpp.o"
+  "CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateUpwind.cpp.o"
   "../bin/finiteVolumeSolver.pdb"
   "../bin/finiteVolumeSolver"
 )

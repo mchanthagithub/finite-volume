@@ -4,13 +4,16 @@
 
 #include "AdvectionUpwind.h"
 #include <iostream>
-void AdvectionUpwind::calculateAdvectionFluxesCartesian(CartesianGrid &grid)
+void AdvectionUpwind::calculateAdvectionFluxesCartesian(CartesianGrid &grid, InterpolateUpwind& interp)
 {
   double rho = 1000;
+  uVelInterp = interp.uVelInterp;
+  vVelInterp = interp.vVelInterp;
+  applyDirichletBCs(grid);
   // Calculate advection flux at all surfaces for all cells, then average to obtain final flux term
   // Here use midpoint rule (fluxMid*surfaceArea = totalFlux + O(delX^2))
 
-  calculateInterpolationValues(grid);
+  //calculateInterpolationValues(grid);
   //std::cout<<"uVelInterp: "<<std::endl;
   //std::cout<<uVelInterp.transpose()<<std::endl;
 

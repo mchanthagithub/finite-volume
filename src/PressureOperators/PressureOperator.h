@@ -6,7 +6,6 @@
 #define PROJECT_PRESSUREOPERATOR_H
 
 #include "Eigen/Core"
-#include "../Grids"
 #include "../Grids/CartesianGrid.h"
 
 class PressureOperator {

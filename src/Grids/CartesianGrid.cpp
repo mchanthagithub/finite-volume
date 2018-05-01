@@ -127,16 +127,14 @@ void CartesianGrid::setInitialValues()
       double pi = 3.14159;
       if(xCoord <= 1.0 && yCoord <= 1.0)
       {
-        uVel(flatIdx) = 0.25*std::sin(pi*xCoord);
-        vVel(flatIdx) = 0.25*std::sin(pi*yCoord);
+        //uVel(flatIdx) = 0.25*std::sin(pi*xCoord);
+        //vVel(flatIdx) = 0.25*std::sin(pi*yCoord);
       }
-      /*
       else if((xCoord <= 2.0 && xCoord >=1.0) && (yCoord <= 2.0 && yCoord >=1.0))
       {
-        uVel(flatIdx) = -0.25*std::sin(pi*(xCoord-1.0));
-        vVel(flatIdx) = -0.25*std::sin(pi*(yCoord-1.0));
+        uVel(flatIdx) = 0.25*std::sin(pi*(xCoord-1.0));
+        vVel(flatIdx) = 0.25*std::sin(pi*(yCoord-1.0));
       }
-      */
     }
   }
 }

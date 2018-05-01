@@ -17,3 +17,5 @@
 /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/CalculusFunctions/CMakeFiles/edit_cache.dir
 /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/PressureOperators/CMakeFiles/rebuild_cache.dir
 /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/PressureOperators/CMakeFiles/edit_cache.dir
+/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/InterpolationOperators/CMakeFiles/rebuild_cache.dir
+/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/InterpolationOperators/CMakeFiles/edit_cache.dir

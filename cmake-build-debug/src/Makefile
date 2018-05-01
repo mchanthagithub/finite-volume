@@ -206,6 +206,33 @@ CalculusFunctions/CalculusFunctions.cpp.s:
 	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/CalculusFunctions/CalculusFunctions.cpp.s
 .PHONY : CalculusFunctions/CalculusFunctions.cpp.s
 
+DiffusionOperators/DiffusionCentral.o: DiffusionOperators/DiffusionCentral.cpp.o
+
+.PHONY : DiffusionOperators/DiffusionCentral.o
+
+# target to build an object file
+DiffusionOperators/DiffusionCentral.cpp.o:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionCentral.cpp.o
+.PHONY : DiffusionOperators/DiffusionCentral.cpp.o
+
+DiffusionOperators/DiffusionCentral.i: DiffusionOperators/DiffusionCentral.cpp.i
+
+.PHONY : DiffusionOperators/DiffusionCentral.i
+
+# target to preprocess a source file
+DiffusionOperators/DiffusionCentral.cpp.i:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionCentral.cpp.i
+.PHONY : DiffusionOperators/DiffusionCentral.cpp.i
+
+DiffusionOperators/DiffusionCentral.s: DiffusionOperators/DiffusionCentral.cpp.s
+
+.PHONY : DiffusionOperators/DiffusionCentral.s
+
+# target to generate assembly for a file
+DiffusionOperators/DiffusionCentral.cpp.s:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionCentral.cpp.s
+.PHONY : DiffusionOperators/DiffusionCentral.cpp.s
+
 DiffusionOperators/DiffusionOperator.o: DiffusionOperators/DiffusionOperator.cpp.o
 
 .PHONY : DiffusionOperators/DiffusionOperator.o
@@ -313,6 +340,60 @@ Grids/PlottingGrid.s: Grids/PlottingGrid.cpp.s
 Grids/PlottingGrid.cpp.s:
 	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.s
 .PHONY : Grids/PlottingGrid.cpp.s
+
+InterpolationOperators/InterpolateUpwind.o: InterpolationOperators/InterpolateUpwind.cpp.o
+
+.PHONY : InterpolationOperators/InterpolateUpwind.o
+
+# target to build an object file
+InterpolationOperators/InterpolateUpwind.cpp.o:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateUpwind.cpp.o
+.PHONY : InterpolationOperators/InterpolateUpwind.cpp.o
+
+InterpolationOperators/InterpolateUpwind.i: InterpolationOperators/InterpolateUpwind.cpp.i
+
+.PHONY : InterpolationOperators/InterpolateUpwind.i
+
+# target to preprocess a source file
+InterpolationOperators/InterpolateUpwind.cpp.i:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateUpwind.cpp.i
+.PHONY : InterpolationOperators/InterpolateUpwind.cpp.i
+
+InterpolationOperators/InterpolateUpwind.s: InterpolationOperators/InterpolateUpwind.cpp.s
+
+.PHONY : InterpolationOperators/InterpolateUpwind.s
+
+# target to generate assembly for a file
+InterpolationOperators/InterpolateUpwind.cpp.s:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateUpwind.cpp.s
+.PHONY : InterpolationOperators/InterpolateUpwind.cpp.s
+
+InterpolationOperators/InterpolationOperator.o: InterpolationOperators/InterpolationOperator.cpp.o
+
+.PHONY : InterpolationOperators/InterpolationOperator.o
+
+# target to build an object file
+InterpolationOperators/InterpolationOperator.cpp.o:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolationOperator.cpp.o
+.PHONY : InterpolationOperators/InterpolationOperator.cpp.o
+
+InterpolationOperators/InterpolationOperator.i: InterpolationOperators/InterpolationOperator.cpp.i
+
+.PHONY : InterpolationOperators/InterpolationOperator.i
+
+# target to preprocess a source file
+InterpolationOperators/InterpolationOperator.cpp.i:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolationOperator.cpp.i
+.PHONY : InterpolationOperators/InterpolationOperator.cpp.i
+
+InterpolationOperators/InterpolationOperator.s: InterpolationOperators/InterpolationOperator.cpp.s
+
+.PHONY : InterpolationOperators/InterpolationOperator.s
+
+# target to generate assembly for a file
+InterpolationOperators/InterpolationOperator.cpp.s:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolationOperator.cpp.s
+.PHONY : InterpolationOperators/InterpolationOperator.cpp.s
 
 OutputUtilities/OutputUtilities.o: OutputUtilities/OutputUtilities.cpp.o
 
@@ -494,6 +575,9 @@ help:
 	@echo "... CalculusFunctions/CalculusFunctions.o"
 	@echo "... CalculusFunctions/CalculusFunctions.i"
 	@echo "... CalculusFunctions/CalculusFunctions.s"
+	@echo "... DiffusionOperators/DiffusionCentral.o"
+	@echo "... DiffusionOperators/DiffusionCentral.i"
+	@echo "... DiffusionOperators/DiffusionCentral.s"
 	@echo "... DiffusionOperators/DiffusionOperator.o"
 	@echo "... DiffusionOperators/DiffusionOperator.i"
 	@echo "... DiffusionOperators/DiffusionOperator.s"
@@ -506,6 +590,12 @@ help:
 	@echo "... Grids/PlottingGrid.o"
 	@echo "... Grids/PlottingGrid.i"
 	@echo "... Grids/PlottingGrid.s"
+	@echo "... InterpolationOperators/InterpolateUpwind.o"
+	@echo "... InterpolationOperators/InterpolateUpwind.i"
+	@echo "... InterpolationOperators/InterpolateUpwind.s"
+	@echo "... InterpolationOperators/InterpolationOperator.o"
+	@echo "... InterpolationOperators/InterpolationOperator.i"
+	@echo "... InterpolationOperators/InterpolationOperator.s"
 	@echo "... OutputUtilities/OutputUtilities.o"
 	@echo "... OutputUtilities/OutputUtilities.i"
 	@echo "... OutputUtilities/OutputUtilities.s"

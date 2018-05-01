@@ -46,6 +46,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/TimeIntegrators/cmake_install.cmake")
   include("/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/CalculusFunctions/cmake_install.cmake")
   include("/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/PressureOperators/cmake_install.cmake")
+  include("/home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug/src/InterpolationOperators/cmake_install.cmake")
 
 endif()
 
