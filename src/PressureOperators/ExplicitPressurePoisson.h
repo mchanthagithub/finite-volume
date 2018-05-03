@@ -6,6 +6,8 @@
 #define PROJECT_EXPLICTPRESSUREPOISSON_H
 
 #include "PressureOperator.h"
+#include "Eigen/SparseCholesky"
+#include "Eigen/SparseLU"
 class ExplicitPressurePoisson : public PressureOperator {
 public:
     // Note that H is the sum of the advective and diffusive flux
@@ -13,13 +15,19 @@ public:
     void calculatePressureGradient(CartesianGrid& grid, Eigen::MatrixXd H);
     void clearData();
     void createMappings(CartesianGrid& grid);
+    void constructAMatrix(CartesianGrid& grid);
+    void constructRHSVector(CartesianGrid& grid, Eigen::MatrixXd H);
 
-    Eigen::VectorXd pressure;
+    Eigen::VectorXd activePressure;
     Eigen::MatrixXd pressureGradient;
 
     Eigen::VectorXi mappingGlobalToActive;
     Eigen::VectorXi mappingActiveToGlobal;
     int totalDOF;
+    Eigen::SparseMatrix<double> sparseA;
+    Eigen::VectorXd RHS;
+    bool haveCreatedMappings = false;
+    bool haveConstructedAMatrix = false;
 };
 
 

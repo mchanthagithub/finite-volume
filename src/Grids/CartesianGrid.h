@@ -39,6 +39,7 @@ public:
     CartesianGrid(int Nx, int Ny, double Lx, double Ly, double smallX, double smallY);
     void setVariableSizes(int nCells, int nFaces, int nCorners);
     void generateMesh();
+    void createMappings();
 
     void setBCs() override;
     void setInitialValues() override;
@@ -52,6 +53,11 @@ public:
     double minX;
     double minY;
     Eigen::VectorXd nodeVelocities; // This is only for plotting purposes, is not used for the main grid;
+
+
+    Eigen::VectorXi mappingGlobalToActive;
+    Eigen::VectorXi mappingActiveToGlobal;
+    int totalDOF;
 };
 
 

@@ -1153,12 +1153,18 @@ Eigen/Sparse
 /home/maytee/Documents/2.29/finiteVolumeSolver/src/PressureOperators/Eigen/Sparse
 Eigen/SparseLU
 /home/maytee/Documents/2.29/finiteVolumeSolver/src/PressureOperators/Eigen/SparseLU
+Eigen/SparseCholesky
+/home/maytee/Documents/2.29/finiteVolumeSolver/src/PressureOperators/Eigen/SparseCholesky
 iostream
 /home/maytee/Documents/2.29/finiteVolumeSolver/src/PressureOperators/iostream
 
 /home/maytee/Documents/2.29/finiteVolumeSolver/src/PressureOperators/ExplicitPressurePoisson.h
 PressureOperator.h
 /home/maytee/Documents/2.29/finiteVolumeSolver/src/PressureOperators/PressureOperator.h
+Eigen/SparseCholesky
+/home/maytee/Documents/2.29/finiteVolumeSolver/src/PressureOperators/Eigen/SparseCholesky
+Eigen/SparseLU
+/home/maytee/Documents/2.29/finiteVolumeSolver/src/PressureOperators/Eigen/SparseLU
 
 /home/maytee/Documents/2.29/finiteVolumeSolver/src/PressureOperators/PressureOperator.cpp
 PressureOperator.h

@@ -15,12 +15,12 @@ int main() {
   std::cout << "Hello, World!" << std::endl;
 
   // Generate and initialize grid
-  int numX = 4;
-  int numY = 4;
+  int numX = 20;
+  int numY = 20;
   double minX = 0.0;
   double minY = 0.0;
-  double Lx = 4.0;
-  double Ly = 4.0;
+  double Lx = 5.0;
+  double Ly = 5.0;
   CartesianGrid grid(numX,numY,Lx,Ly, minX,minY);
   CartesianGrid plottingGrid(numX-1,numY-1,Lx-grid.delX,Ly-grid.delY,grid.delX/2.0,grid.delY/2.0);
   plottingGrid.nodeVelocities.setZero(grid.numCells*grid.nDim);
@@ -45,7 +45,7 @@ int main() {
   ExplicitPressurePoisson poissonPressObj;
 
   double finalTime = 4.0;
-  double delT = 0.001;
+  double delT = 0.00005;
   std::cout<<"CFL CHECK: "<<delT/(grid.delX*grid.delY)<<std::endl;
   assert(delT/(grid.delX*grid.delY) < 1.0);
   double totalTime = delT;
@@ -61,6 +61,7 @@ int main() {
   int timeStep = 0;
   double totalNumSteps = 4.0/delT;
   int outputInterval = (int)totalNumSteps/100;
+  //int outputInterval = 1;
   ForwardEuler integrator;
   while(totalTime < finalTime)
   {
@@ -82,9 +83,11 @@ int main() {
 
     Eigen::MatrixXd totalPressureGradient;
     pressureObj.clearData();
-    pressureObj.calculatePressureGradient(grid,totalFluxesMatrix);
+    //pressureObj.calculatePressureGradient(grid,totalFluxesMatrix);
 
-    poissonPressObj.calculatePressure(grid,totalFluxesMatrix);
+    poissonPressObj.clearData();
+    poissonPressObj.calculatePressureGradient(grid,totalFluxesMatrix);
+
     Eigen::VectorXd oldVelocities;
     Eigen::VectorXd newVelocities;
     oldVelocities.setZero(grid.numCells*grid.nDim);
@@ -104,10 +107,16 @@ int main() {
       fluxTermsVector(ii*2+1) -= advectionObj.totalCellAdvectionFlux(ii,1);
       fluxTermsVector(ii*2) += diffusionObj.totalCellDiffusionFlux(ii,0);
       fluxTermsVector(ii*2+1) += diffusionObj.totalCellDiffusionFlux(ii,1);
-      newPressureGradient(ii*2) += pressureObj.pressureGradient(ii,0);
-      newPressureGradient(ii*2+1) += pressureObj.pressureGradient(ii,1);
+      //newPressureGradient(ii*2) += pressureObj.pressureGradient(ii,0);
+      //newPressureGradient(ii*2+1) += pressureObj.pressureGradient(ii,1);
+      newPressureGradient(ii*2) += poissonPressObj.pressureGradient(ii,0);
+      newPressureGradient(ii*2+1) += poissonPressObj.pressureGradient(ii,1);
     }
     integrator.integrate(delT,grid,oldVelocities,newVelocities,newPressureGradient,fluxTermsVector);
+    grid.pressure = poissonPressObj.pressure;
+    grid.pressureGradient = poissonPressObj.pressureGradient;
+    //std::cout<<"grid press grad"<<std::endl;
+    //std::cout<<grid.pressureGradient<<std::endl;
     // Print out the max and min velocity components
     std::cout<<"max-v-comp: "<<newVelocities.maxCoeff()<<" min-v-comp: "<<newVelocities.minCoeff()<<std::endl;
 
@@ -123,7 +132,6 @@ int main() {
       grid.uVel(ii) = newVelocities(ii*2);
       grid.vVel(ii) = newVelocities(ii*2+1);
     }
-    grid.pressure = newPressureGradient;
 
     totalTime += delT;
     timeStep++;
@@ -134,7 +142,8 @@ int main() {
         plottingGrid.nodeVelocities(ii*2) = grid.uVel(ii);
         plottingGrid.nodeVelocities(ii*2+1) = grid.vVel(ii);
       }
-
+      grid.advectionFluxes = advectionObj.totalCellAdvectionFlux;
+      grid.diffusionFluxes = diffusionObj.totalCellDiffusionFlux;
       std::string fileNumber = std::to_string(timeStep/outputInterval)+".vtu";
       std::cout<<"Saving output at "<<std::to_string(totalTime)<<" seconds to cellData_"+fileNumber<<std::endl;
       output.writeCartesianCellDataToVTU(grid,"/home/maytee/Documents/2.29/finiteVolumeSolver/cellData_"+fileNumber);

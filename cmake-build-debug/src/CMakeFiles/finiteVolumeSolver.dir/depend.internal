@@ -2385,6 +2385,10 @@ src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.o
  /home/maytee/Documents/2.29/finiteVolumeSolver/src/TimeIntegrators/TimeIntegrator.h
 src/CMakeFiles/finiteVolumeSolver.dir/main.cpp.o
  ../src/include/eigen/Eigen/Core
+ ../src/include/eigen/Eigen/OrderingMethods
+ ../src/include/eigen/Eigen/SparseCholesky
+ ../src/include/eigen/Eigen/SparseCore
+ ../src/include/eigen/Eigen/SparseLU
  ../src/include/eigen/Eigen/src/Core/Array.h
  ../src/include/eigen/Eigen/src/Core/ArrayBase.h
  ../src/include/eigen/Eigen/src/Core/ArrayWrapper.h
@@ -2512,9 +2516,62 @@ src/CMakeFiles/finiteVolumeSolver.dir/main.cpp.o
  ../src/include/eigen/Eigen/src/Core/util/Macros.h
  ../src/include/eigen/Eigen/src/Core/util/Memory.h
  ../src/include/eigen/Eigen/src/Core/util/Meta.h
+ ../src/include/eigen/Eigen/src/Core/util/NonMPL2.h
  ../src/include/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h
  ../src/include/eigen/Eigen/src/Core/util/StaticAssert.h
  ../src/include/eigen/Eigen/src/Core/util/XprHelper.h
+ ../src/include/eigen/Eigen/src/OrderingMethods/Amd.h
+ ../src/include/eigen/Eigen/src/OrderingMethods/Eigen_Colamd.h
+ ../src/include/eigen/Eigen/src/OrderingMethods/Ordering.h
+ ../src/include/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h
+ ../src/include/eigen/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h
+ ../src/include/eigen/Eigen/src/SparseCore/AmbiVector.h
+ ../src/include/eigen/Eigen/src/SparseCore/CompressedStorage.h
+ ../src/include/eigen/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h
+ ../src/include/eigen/Eigen/src/SparseCore/MappedSparseMatrix.h
+ ../src/include/eigen/Eigen/src/SparseCore/SparseAssign.h
+ ../src/include/eigen/Eigen/src/SparseCore/SparseBlock.h
+ ../src/include/eigen/Eigen/src/SparseCore/SparseColEtree.h
+ ../src/include/eigen/Eigen/src/SparseCore/SparseCompressedBase.h
+ ../src/include/eigen/Eigen/src/SparseCore/SparseCwiseBinaryOp.h
+ ../src/include/eigen/Eigen/src/SparseCore/SparseCwiseUnaryOp.h
+ ../src/include/eigen/Eigen/src/SparseCore/SparseDenseProduct.h
+ ../src/include/eigen/Eigen/src/SparseCore/SparseDiagonalProduct.h
+ ../src/include/eigen/Eigen/src/SparseCore/SparseDot.h
+ ../src/include/eigen/Eigen/src/SparseCore/SparseFuzzy.h
+ ../src/include/eigen/Eigen/src/SparseCore/SparseMap.h
+ ../src/include/eigen/Eigen/src/SparseCore/SparseMatrix.h
+ ../src/include/eigen/Eigen/src/SparseCore/SparseMatrixBase.h
+ ../src/include/eigen/Eigen/src/SparseCore/SparsePermutation.h
+ ../src/include/eigen/Eigen/src/SparseCore/SparseProduct.h
+ ../src/include/eigen/Eigen/src/SparseCore/SparseRedux.h
+ ../src/include/eigen/Eigen/src/SparseCore/SparseRef.h
+ ../src/include/eigen/Eigen/src/SparseCore/SparseSelfAdjointView.h
+ ../src/include/eigen/Eigen/src/SparseCore/SparseSolverBase.h
+ ../src/include/eigen/Eigen/src/SparseCore/SparseSparseProductWithPruning.h
+ ../src/include/eigen/Eigen/src/SparseCore/SparseTranspose.h
+ ../src/include/eigen/Eigen/src/SparseCore/SparseTriangularView.h
+ ../src/include/eigen/Eigen/src/SparseCore/SparseUtil.h
+ ../src/include/eigen/Eigen/src/SparseCore/SparseVector.h
+ ../src/include/eigen/Eigen/src/SparseCore/SparseView.h
+ ../src/include/eigen/Eigen/src/SparseCore/TriangularSolver.h
+ ../src/include/eigen/Eigen/src/SparseLU/SparseLU.h
+ ../src/include/eigen/Eigen/src/SparseLU/SparseLUImpl.h
+ ../src/include/eigen/Eigen/src/SparseLU/SparseLU_Memory.h
+ ../src/include/eigen/Eigen/src/SparseLU/SparseLU_Structs.h
+ ../src/include/eigen/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h
+ ../src/include/eigen/Eigen/src/SparseLU/SparseLU_Utils.h
+ ../src/include/eigen/Eigen/src/SparseLU/SparseLU_column_bmod.h
+ ../src/include/eigen/Eigen/src/SparseLU/SparseLU_column_dfs.h
+ ../src/include/eigen/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h
+ ../src/include/eigen/Eigen/src/SparseLU/SparseLU_gemm_kernel.h
+ ../src/include/eigen/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h
+ ../src/include/eigen/Eigen/src/SparseLU/SparseLU_kernel_bmod.h
+ ../src/include/eigen/Eigen/src/SparseLU/SparseLU_panel_bmod.h
+ ../src/include/eigen/Eigen/src/SparseLU/SparseLU_panel_dfs.h
+ ../src/include/eigen/Eigen/src/SparseLU/SparseLU_pivotL.h
+ ../src/include/eigen/Eigen/src/SparseLU/SparseLU_pruneL.h
+ ../src/include/eigen/Eigen/src/SparseLU/SparseLU_relax_snode.h
  ../src/include/eigen/Eigen/src/misc/blas.h
  ../src/include/eigen/Eigen/src/plugins/ArrayCwiseBinaryOps.h
  ../src/include/eigen/Eigen/src/plugins/ArrayCwiseUnaryOps.h

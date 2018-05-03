@@ -23,6 +23,9 @@ public:
   Eigen::VectorXd uVel;
   Eigen::VectorXd vVel;
   Eigen::VectorXd pressure;
+  Eigen::MatrixXd pressureGradient;
+  Eigen::MatrixXd advectionFluxes;
+  Eigen::MatrixXd diffusionFluxes;
 
   // Hold the value of BCs
   // Are as long as the total number of different BCs for that field, ex. if there are BCs for uvel = 0 m/s, 2 m/s,

@@ -3,7 +3,7 @@
 //
 
 #include "OutputUtilities.h"
-void OutputUtilities::writeCartesianCellDataToVTU(Grid &grid, std::string fileName)
+void OutputUtilities::writeCartesianCellDataToVTU(CartesianGrid &grid, std::string fileName)
 {
   std::ofstream outputFp;
   outputFp.open(fileName);
@@ -39,15 +39,37 @@ void OutputUtilities::writeCartesianCellDataToVTU(Grid &grid, std::string fileNa
   outputFp<<"   </Cells>\n";
   outputFp<<"   <CellData Vectors=\"vectors\">\n";
   Eigen::VectorXd cellVelocities;
+  Eigen::VectorXd cellPressureGradients;
+  Eigen::VectorXd cellAdvectionFlux;
+  Eigen::VectorXd cellDiffusionFlux;
   cellVelocities.setZero(grid.numCells*2);
+  cellPressureGradients.setZero(grid.numCells*2);
+  cellAdvectionFlux.setZero(grid.numCells*2);
+  cellDiffusionFlux.setZero(grid.numCells*2);
+
   for(int ii = 0; ii < grid.numCells; ii++)
   {
     cellVelocities(ii*2) = grid.uVel(ii);
     cellVelocities(ii*2+1) = grid.vVel(ii);
+
+    cellPressureGradients(ii*2) = grid.pressureGradient(ii,0);
+    cellPressureGradients(ii*2+1) = grid.pressureGradient(ii,1);
+
+    cellAdvectionFlux(ii*2) = grid.advectionFluxes(ii,0);
+    cellAdvectionFlux(ii*2+1) = grid.advectionFluxes(ii,1);
+
+    cellDiffusionFlux(ii*2) = grid.diffusionFluxes(ii,0);
+    cellDiffusionFlux(ii*2+1) = grid.diffusionFluxes(ii,1);
+
   }
   outputFp<<writeCellVector(cellVelocities, grid.nDim,"cellCenteredVelocity");
   Eigen::VectorXi pressureBCs = grid.cellHasPressureBC.col(1);
   outputFp<<writeCellScalar(pressureBCs,grid.nDim,"pressureBC");
+  outputFp<<writeCellScalar(grid.mappingGlobalToActive,grid.nDim,"dofNumber");
+  outputFp<<writeCellScalar(grid.pressure,grid.nDim,"pressure");
+  outputFp<<writeCellVector(cellPressureGradients,grid.nDim,"pressureGradients");
+  outputFp<<writeCellVector(cellAdvectionFlux,grid.nDim,"advectionFlux");
+  outputFp<<writeCellVector(cellDiffusionFlux,grid.nDim,"diffusionFlux");
   outputFp<<"   </CellData>\n";
   outputFp<<"  </Piece>\n";
   outputFp<<" </UnstructuredGrid>\n";
