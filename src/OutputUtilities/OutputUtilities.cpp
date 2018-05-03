@@ -45,8 +45,9 @@ void OutputUtilities::writeCartesianCellDataToVTU(Grid &grid, std::string fileNa
     cellVelocities(ii*2) = grid.uVel(ii);
     cellVelocities(ii*2+1) = grid.vVel(ii);
   }
-  std::string cellVelocitiesOutputStr = writeCellVector(cellVelocities, grid.nDim,"cellCenteredVelocity");
-  outputFp<<cellVelocitiesOutputStr;
+  outputFp<<writeCellVector(cellVelocities, grid.nDim,"cellCenteredVelocity");
+  Eigen::VectorXi pressureBCs = grid.cellHasPressureBC.col(1);
+  outputFp<<writeCellScalar(pressureBCs,grid.nDim,"pressureBC");
   outputFp<<"   </CellData>\n";
   outputFp<<"  </Piece>\n";
   outputFp<<" </UnstructuredGrid>\n";
@@ -131,9 +132,28 @@ void OutputUtilities::writeCartesianFaceDataToVTU(CartesianGrid &grid, std::stri
   outputFp.close();
 }
 
-std::string OutputUtilities::writeCellScalar(Eigen::VectorXd inputVector)
+std::string OutputUtilities::writeCellScalar(Eigen::VectorXd inputVector, int nDim, std::string inputString)
 {
+  std::string outputStr;
+  outputStr = "<DataArray type=\"Float32\" Name=\""+inputString+"\" NumberOfComponents=\"1\" format=\"ascii\">\n";
+  for(int ii = 0; ii < inputVector.size(); ii++)
+  {
+    outputStr += std::to_string(inputVector(ii))+"\n";
+  }
+  outputStr += "</DataArray>\n";
+  return outputStr;
+}
 
+std::string OutputUtilities::writeCellScalar(Eigen::VectorXi inputVector, int nDim, std::string inputString)
+{
+  std::string outputStr;
+  outputStr = "<DataArray type=\"Int32\" Name=\""+inputString+"\" NumberOfComponents=\"1\" format=\"ascii\">\n";
+  for(int ii = 0; ii < inputVector.size(); ii++)
+  {
+    outputStr += std::to_string(inputVector(ii))+"\n";
+  }
+  outputStr += "</DataArray>\n";
+  return outputStr;
 }
 
 std::string OutputUtilities::writeCellVector(Eigen::VectorXd inputVector, int nDim, std::string inputString)
@@ -146,4 +166,58 @@ std::string OutputUtilities::writeCellVector(Eigen::VectorXd inputVector, int nD
   }
   outputStr += "</DataArray>\n";
   return outputStr;
+}
+
+
+void OutputUtilities::writePlottingCartesianDataToVTU(CartesianGrid &grid, std::string fileName)
+{
+  std::ofstream outputFp;
+  outputFp.open(fileName);
+  int numNodes = grid.numCorners;
+  int numCells = grid.numCells;
+
+  Eigen::VectorXd velocitySums;
+  velocitySums.setZero(grid.nodeVelocities.size()/2);
+  for(int ii = 0 ; ii < grid.nodeVelocities.size()/2;ii++)
+    velocitySums(ii) = grid.nodeVelocities(ii*2) + grid.nodeVelocities(ii*2+1);
+
+  outputFp<<"<VTKFile type=\"UnstructuredGrid\" version=\"0.1\" byte_order=\"LittleEndian\">\n";
+
+  outputFp<<" <UnstructuredGrid>\n";
+  outputFp<<"  <Piece NumberOfPoints=\""+std::to_string(numNodes)+"\" NumberOfCells=\""+std::to_string(numCells)+"\">\n";
+  outputFp<<"   <Points>\n";
+  outputFp<<"    <DataArray name=\"Position\" type=\"Float32\" NumberOfComponents=\"3\" format=\"ascii\">\n";
+  for(int ii = 0; ii < numNodes;ii++)
+           outputFp<<"    "+std::to_string(grid.cornerXY(ii*2))+" "+std::to_string(grid.cornerXY(ii*2+1))+" "+std::to_string(velocitySums(ii))+"\n";
+  outputFp<<"    </DataArray>\n";
+  outputFp<<"   </Points>\n";
+  outputFp<<"   <PointData Vectors=\"vectors\">\n";
+  std::string nodeVelocitiesOutputStr = writeCellVector(grid.nodeVelocities, grid.nDim,"cellCenteredVelocity");
+  outputFp<<nodeVelocitiesOutputStr;
+
+  std::string nodeVelocitySumsOutputStr = writeCellScalar(velocitySums, grid.nDim,"velocitySum");
+  outputFp<<nodeVelocitySumsOutputStr;
+  outputFp<<"   </PointData>\n";
+  outputFp<<"   <Cells>\n";
+  outputFp<<"    <DataArray type=\"Int32\" Name=\"connectivity\" format=\"ascii\">\n";
+  for(int ii = 0; ii < numCells;ii++)
+          outputFp<<"    "+std::to_string(grid.cornerMap(0,ii))+" "+std::to_string(grid.cornerMap(1,ii))+" "+
+                                  std::to_string(grid.cornerMap(2,ii))+" "+std::to_string(grid.cornerMap(3,ii))+"\n";
+  outputFp<<"    </DataArray>\n";
+  outputFp<<"    <DataArray type=\"Int32\" Name=\"offsets\" format=\"ascii\">\n";
+  for(int ii = 0; ii < numCells;ii++)
+      outputFp<<"    "+std::to_string(4*(ii+1))+"\n";
+  outputFp<<"    </DataArray>\n";
+  outputFp<<"    <DataArray type=\"Int32\" Name=\"types\" format=\"ascii\">\n";
+  for(int ii = 0; ii < numCells;ii++)
+      outputFp<<"    9\n";
+  outputFp<<"    </DataArray>\n";
+  outputFp<<"   </Cells>\n";
+  outputFp<<"   <CellData Vectors=\"vectors\">\n";
+  outputFp<<"   </CellData>\n";
+  outputFp<<"  </Piece>\n";
+  outputFp<<" </UnstructuredGrid>\n";
+  outputFp<<"</VTKFile>\n";
+
+  outputFp.close();
 }

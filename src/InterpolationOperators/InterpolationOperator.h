@@ -11,6 +11,8 @@ class InterpolationOperator {
 public:
     virtual void interpolateVelocities(CartesianGrid& grid) = 0;
     virtual void clearData() = 0;
+
+    // Matrices are (numCells x numFacesPerCell) in size
     Eigen::MatrixXd uVelInterp;
     Eigen::MatrixXd vVelInterp;
 };

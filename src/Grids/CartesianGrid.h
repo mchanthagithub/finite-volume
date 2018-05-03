@@ -51,6 +51,7 @@ public:
     double delY;
     double minX;
     double minY;
+    Eigen::VectorXd nodeVelocities; // This is only for plotting purposes, is not used for the main grid;
 };
 
 

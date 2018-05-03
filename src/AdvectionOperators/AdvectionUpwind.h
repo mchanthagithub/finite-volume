@@ -9,9 +9,11 @@
 
 #include "AdvectionOperator.h"
 #include "../InterpolationOperators/InterpolateUpwind.h"
+#include "../InterpolationOperators/InterpolateQUICK.h"
 class AdvectionUpwind : public AdvectionOperator{
 public:
     void calculateAdvectionFluxesCartesian(CartesianGrid &grid, InterpolateUpwind& interp);
+    void calculateAdvectionFluxesCartesian(CartesianGrid &grid, InterpolateQUICK& interp);
 
     // Calculate cell-averaged velocities at element centers
     void calculateInterpolationValues(CartesianGrid& grid);

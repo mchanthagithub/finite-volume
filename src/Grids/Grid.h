@@ -29,17 +29,19 @@ public:
   // and 4 m/s, then uVelBCValue will be 3 elements long
   Eigen::VectorXd uVelBCValue;
   Eigen::VectorXd vVelBCValue;
-  Eigen::VectorXd pressureBCValue;
+  Eigen::VectorXd pressureDirichletBCValue;
+  Eigen::VectorXd pressureNeumannBCValue;
 
-  std::vector<Eigen::VectorXd> uVelNeumannBCValue;
-  std::vector<Eigen::VectorXd> vVelNeumannBCValue;
+  Eigen::VectorXd uVelNeumannBCValue;
+  Eigen::VectorXd vVelNeumannBCValue;
 
 
-  // Tells if cell has a velocity BC
-  Eigen::VectorXi cellHasVelocityBC;
+  // Tells if cell has a velocity BC, is numCellsxnDim in size
+  // 2nd column tells which direction the neumann BC is in if there is one
+  Eigen::MatrixXi cellHasVelocityBC;
 
   // Tells if a cell has a pressure BC
-  Eigen::VectorXi cellHasPressureBC;
+  Eigen::MatrixXi cellHasPressureBC;
 
   // Matrix that is (numFaces) x (nDim+1) in size that tells if the face has a BC and what kind\
   // Column 1 is u-velocity BC, column 2 is v-velocity BC, column 3 is pressure BC here

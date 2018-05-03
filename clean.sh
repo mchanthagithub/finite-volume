@@ -1,2 +1,2 @@
 #!/bin/bash
-rm *.vtu
+rm cell*.vtu face*.vtu plot*.vtu

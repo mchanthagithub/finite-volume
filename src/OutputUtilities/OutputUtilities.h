@@ -13,7 +13,10 @@ class OutputUtilities {
 public:
   void writeCartesianCellDataToVTU(Grid& grid,std::string fileName);
   void writeCartesianFaceDataToVTU(CartesianGrid& grid,std::string fileName);
-  std::string writeCellScalar(Eigen::VectorXd inputScalar);
+  void writePlottingCartesianDataToVTU(CartesianGrid& grid, std::string fileName);
+  std::string writeCellScalar(Eigen::VectorXd inputVector, int nDim, std::string inputString);
+  std::string writeCellScalar(Eigen::VectorXi inputVector, int nDim, std::string inputString);
+
   std::string writeCellVector(Eigen::VectorXd inputVector, int nDim, std::string inputString);
 };
 

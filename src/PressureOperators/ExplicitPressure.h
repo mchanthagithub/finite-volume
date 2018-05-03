@@ -10,8 +10,9 @@
 
 class ExplicitPressure : public PressureOperator {
 public:
-    void calculatePressure(CartesianGrid& grid, Eigen::VectorXd H);
-
+    void calculatePressure(CartesianGrid& grid, Eigen::MatrixXd H);
+    void calculatePressureGradient(CartesianGrid& grid, Eigen::MatrixXd H);
+    void clearData();
 };
 
 

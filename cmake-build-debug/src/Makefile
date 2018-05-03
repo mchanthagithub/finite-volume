@@ -314,32 +314,32 @@ Grids/Grid.cpp.s:
 	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/Grids/Grid.cpp.s
 .PHONY : Grids/Grid.cpp.s
 
-Grids/PlottingGrid.o: Grids/PlottingGrid.cpp.o
+InterpolationOperators/InterpolateQUICK.o: InterpolationOperators/InterpolateQUICK.cpp.o
 
-.PHONY : Grids/PlottingGrid.o
+.PHONY : InterpolationOperators/InterpolateQUICK.o
 
 # target to build an object file
-Grids/PlottingGrid.cpp.o:
-	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.o
-.PHONY : Grids/PlottingGrid.cpp.o
+InterpolationOperators/InterpolateQUICK.cpp.o:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateQUICK.cpp.o
+.PHONY : InterpolationOperators/InterpolateQUICK.cpp.o
 
-Grids/PlottingGrid.i: Grids/PlottingGrid.cpp.i
+InterpolationOperators/InterpolateQUICK.i: InterpolationOperators/InterpolateQUICK.cpp.i
 
-.PHONY : Grids/PlottingGrid.i
+.PHONY : InterpolationOperators/InterpolateQUICK.i
 
 # target to preprocess a source file
-Grids/PlottingGrid.cpp.i:
-	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.i
-.PHONY : Grids/PlottingGrid.cpp.i
+InterpolationOperators/InterpolateQUICK.cpp.i:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateQUICK.cpp.i
+.PHONY : InterpolationOperators/InterpolateQUICK.cpp.i
 
-Grids/PlottingGrid.s: Grids/PlottingGrid.cpp.s
+InterpolationOperators/InterpolateQUICK.s: InterpolationOperators/InterpolateQUICK.cpp.s
 
-.PHONY : Grids/PlottingGrid.s
+.PHONY : InterpolationOperators/InterpolateQUICK.s
 
 # target to generate assembly for a file
-Grids/PlottingGrid.cpp.s:
-	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.s
-.PHONY : Grids/PlottingGrid.cpp.s
+InterpolationOperators/InterpolateQUICK.cpp.s:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateQUICK.cpp.s
+.PHONY : InterpolationOperators/InterpolateQUICK.cpp.s
 
 InterpolationOperators/InterpolateUpwind.o: InterpolationOperators/InterpolateUpwind.cpp.o
 
@@ -448,6 +448,33 @@ PressureOperators/ExplicitPressure.s: PressureOperators/ExplicitPressure.cpp.s
 PressureOperators/ExplicitPressure.cpp.s:
 	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.s
 .PHONY : PressureOperators/ExplicitPressure.cpp.s
+
+PressureOperators/ExplicitPressurePoisson.o: PressureOperators/ExplicitPressurePoisson.cpp.o
+
+.PHONY : PressureOperators/ExplicitPressurePoisson.o
+
+# target to build an object file
+PressureOperators/ExplicitPressurePoisson.cpp.o:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressurePoisson.cpp.o
+.PHONY : PressureOperators/ExplicitPressurePoisson.cpp.o
+
+PressureOperators/ExplicitPressurePoisson.i: PressureOperators/ExplicitPressurePoisson.cpp.i
+
+.PHONY : PressureOperators/ExplicitPressurePoisson.i
+
+# target to preprocess a source file
+PressureOperators/ExplicitPressurePoisson.cpp.i:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressurePoisson.cpp.i
+.PHONY : PressureOperators/ExplicitPressurePoisson.cpp.i
+
+PressureOperators/ExplicitPressurePoisson.s: PressureOperators/ExplicitPressurePoisson.cpp.s
+
+.PHONY : PressureOperators/ExplicitPressurePoisson.s
+
+# target to generate assembly for a file
+PressureOperators/ExplicitPressurePoisson.cpp.s:
+	cd /home/maytee/Documents/2.29/finiteVolumeSolver/cmake-build-debug && $(MAKE) -f src/CMakeFiles/finiteVolumeSolver.dir/build.make src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressurePoisson.cpp.s
+.PHONY : PressureOperators/ExplicitPressurePoisson.cpp.s
 
 PressureOperators/PressureOperator.o: PressureOperators/PressureOperator.cpp.o
 
@@ -587,9 +614,9 @@ help:
 	@echo "... Grids/Grid.o"
 	@echo "... Grids/Grid.i"
 	@echo "... Grids/Grid.s"
-	@echo "... Grids/PlottingGrid.o"
-	@echo "... Grids/PlottingGrid.i"
-	@echo "... Grids/PlottingGrid.s"
+	@echo "... InterpolationOperators/InterpolateQUICK.o"
+	@echo "... InterpolationOperators/InterpolateQUICK.i"
+	@echo "... InterpolationOperators/InterpolateQUICK.s"
 	@echo "... InterpolationOperators/InterpolateUpwind.o"
 	@echo "... InterpolationOperators/InterpolateUpwind.i"
 	@echo "... InterpolationOperators/InterpolateUpwind.s"
@@ -602,6 +629,9 @@ help:
 	@echo "... PressureOperators/ExplicitPressure.o"
 	@echo "... PressureOperators/ExplicitPressure.i"
 	@echo "... PressureOperators/ExplicitPressure.s"
+	@echo "... PressureOperators/ExplicitPressurePoisson.o"
+	@echo "... PressureOperators/ExplicitPressurePoisson.i"
+	@echo "... PressureOperators/ExplicitPressurePoisson.s"
 	@echo "... PressureOperators/PressureOperator.o"
 	@echo "... PressureOperators/PressureOperator.i"
 	@echo "... PressureOperators/PressureOperator.s"

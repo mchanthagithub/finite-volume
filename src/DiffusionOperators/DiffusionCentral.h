@@ -9,7 +9,7 @@
 #include "../InterpolationOperators/InterpolateUpwind.h"
 class DiffusionCentral : public DiffusionOperator {
 public:
-    void calculateDiffusionFluxesCartesian(CartesianGrid &grid);
+    void calculateDiffusionFluxesCartesian(CartesianGrid &grid,InterpolateUpwind& interp);
     void calculateCentralGradients(CartesianGrid &grid);
     void calculateGradients(CartesianGrid& grid, InterpolateUpwind& interp);
     void clearData();
@@ -20,7 +20,7 @@ public:
     std::vector<Eigen::MatrixXd> centralGradients;
 
     // Is a vector numCells long with each element being another vector that is numFacesPerElement long
-    // which then hold (numFacesPerElement x nDim) matrix, which is the velocity gradient at each face
+    // which then hold (nDim x nDim) matrix, which is the velocity gradient at each face
     std::vector<std::vector<Eigen::MatrixXd> >faceVelocityGradients;
 };
 

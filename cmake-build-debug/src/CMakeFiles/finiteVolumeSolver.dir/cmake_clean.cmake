@@ -7,7 +7,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o"
   "CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.o"
   "CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/ForwardEuler.cpp.o"
-  "CMakeFiles/finiteVolumeSolver.dir/Grids/PlottingGrid.cpp.o"
   "CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionOperator.cpp.o"
   "CMakeFiles/finiteVolumeSolver.dir/PressureOperators/PressureOperator.cpp.o"
   "CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.o"
@@ -15,6 +14,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionCentral.cpp.o"
   "CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolationOperator.cpp.o"
   "CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateUpwind.cpp.o"
+  "CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateQUICK.cpp.o"
+  "CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressurePoisson.cpp.o"
   "../bin/finiteVolumeSolver.pdb"
   "../bin/finiteVolumeSolver"
 )

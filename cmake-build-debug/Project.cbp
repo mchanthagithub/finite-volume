@@ -128,10 +128,10 @@
 		<Unit filename="/home/maytee/Documents/2.29/finiteVolumeSolver/src/Grids/Grid.h">
 			<Option target="finiteVolumeSolver"/>
 		</Unit>
-		<Unit filename="/home/maytee/Documents/2.29/finiteVolumeSolver/src/Grids/PlottingGrid.cpp">
+		<Unit filename="/home/maytee/Documents/2.29/finiteVolumeSolver/src/InterpolationOperators/InterpolateQUICK.cpp">
 			<Option target="finiteVolumeSolver"/>
 		</Unit>
-		<Unit filename="/home/maytee/Documents/2.29/finiteVolumeSolver/src/Grids/PlottingGrid.h">
+		<Unit filename="/home/maytee/Documents/2.29/finiteVolumeSolver/src/InterpolationOperators/InterpolateQUICK.h">
 			<Option target="finiteVolumeSolver"/>
 		</Unit>
 		<Unit filename="/home/maytee/Documents/2.29/finiteVolumeSolver/src/InterpolationOperators/InterpolateUpwind.cpp">
@@ -156,6 +156,12 @@
 			<Option target="finiteVolumeSolver"/>
 		</Unit>
 		<Unit filename="/home/maytee/Documents/2.29/finiteVolumeSolver/src/PressureOperators/ExplicitPressure.h">
+			<Option target="finiteVolumeSolver"/>
+		</Unit>
+		<Unit filename="/home/maytee/Documents/2.29/finiteVolumeSolver/src/PressureOperators/ExplicitPressurePoisson.cpp">
+			<Option target="finiteVolumeSolver"/>
+		</Unit>
+		<Unit filename="/home/maytee/Documents/2.29/finiteVolumeSolver/src/PressureOperators/ExplicitPressurePoisson.h">
 			<Option target="finiteVolumeSolver"/>
 		</Unit>
 		<Unit filename="/home/maytee/Documents/2.29/finiteVolumeSolver/src/PressureOperators/PressureOperator.cpp">
