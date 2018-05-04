@@ -16,27 +16,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f98b5831-ca57-466b-a0d8-e90ba7e88387" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/bin/finiteVolumeSolver" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/bin/finiteVolumeSolver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionCentral.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/Grids/CartesianGrid.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/Grids/CartesianGrid.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/Grids/Grid.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/Grids/Grid.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateUpwind.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/OutputUtilities/OutputUtilities.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/TimeIntegrator.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/main.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdvectionOperators/AdvectionUpwind.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdvectionOperators/AdvectionUpwind.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdvectionOperators/AdvectionUpwind.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdvectionOperators/AdvectionUpwind.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DiffusionOperators/DiffusionCentral.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/DiffusionOperators/DiffusionCentral.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DiffusionOperators/DiffusionCentral.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/DiffusionOperators/DiffusionCentral.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Grids/CartesianGrid.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grids/CartesianGrid.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Grids/CartesianGrid.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grids/CartesianGrid.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Grids/Grid.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grids/Grid.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InterpolationOperators/InterpolateQUICK.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/InterpolationOperators/InterpolateQUICK.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InterpolationOperators/InterpolateUpwind.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/InterpolationOperators/InterpolateUpwind.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OutputUtilities/OutputUtilities.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/OutputUtilities/OutputUtilities.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OutputUtilities/OutputUtilities.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/OutputUtilities/OutputUtilities.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PressureOperators/ExplicitPressurePoisson.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/PressureOperators/ExplicitPressurePoisson.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
@@ -54,11 +34,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="121" column="75" selection-start-line="121" selection-start-column="75" selection-end-line="121" selection-end-column="75" />
+            <state relative-caret-position="-210">
+              <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
               <folding>
                 <element signature="e#52#71#0" expanded="true" />
               </folding>
@@ -66,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExplicitPressurePoisson.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ExplicitPressurePoisson.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PressureOperators/ExplicitPressurePoisson.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="484" column="30" selection-start-line="484" selection-start-column="30" selection-end-line="484" selection-end-column="30" />
+            <state relative-caret-position="137">
+              <caret line="136" column="33" selection-start-line="136" selection-start-column="33" selection-end-line="136" selection-end-column="33" />
               <folding>
                 <element signature="e#39#75#0" expanded="true" />
               </folding>
@@ -78,20 +58,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CartesianGrid.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Grids/CartesianGrid.cpp">
+      <file leaf-file-name="SparseLU.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/include/eigen/Eigen/src/SparseLU/SparseLU.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="154" column="31" selection-start-line="154" selection-start-column="31" selection-end-line="154" selection-end-column="31" />
+            <state relative-caret-position="129">
+              <caret line="499" selection-start-line="499" selection-end-line="499" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OutputUtilities.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OutputUtilities/OutputUtilities.cpp">
+      <file leaf-file-name="CartesianGrid.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Grids/CartesianGrid.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="200" selection-start-line="200" selection-end-line="200" />
+            <state relative-caret-position="526">
+              <caret line="154" column="31" selection-start-line="154" selection-start-column="31" selection-end-line="154" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -114,22 +94,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InterpolateUpwind.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/InterpolationOperators/InterpolateUpwind.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2835">
-              <caret line="189" selection-start-line="189" selection-end-line="189" />
-              <folding>
-                <element signature="e#39#69#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AdvectionUpwind.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AdvectionOperators/AdvectionUpwind.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2116">
+            <state relative-caret-position="15">
               <caret line="153" selection-start-line="153" selection-end-line="153" />
             </state>
           </provider>
@@ -138,7 +106,7 @@
       <file leaf-file-name="Grid.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Grids/Grid.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-359">
+            <state relative-caret-position="15">
               <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
             </state>
           </provider>
@@ -205,9 +173,9 @@
         <option value="$PROJECT_DIR$/src/AdvectionOperators/AdvectionUpwind.cpp" />
         <option value="$PROJECT_DIR$/src/OutputUtilities/OutputUtilities.h" />
         <option value="$PROJECT_DIR$/src/OutputUtilities/OutputUtilities.cpp" />
-        <option value="$PROJECT_DIR$/src/PressureOperators/ExplicitPressurePoisson.cpp" />
         <option value="$PROJECT_DIR$/src/Grids/CartesianGrid.cpp" />
         <option value="$PROJECT_DIR$/src/main.cpp" />
+        <option value="$PROJECT_DIR$/src/PressureOperators/ExplicitPressurePoisson.cpp" />
       </list>
     </option>
   </component>
@@ -219,8 +187,8 @@
   </component>
   <component name="OCFindUsagesOptions" text="false" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="123" />
-    <option name="y" value="55" />
+    <option name="x" value="617" />
+    <option name="y" value="83" />
     <option name="width" value="1651" />
     <option name="height" value="940" />
   </component>
@@ -512,54 +480,55 @@
       <workItem from="1525292410868" duration="2853000" />
       <workItem from="1525309223180" duration="3000" />
       <workItem from="1525309254521" duration="22898000" />
-      <workItem from="1525368447480" duration="27381000" />
+      <workItem from="1525368447480" duration="27989000" />
+      <workItem from="1525449115872" duration="4668000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165074000" />
+    <option name="totallyTimeSpent" value="170350000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="123" y="55" width="1651" height="940" extended-state="0" />
+    <frame x="617" y="83" width="1651" height="940" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18594791" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32095808" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3206198" />
       <window_info anchor="bottom" id="CMake" order="7" weight="0.32851985" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.18829517" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.326972" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.43592814" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.50655544" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.18829517" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="bottom" id="CMake" order="11" weight="0.32851985" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24772865" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.326972" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.18829517" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.43638676" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32188296" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="CMake" order="11" weight="0.32851985" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.18829517" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32188296" />
       <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -574,7 +543,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="15" />
+      <option name="time" value="16" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -794,9 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdvectionOperators/AdvectionOperator.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AdvectionOperators/AdvectionUpwind.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -848,39 +814,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OutputUtilities/OutputUtilities.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
+        <state relative-caret-position="3000">
           <caret line="200" selection-start-line="200" selection-end-line="200" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DiffusionOperators/DiffusionCentral.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdvectionOperators/AdvectionUpwind.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2116">
-          <caret line="153" selection-start-line="153" selection-end-line="153" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Grids/Grid.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-359">
-          <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/InterpolationOperators/InterpolateUpwind.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2835">
-          <caret line="189" selection-start-line="189" selection-end-line="189" />
-          <folding>
-            <element signature="e#39#69#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -891,13 +826,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Grids/CartesianGrid.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="154" column="31" selection-start-line="154" selection-start-column="31" selection-end-line="154" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TimeIntegrators/ForwardEuler.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -905,22 +833,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PressureOperators/ExplicitPressurePoisson.cpp">
+    <entry file="file://$PROJECT_DIR$/src/Grids/Grid.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="484" column="30" selection-start-line="484" selection-start-column="30" selection-end-line="484" selection-end-column="30" />
+        <state relative-caret-position="15">
+          <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/InterpolationOperators/InterpolateUpwind.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="189" selection-start-line="189" selection-end-line="189" />
           <folding>
-            <element signature="e#39#75#0" expanded="true" />
+            <element signature="e#39#69#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DiffusionOperators/DiffusionCentral.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/include/eigen/Eigen/src/SparseLU/SparseLU.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="499" selection-start-line="499" selection-end-line="499" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="121" column="75" selection-start-line="121" selection-start-column="75" selection-end-line="121" selection-end-column="75" />
+        <state relative-caret-position="-210">
+          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
           <folding>
             <element signature="e#52#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdvectionOperators/AdvectionUpwind.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="153" selection-start-line="153" selection-end-line="153" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Grids/CartesianGrid.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="154" column="31" selection-start-line="154" selection-start-column="31" selection-end-line="154" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PressureOperators/ExplicitPressurePoisson.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="136" column="33" selection-start-line="136" selection-start-column="33" selection-end-line="136" selection-end-column="33" />
+          <folding>
+            <element signature="e#39#75#0" expanded="true" />
           </folding>
         </state>
       </provider>

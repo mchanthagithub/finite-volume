@@ -18,7 +18,9 @@ void ExplicitPressurePoisson::calculatePressure(CartesianGrid &grid, Eigen::Matr
 
   constructRHSVector(grid,H);
 
-  Eigen::SparseLU<Eigen::SparseMatrix<double>> solver;
+  //Eigen::SparseLU<Eigen::SparseMatrix<double>> solver;
+  Eigen::SparseQR<Eigen::SparseMatrix<double>, Eigen::COLAMDOrdering<int>> solver;
+
   solver.compute(sparseA);
 
   //Eigen::ConjugateGradient<Eigen::SparseMatrix<double>> solver;
@@ -134,10 +136,12 @@ void ExplicitPressurePoisson::constructAMatrix(CartesianGrid& grid)
             A(activeIdx,westActiveIdx) += xFactor;
             if(grid.cellHasPressureBC(northElemIdx,0) > 0)
             {
+              std::cout<<"HERE1"<<std::endl;
               A(activeIdx,southActiveIdx) += yFactor;
             }
             else if(grid.cellHasPressureBC(southElemIdx,0) > 0)
             {
+              std::cout<<"HERE2"<<std::endl;
               A(activeIdx,northActiveIdx) += yFactor;
             }
             else
@@ -259,9 +263,11 @@ void ExplicitPressurePoisson::constructAMatrix(CartesianGrid& grid)
   // If all neumann pressure conditions then need to deal with singular matrix
   if(grid.isAllNeumannPressureBCs)
   {
-    Eigen::VectorXd temp = Eigen::VectorXd::Zero(totalDOF);
-    temp(totalDOF-1) = 1.0;
-    A.row(totalDOF-1) = temp;
+    Eigen::VectorXd temp = Eigen::VectorXd::Ones(totalDOF);
+    A.conservativeResize(A.rows()+1,A.cols());
+    //temp(totalDOF-1) = 1.0;
+    //A.row(totalDOF-1) = temp;
+    A.row(A.rows()-1) = temp;
   }
 
   //std::cout<<"A after singular treatment: "<<std::endl;
@@ -475,10 +481,14 @@ void ExplicitPressurePoisson::constructRHSVector(CartesianGrid &grid, Eigen::Mat
   //std::cout<<RHS<<std::endl;
   // If all neumann pressure conditions then need to treat for singularity
   if(grid.isAllNeumannPressureBCs)
-    RHS(totalDOF-1) = 101000.0;
+  {
+    //RHS(totalDOF-1) = 0.0;
+    RHS.conservativeResize(RHS.size()+1);
+    RHS(RHS.size()-1) = 0.0;
+  }
 
   //std::cout<<"RHS after singular treatment: "<<std::endl;
-  //std::cout<<RHS<<std::endl;
+  //`std::cout<<RHS<<std::endl;
 
 }
 
