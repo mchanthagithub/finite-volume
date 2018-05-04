@@ -67,7 +67,7 @@ void CartesianGrid::setBCs() {
       if(kk == 0)
       {
         // Bottom of cells
-        cellHasVelocityBC(cellNum, 0) = 1;
+        cellHasDirichletVelocityBC(cellNum) = 1;
         BCTypes(faceMap(0, cellNum), 0) = 1; // No slip in x
         BCTypes(faceMap(0, cellNum), 1) = 1; // No penetration in y
 
@@ -77,8 +77,8 @@ void CartesianGrid::setBCs() {
       else if(kk == Ny-1)
       {
         // Top of cells
-        cellHasVelocityBC(cellNum, 0) = 1;
-        BCTypes(faceMap(2, cellNum), 0) = 2; // No slip in x
+        cellHasDirichletVelocityBC(cellNum) = 1;
+        BCTypes(faceMap(2, cellNum), 0) = 1; // No slip in x
         BCTypes(faceMap(2, cellNum), 1) = 1; // No penetration in y
 
         cellHasPressureBC(cellNum, 0) = -1;
@@ -88,8 +88,8 @@ void CartesianGrid::setBCs() {
       if(ii == 0)
       {
         // Left side
-        cellHasVelocityBC(cellNum, 0) = 1;
-        BCTypes(faceMap(3, cellNum), 0) = 1; // No penetration in x
+        cellHasDirichletVelocityBC(cellNum) = 1;
+        BCTypes(faceMap(3, cellNum), 0) = 2; // No penetration in x
         BCTypes(faceMap(3, cellNum), 1) = 1; // No slip in y
 
         // Dirichlet pressure BC at inlet
@@ -112,10 +112,15 @@ void CartesianGrid::setBCs() {
         //cellHasPressureBC(cellNum) = 1;
         //BCTypes(faceMap(1,cellNum),2) = 1; // Dirichlet presure at otulet
 
-        cellHasVelocityBC(cellNum, 0) = 1;
-        BCTypes(faceMap(1, cellNum), 0) = 1; // No penetration in x
-        BCTypes(faceMap(1, cellNum), 1) = 1; // No slip in y
+        cellHasDirichletVelocityBC(cellNum) = -1 ; // Neumann
+        BCTypes(faceMap(1, cellNum), 0) = -1; // No penetration in x
+        BCTypes(faceMap(1, cellNum), 1) = -1; // No slip in y
 
+        faceHasNeumannVelocityBC(faceMap(1,cellNum)) = 1;
+        int temp = faceMap(1,cellNum);
+        int sizetep = faceVelocityNeumannBCs[0].size();
+        faceVelocityNeumannBCs[faceMap(1,cellNum)](0,0) = 1;
+        faceVelocityNeumannBCs[faceMap(1,cellNum)](1,0) = 1;
 
         if(kk != Ny-1)
         {
@@ -147,7 +152,7 @@ void CartesianGrid::setBCs() {
       }
     }
   }
-
+  isAllNeumannPressureBCs = true;
 
   /*
   double height = 1.5;
@@ -164,7 +169,7 @@ void CartesianGrid::setBCs() {
       double yCoord = centerXY(flatElemIdx*2+1);
       if(xCoord >= minX && xCoord <= minX+length && yCoord >= minY && yCoord <= minY+height)
       {
-        cellHasVelocityBC(flatElemIdx,0) = 1;
+        cellHasDirichletVelocityBC(flatElemIdx,0) = 1;
         cellHasPressureBC(flatElemIdx,0) = -1;
         for(int faceNum = 0; faceNum < numFacesPerElement; faceNum++)
         {
@@ -231,7 +236,7 @@ void CartesianGrid::setBCs() {
         // Square
         if(ii >= xBegin && ii <= xEnd && kk >= yBegin && kk <= yEnd)
         {
-          cellHasVelocityBC(flatElemIdx,0) = 1;
+          cellHasDirichletVelocityBC(flatElemIdx) = 1;
           cellHasPressureBC(flatElemIdx,0) = -1;
           for(int faceNum = 0; faceNum < numFacesPerElement; faceNum++)
           {
@@ -248,6 +253,12 @@ void CartesianGrid::setBCs() {
   uVelBCValue(0) = 0.0;
   uVelBCValue(1) = 10.0;
   uVelBCValue(2) = -1.0;
+
+  uVelNeumannBCValue.resize(1);
+  uVelNeumannBCValue(0) = 0.0;
+
+  vVelNeumannBCValue.resize(1);
+  vVelNeumannBCValue(0) = 0.0;
 
   vVelBCValue.resize(3);
   vVelBCValue(0) = 0.0;
@@ -307,10 +318,16 @@ void CartesianGrid::setVariableSizes(int nCells, int nFaces, int nCorners)
   faceMap.setZero(numFacesPerElement,numCells);
 
   cellHasPressureBC.setZero(numCells,nDim);
-  cellHasVelocityBC.setZero(numCells,nDim);
+  cellHasDirichletVelocityBC.setZero(numCells);
   BCTypes.setZero(numFaces,nDim+1);
   advectionFluxes.setZero(numCells,nDim);
   diffusionFluxes.setZero(numCells,nDim);
+  faceVelocityNeumannBCs.resize(numFaces);
+  Eigen::MatrixXi temp = Eigen::MatrixXi::Zero(nDim,nDim);
+  for(int ii = 0; ii < numFaces; ii++)
+    faceVelocityNeumannBCs[ii] = temp;
+
+  faceHasNeumannVelocityBC.resize(numFaces);
 }
 
 void CartesianGrid::generateMesh()

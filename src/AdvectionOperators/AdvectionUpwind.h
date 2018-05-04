@@ -15,8 +15,6 @@ public:
     void calculateAdvectionFluxesCartesian(CartesianGrid &grid, InterpolateUpwind& interp);
     void calculateAdvectionFluxesCartesian(CartesianGrid &grid, InterpolateQUICK& interp);
 
-    // Calculate cell-averaged velocities at element centers
-    void calculateInterpolationValues(CartesianGrid& grid);
 
     // Apply Dirichlet BCs to interpolated face values; should be called in calculateInterpolationValues
     void applyDirichletBCs(CartesianGrid &grid);

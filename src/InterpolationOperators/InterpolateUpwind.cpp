@@ -3,7 +3,7 @@
 //
 
 #include "InterpolateUpwind.h"
-
+#include "iostream"
 void InterpolateUpwind::interpolateVelocities(CartesianGrid &grid)
 {
   // Go cell by cell and figure out whether the velocity is upwind or not in both the x and y directions
@@ -176,6 +176,16 @@ void InterpolateUpwind::interpolateVelocities(CartesianGrid &grid)
     }
   }
   applyDirichletBCs(grid);
+
+  /*
+  for(int ii = 0; ii < grid.numCells; ii++)
+  {
+    std::cout<<"cell: "<<ii<<std::endl;
+    std::cout<<uVelInterp.row(ii)<<std::endl;
+    std::cout<<vVelInterp.row(ii)<<std::endl;
+
+  }
+   */
 }
 
 void InterpolateUpwind::clearData()
@@ -188,7 +198,7 @@ void InterpolateUpwind::applyDirichletBCs(CartesianGrid &grid)
   // Account for BCs
   for(int cellNum = 0; cellNum < grid.numCells; cellNum++)
   {
-    if(grid.cellHasVelocityBC(cellNum) == 0)
+    if(grid.cellHasDirichletVelocityBC(cellNum) <= 0)
       continue;
 
     for(int faceNum = 0; faceNum < grid.numFacesPerElement; faceNum++)

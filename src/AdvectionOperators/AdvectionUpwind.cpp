@@ -7,7 +7,6 @@
 #include "cstdlib"
 void AdvectionUpwind::calculateAdvectionFluxesCartesian(CartesianGrid &grid, InterpolateUpwind& interp)
 {
-  double rho = 1000;
   uVelInterp = interp.uVelInterp;
   vVelInterp = interp.vVelInterp;
   // Calculate advection flux at all surfaces for all cells, then average to obtain final flux term
@@ -112,7 +111,7 @@ void AdvectionUpwind::calculateAdvectionFluxesCartesian(CartesianGrid &grid, Int
         averagedFaceFluxes(grid.faceMap(faceNum,flatElemIdx),0) += std::abs(advectionFluxValues[flatElemIdx](faceNum,0)/2.0);
         averagedFaceFluxes(grid.faceMap(faceNum,flatElemIdx),1) += std::abs(advectionFluxValues[flatElemIdx](faceNum,1)/2.0);
         // No BCs
-        if(grid.cellHasVelocityBC(flatElemIdx) == 0)
+        if(grid.cellHasDirichletVelocityBC(flatElemIdx) == 0)
         {
           //averagedFaceFluxes(grid.faceMap(faceNum,flatElemIdx),0) += std::abs(advectionFluxValues[flatElemIdx](faceNum,0)/2.0);
           //averagedFaceFluxes(grid.faceMap(faceNum,flatElemIdx),1) += std::abs(advectionFluxValues[flatElemIdx](faceNum,1)/2.0);
@@ -124,6 +123,15 @@ void AdvectionUpwind::calculateAdvectionFluxesCartesian(CartesianGrid &grid, Int
       }
     }
   }
+  /*
+  std::cout<<"faceFluxes: "<<std::endl;
+  for(int ii = 0; ii < grid.numCells; ii++)
+  {
+    std::cout<<"cellnumflux: "<<ii<<std::endl;
+    std::cout<<averagedFaceFluxes(grid.faceMap(0,ii),0)<<" "<<averagedFaceFluxes(grid.faceMap(1,ii),0)<<" "<<averagedFaceFluxes(grid.faceMap(2,ii),0)<<" "<<averagedFaceFluxes(grid.faceMap(3,ii),0)<<std::endl;
+    std::cout<<averagedFaceFluxes(grid.faceMap(0,ii),1)<<" "<<averagedFaceFluxes(grid.faceMap(1,ii),1)<<" "<<averagedFaceFluxes(grid.faceMap(2,ii),1)<<" "<<averagedFaceFluxes(grid.faceMap(3,ii),1)<<std::endl;
+  }
+  */
   double signX, signY;
   for(int cellNum = 0; cellNum < grid.numCells; cellNum++)
   {
@@ -131,8 +139,10 @@ void AdvectionUpwind::calculateAdvectionFluxesCartesian(CartesianGrid &grid, Int
     {
       signX = (advectionFluxValues[cellNum](faceNum,0) > 0) - (advectionFluxValues[cellNum](faceNum,0) < 0);
       signY = (advectionFluxValues[cellNum](faceNum,1) > 0) - (advectionFluxValues[cellNum](faceNum,1) < 0);
-      totalCellAdvectionFlux(cellNum,0) += averagedFaceFluxes(grid.faceMap(faceNum,cellNum),0)*signX;
-      totalCellAdvectionFlux(cellNum,1) += averagedFaceFluxes(grid.faceMap(faceNum,cellNum),1)*signY;
+      //totalCellAdvectionFlux(cellNum,0) += averagedFaceFluxes(grid.faceMap(faceNum,cellNum),0)*signX;
+      //totalCellAdvectionFlux(cellNum,1) += averagedFaceFluxes(grid.faceMap(faceNum,cellNum),1)*signY;
+      totalCellAdvectionFlux(cellNum,0) += advectionFluxValues[cellNum](faceNum,0);
+      totalCellAdvectionFlux(cellNum,1) += advectionFluxValues[cellNum](faceNum,1);
     }
   }
   //std::cout<<"Total cell fluxes: "<<std::endl;
@@ -141,7 +151,6 @@ void AdvectionUpwind::calculateAdvectionFluxesCartesian(CartesianGrid &grid, Int
 
 void AdvectionUpwind::calculateAdvectionFluxesCartesian(CartesianGrid &grid, InterpolateQUICK& interp)
 {
-  double rho = 1000;
   uVelInterp = interp.uVelInterp;
   vVelInterp = interp.vVelInterp;
   // Calculate advection flux at all surfaces for all cells, then average to obtain final flux term
@@ -245,7 +254,7 @@ void AdvectionUpwind::calculateAdvectionFluxesCartesian(CartesianGrid &grid, Int
       for(int faceNum = 0 ; faceNum < grid.numFacesPerElement; faceNum++)
       {
         // No BCs
-        if(grid.cellHasVelocityBC(flatElemIdx) == 0)
+        if(grid.cellHasDirichletVelocityBC(flatElemIdx) == 0)
         {
           averagedFaceFluxes(grid.faceMap(faceNum,flatElemIdx),0) += std::abs(advectionFluxValues[flatElemIdx](faceNum,0)/2.0);
           averagedFaceFluxes(grid.faceMap(faceNum,flatElemIdx),1) += std::abs(advectionFluxValues[flatElemIdx](faceNum,1)/2.0);
@@ -275,190 +284,12 @@ void AdvectionUpwind::calculateAdvectionFluxesCartesian(CartesianGrid &grid, Int
 }
 
 
-void AdvectionUpwind::calculateInterpolationValues(CartesianGrid &grid)
-{
-  // Go cell by cell and figure out whether the velocity is upwind or not in both the x and y directions
-  // For east face, check element east, for west face, check element west, for south face check element south, etc
-  // At boundary of boubdary elements, eg the west face of a left-side cell, just take the current cell center value,
-  // though still check east element for east face
-  uVelInterp.setZero(grid.numCells,grid.numFacesPerElement);
-  vVelInterp.setZero(grid.numCells,grid.numFacesPerElement);
-
-  // Loop through all elements going left to right, bottom to top
-  // Check all faces of each element and account for boundaries at the end
-  // Boundary values will overwrite whatever is calculated here, but still calculate for simplicity
-  bool isTopElement = false;
-  bool isBotElement = false;
-  for(int kk = 0; kk < grid.Ny; kk++)
-  {
-    isTopElement = (kk == grid.Ny-1);
-    isBotElement = (kk == 0);
-    bool isRightElement = false;
-    bool isLeftElement = false;
-    for(int ii = 0; ii < grid.Nx; ii++)
-    {
-      isLeftElement = (ii == 0);
-      isRightElement = (ii == grid.Nx-1);
-      int flatElemIdx = ii + kk*grid.Nx;
-      int elemNorthIdx = flatElemIdx + grid.Nx;
-      int elemSouthIdx = flatElemIdx - grid.Nx;
-      int elemEastIdx = flatElemIdx + 1;
-      int elemWestIdx = flatElemIdx - 1;
-
-      // Bottom edge of grid or top edge of grid, just set the velocity vector equal to the current center node value
-      if(isBotElement)
-      {
-        vVelInterp(flatElemIdx,0) = grid.vVel(flatElemIdx);
-        uVelInterp(flatElemIdx,0) = grid.uVel(flatElemIdx);
-      }
-      else if(isTopElement)
-      {
-        vVelInterp(flatElemIdx,2) = grid.vVel(flatElemIdx);
-        uVelInterp(flatElemIdx,2) = grid.uVel(flatElemIdx);
-      }
-
-      // Left edge of grid or right edge of grid, just set velocity vector equal to the current center node value
-      if(isLeftElement)
-      {
-        uVelInterp(flatElemIdx,3) = grid.uVel(flatElemIdx);
-        vVelInterp(flatElemIdx,3) = grid.vVel(flatElemIdx);
-      }
-      else if(isRightElement)
-      {
-        uVelInterp(flatElemIdx,1) = grid.uVel(flatElemIdx);
-        vVelInterp(flatElemIdx,1) = grid.vVel(flatElemIdx);
-      }
-
-      if(!isBotElement)
-      {
-        if(!isTopElement)
-        {
-          // Check south face
-          if(grid.vVel(elemSouthIdx) >= 0)
-          {
-            vVelInterp(flatElemIdx,0) = grid.vVel(elemSouthIdx);
-            uVelInterp(flatElemIdx,0) = grid.uVel(elemSouthIdx);
-          }
-          else
-          {
-            vVelInterp(flatElemIdx,0) = grid.vVel(flatElemIdx);
-            uVelInterp(flatElemIdx,0) = grid.uVel(flatElemIdx);
-          }
-
-          // Check north face
-          if(grid.vVel(elemNorthIdx) >= 0)
-          {
-            vVelInterp(flatElemIdx,2) = grid.vVel(flatElemIdx);
-            uVelInterp(flatElemIdx,2) = grid.uVel(flatElemIdx);
-          }
-          else
-          {
-            vVelInterp(flatElemIdx,2) = grid.vVel(elemNorthIdx);
-            uVelInterp(flatElemIdx,2) = grid.uVel(elemNorthIdx);
-          }
-        }
-        else
-        {
-          // Take care of south face of top element
-          if(grid.vVel(elemSouthIdx) >= 0)
-          {
-            vVelInterp(flatElemIdx,0) = grid.vVel(elemSouthIdx);
-            uVelInterp(flatElemIdx,0) = grid.uVel(elemSouthIdx);
-          }
-          else
-          {
-            vVelInterp(flatElemIdx,0) = grid.vVel(flatElemIdx);
-            uVelInterp(flatElemIdx,0) = grid.uVel(flatElemIdx);
-          }
-        }
-      }
-      else
-      {
-        // Take care of north face of bottom elements
-        if(grid.vVel(elemNorthIdx) >= 0)
-        {
-          vVelInterp(flatElemIdx,2) = grid.vVel(flatElemIdx);
-          uVelInterp(flatElemIdx,2) = grid.uVel(flatElemIdx);
-        }
-        else
-        {
-          vVelInterp(flatElemIdx,2) = grid.vVel(elemNorthIdx);
-          uVelInterp(flatElemIdx,2) = grid.uVel(elemNorthIdx);
-        }
-      }
-
-      if(!isLeftElement)
-      {
-        if(!isRightElement)
-        {
-          // Check west face
-          if(grid.uVel(elemWestIdx) >= 0)
-          {
-            uVelInterp(flatElemIdx,3) = grid.uVel(elemWestIdx);
-            vVelInterp(flatElemIdx,3) = grid.vVel(elemWestIdx);
-          }
-          else
-          {
-            uVelInterp(flatElemIdx,3) = grid.uVel(flatElemIdx);
-            vVelInterp(flatElemIdx,3) = grid.vVel(flatElemIdx);
-          }
-
-          // Check east face
-          if(grid.uVel(elemEastIdx) >= 0)
-          {
-            uVelInterp(flatElemIdx,1) = grid.uVel(flatElemIdx);
-            vVelInterp(flatElemIdx,1) = grid.vVel(flatElemIdx);
-          }
-          else
-          {
-            uVelInterp(flatElemIdx,1) = grid.uVel(elemEastIdx);
-            vVelInterp(flatElemIdx,1) = grid.vVel(elemEastIdx);
-          }
-        }
-        else
-        {
-          // Take care of west face of right element
-          if(grid.uVel(elemWestIdx) >= 0)
-          {
-            uVelInterp(flatElemIdx,3) = grid.uVel(elemWestIdx);
-            vVelInterp(flatElemIdx,3) = grid.vVel(elemWestIdx);
-          }
-          else
-          {
-            uVelInterp(flatElemIdx,3) = grid.uVel(flatElemIdx);
-            vVelInterp(flatElemIdx,3) = grid.vVel(flatElemIdx);
-          }
-        }
-      }
-      else
-      {
-        // Take care of east face of left element
-        if(grid.uVel(elemEastIdx) >= 0)
-        {
-          uVelInterp(flatElemIdx,1) = grid.uVel(flatElemIdx);
-          vVelInterp(flatElemIdx,1) = grid.vVel(flatElemIdx);
-        }
-        else
-        {
-          uVelInterp(flatElemIdx,1) = grid.uVel(elemEastIdx);
-          vVelInterp(flatElemIdx,1) = grid.vVel(elemEastIdx);
-        }
-      }
-    }
-  }
-
-  // Now apply BCs
-  applyDirichletBCs(grid);
-
-}
-
-
 void AdvectionUpwind::applyDirichletBCs(CartesianGrid &grid)
 {
   // Account for BCs
   for(int cellNum = 0; cellNum < grid.numCells; cellNum++)
   {
-    if(grid.cellHasVelocityBC(cellNum) == 0)
+    if(grid.cellHasDirichletVelocityBC(cellNum) == 0)
       continue;
 
     for(int faceNum = 0; faceNum < grid.numFacesPerElement; faceNum++)

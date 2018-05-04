@@ -39,9 +39,16 @@ public:
   Eigen::VectorXd vVelNeumannBCValue;
 
 
-  // Tells if cell has a velocity BC, is numCellsxnDim in size
-  // 2nd column tells which direction the neumann BC is in if there is one
-  Eigen::MatrixXi cellHasVelocityBC;
+  // Tells if cell has a velocity BC, is numCells in size
+  Eigen::VectorXi cellHasDirichletVelocityBC;
+
+  // Tells if cell has a velocity BC, is numCells in size
+  Eigen::VectorXi faceHasNeumannVelocityBC;
+
+  // Is a vector numFaces in size that holds a nDimxnDim matrix that holds whether that direction has a neumann
+  // BC. For example [1 0; 1 2] means delU/delX = 1st neumann condition, delU/delY has no neumann condition,
+  // delV/delX = 1st condition, delV/delY = 2nd condition
+  std::vector<Eigen::MatrixXi> faceVelocityNeumannBCs;
 
   // Tells if a cell has a pressure BC
   Eigen::MatrixXi cellHasPressureBC;

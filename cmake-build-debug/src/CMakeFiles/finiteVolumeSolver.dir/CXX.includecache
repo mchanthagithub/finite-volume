@@ -1105,6 +1105,8 @@ InterpolationOperator.h
 /home/maytee/Documents/2.29/finiteVolumeSolver/src/InterpolationOperators/InterpolateUpwind.cpp
 InterpolateUpwind.h
 /home/maytee/Documents/2.29/finiteVolumeSolver/src/InterpolationOperators/InterpolateUpwind.h
+iostream
+/home/maytee/Documents/2.29/finiteVolumeSolver/src/InterpolationOperators/iostream
 
 /home/maytee/Documents/2.29/finiteVolumeSolver/src/InterpolationOperators/InterpolateUpwind.h
 InterpolationOperator.h
@@ -1155,6 +1157,8 @@ Eigen/SparseLU
 /home/maytee/Documents/2.29/finiteVolumeSolver/src/PressureOperators/Eigen/SparseLU
 Eigen/SparseCholesky
 /home/maytee/Documents/2.29/finiteVolumeSolver/src/PressureOperators/Eigen/SparseCholesky
+Eigen/IterativeLinearSolvers
+/home/maytee/Documents/2.29/finiteVolumeSolver/src/PressureOperators/Eigen/IterativeLinearSolvers
 iostream
 /home/maytee/Documents/2.29/finiteVolumeSolver/src/PressureOperators/iostream
 

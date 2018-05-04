@@ -13,14 +13,19 @@
 
 int main() {
   std::cout << "Hello, World!" << std::endl;
+  //double rho = 1.225; // density of air
+  //double mu = 18.0*1e-6; // dynamic viscosity of air
+  double rho = 1000.0; // density of air
+  double mu = 1.0*1e-3; // dynamic viscosity of air
 
+  double nu = mu/rho; // kinematic viscosity
   // Generate and initialize grid
   int numX = 20;
   int numY = 20;
   double minX = 0.0;
   double minY = 0.0;
-  double Lx = 5.0;
-  double Ly = 5.0;
+  double Lx = 4.0;
+  double Ly = 4.0;
   CartesianGrid grid(numX,numY,Lx,Ly, minX,minY);
   CartesianGrid plottingGrid(numX-1,numY-1,Lx-grid.delX,Ly-grid.delY,grid.delX/2.0,grid.delY/2.0);
   plottingGrid.nodeVelocities.setZero(grid.numCells*grid.nDim);
@@ -45,7 +50,7 @@ int main() {
   ExplicitPressurePoisson poissonPressObj;
 
   double finalTime = 4.0;
-  double delT = 0.00005;
+  double delT = 0.0005;
   std::cout<<"CFL CHECK: "<<delT/(grid.delX*grid.delY)<<std::endl;
   assert(delT/(grid.delX*grid.delY) < 1.0);
   double totalTime = delT;
@@ -78,15 +83,21 @@ int main() {
     diffusionObj.clearData();
     diffusionObj.calculateDiffusionFluxesCartesian(grid,interpObj);
 
+
+    //std::cout<<"advection: "<<std::endl;
+    //std::cout<<advectionObj.totalCellAdvectionFlux<<std::endl;
+
+    //std::cout<<"diffusion: "<<std::endl;
+    //std::cout<<diffusionObj.totalCellDiffusionFlux<<std::endl;
     Eigen::MatrixXd totalFluxesMatrix;
-    totalFluxesMatrix = diffusionObj.totalCellDiffusionFlux - advectionObj.totalCellAdvectionFlux;
+    totalFluxesMatrix = mu*diffusionObj.totalCellDiffusionFlux - advectionObj.totalCellAdvectionFlux;
 
     Eigen::MatrixXd totalPressureGradient;
     pressureObj.clearData();
     //pressureObj.calculatePressureGradient(grid,totalFluxesMatrix);
 
     poissonPressObj.clearData();
-    poissonPressObj.calculatePressureGradient(grid,totalFluxesMatrix);
+    poissonPressObj.calculatePressureGradient(grid,(rho*grid.delY*grid.delX)*totalFluxesMatrix);
 
     Eigen::VectorXd oldVelocities;
     Eigen::VectorXd newVelocities;
@@ -105,12 +116,10 @@ int main() {
     {
       fluxTermsVector(ii*2) -= advectionObj.totalCellAdvectionFlux(ii,0);
       fluxTermsVector(ii*2+1) -= advectionObj.totalCellAdvectionFlux(ii,1);
-      fluxTermsVector(ii*2) += diffusionObj.totalCellDiffusionFlux(ii,0);
-      fluxTermsVector(ii*2+1) += diffusionObj.totalCellDiffusionFlux(ii,1);
-      //newPressureGradient(ii*2) += pressureObj.pressureGradient(ii,0);
-      //newPressureGradient(ii*2+1) += pressureObj.pressureGradient(ii,1);
-      newPressureGradient(ii*2) += poissonPressObj.pressureGradient(ii,0);
-      newPressureGradient(ii*2+1) += poissonPressObj.pressureGradient(ii,1);
+      fluxTermsVector(ii*2) += mu*diffusionObj.totalCellDiffusionFlux(ii,0);
+      fluxTermsVector(ii*2+1) += mu*diffusionObj.totalCellDiffusionFlux(ii,1);
+      newPressureGradient(ii*2) += poissonPressObj.pressureGradient(ii,0)/(rho*grid.delX*grid.delY);
+      newPressureGradient(ii*2+1) += poissonPressObj.pressureGradient(ii,1)/(rho*grid.delX*grid.delY);
     }
     integrator.integrate(delT,grid,oldVelocities,newVelocities,newPressureGradient,fluxTermsVector);
     grid.pressure = poissonPressObj.pressure;

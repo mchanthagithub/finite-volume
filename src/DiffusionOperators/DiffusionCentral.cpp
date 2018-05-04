@@ -6,7 +6,6 @@
 #include "iostream"
 void DiffusionCentral::calculateDiffusionFluxesCartesian(CartesianGrid &grid, InterpolateUpwind& interp)
 {
-  double nu = 0.5;
   Eigen::MatrixXd faceNormals;
   faceNormals.setZero(grid.nDim,grid.numFacesPerElement);
   faceNormals(0,0) = 0.0; faceNormals(1,0) = -1.0;
@@ -23,6 +22,7 @@ void DiffusionCentral::calculateDiffusionFluxesCartesian(CartesianGrid &grid, In
   //calculateCentralGradients(grid);
 
   calculateGradients(grid,interp);
+  applyNeumannBCs(grid);
   for(int ii = 0; ii < grid.numCells; ii++)
   {
     diffusionCentralFluxValues[ii].setZero(grid.numFacesPerElement,grid.nDim);
@@ -46,7 +46,7 @@ void DiffusionCentral::calculateDiffusionFluxesCartesian(CartesianGrid &grid, In
       //std::cout<<"Multuplied by normal:"<<std::endl;
       //std::cout<< faceVelocityGradients[cellNum][faceNum]*faceNormals.col(faceNum)<<std::endl;
 
-      diffusionCentralFluxValues[cellNum].row(faceNum) += sideLengths(faceNum)*(nu/cellArea)*faceVelocityGradients[cellNum][faceNum]*faceNormals.col(faceNum);
+      diffusionCentralFluxValues[cellNum].row(faceNum) += sideLengths(faceNum)*(1.0/cellArea)*faceVelocityGradients[cellNum][faceNum]*faceNormals.col(faceNum);
     }
   }
 
@@ -95,7 +95,7 @@ void DiffusionCentral::calculateDiffusionFluxesCartesian(CartesianGrid &grid, In
         averagedFaceFluxes(grid.faceMap(faceNum,flatElemIdx),0) += std::abs(diffusionCentralFluxValues[flatElemIdx](faceNum,0)/2.0);
         averagedFaceFluxes(grid.faceMap(faceNum,flatElemIdx),1) += std::abs(diffusionCentralFluxValues[flatElemIdx](faceNum,1)/2.0);
         // No BCs
-        if(grid.cellHasVelocityBC(flatElemIdx) == 0)
+        if(grid.cellHasDirichletVelocityBC(flatElemIdx) == 0)
         {
           //averagedFaceFluxes(grid.faceMap(faceNum,flatElemIdx),0) += std::abs(advectionFluxValues[flatElemIdx](faceNum,0)/2.0);
           //averagedFaceFluxes(grid.faceMap(faceNum,flatElemIdx),1) += std::abs(advectionFluxValues[flatElemIdx](faceNum,1)/2.0);
@@ -116,73 +116,17 @@ void DiffusionCentral::calculateDiffusionFluxesCartesian(CartesianGrid &grid, In
     {
       signX = (diffusionCentralFluxValues[cellNum](faceNum,0) > 0) - (diffusionCentralFluxValues[cellNum](faceNum,0) < 0);
       signY = (diffusionCentralFluxValues[cellNum](faceNum,1) > 0) - (diffusionCentralFluxValues[cellNum](faceNum,1) < 0);
-      totalCellDiffusionFlux(cellNum,0) += averagedFaceFluxes(grid.faceMap(faceNum,cellNum),0)*signX;
-      totalCellDiffusionFlux(cellNum,1) += averagedFaceFluxes(grid.faceMap(faceNum,cellNum),1)*signY;
+      //totalCellDiffusionFlux(cellNum,0) += averagedFaceFluxes(grid.faceMap(faceNum,cellNum),0)*signX;
+      //totalCellDiffusionFlux(cellNum,1) += averagedFaceFluxes(grid.faceMap(faceNum,cellNum),1)*signY;
+      totalCellDiffusionFlux(cellNum,0) += diffusionCentralFluxValues[cellNum](faceNum,0);
+      totalCellDiffusionFlux(cellNum,1) += diffusionCentralFluxValues[cellNum](faceNum,1);
     }
     //std::cout<<"Total x diffusion: "<<cellNum<<" "<<totalCellDiffusionFlux(cellNum,0)<<std::endl;
     //std::cout<<"Total y diffusion: "<<cellNum<<" "<<totalCellDiffusionFlux(cellNum,1)<<std::endl;
   }
 
 }
-/*
-void DiffusionCentral::calculateDiffusionFluxesCartesian(CartesianGrid &grid, InterpolateUpwind& interp)
-{
-  double nu = 1.0;
-  Eigen::MatrixXd faceNormals;
-  faceNormals.setZero(grid.nDim,grid.numFacesPerElement);
-  faceNormals(0,0) = 0.0; faceNormals(1,0) = -1.0;
-  faceNormals(0,1) = 1.0; faceNormals(1,1) = 0.0;
-  faceNormals(0,2) = 0.0; faceNormals(1,2) = 1,0;
-  faceNormals(0,3) = -1.0; faceNormals(1,3) = 0.0;
-  if(diffusionCentralFluxValues.size() == 0)
-    diffusionCentralFluxValues.resize(grid.numCells);
 
-  totalCellDiffusionFlux.setZero(grid.numCells,grid.nDim);
-
-  //calculateCentralGradients(grid);
-
-  calculateGradients(grid,interp);
-  for(int ii = 0; ii < grid.numCells; ii++)
-  {
-    diffusionCentralFluxValues[ii].setZero(grid.numFacesPerElement,grid.nDim);
-  }
-
-  for(int cellNum = 0; cellNum < grid.numCells; cellNum++)
-  {
-    double southLength = grid.delX;
-    double northLength = grid.delX;
-    double eastLength = grid.delY;
-    double westLength = grid.delY;
-
-    Eigen::VectorXd sideLengths;
-    sideLengths.setZero(grid.numFacesPerElement);
-    sideLengths(0) = southLength; sideLengths(1) = eastLength; sideLengths(2) = northLength; sideLengths(3) = westLength;
-    double cellArea = southLength*eastLength;
-    //std::cout<<"cell gradient: "<<cellNum<<std::endl;
-    //std::cout<<centralGradients[cellNum]<<std::endl;
-    for(int faceNum = 0; faceNum < grid.numFacesPerElement; faceNum++)
-    {
-      //std::cout<<"Multuplied by normal:"<<std::endl;
-      //std::cout<< faceVelocityGradients[cellNum][faceNum]*faceNormals.col(faceNum)<<std::endl;
-
-      diffusionCentralFluxValues[cellNum].row(faceNum) += sideLengths(faceNum)*(nu/cellArea)*faceVelocityGradients[cellNum][faceNum]*faceNormals.col(faceNum);
-    }
-  }
-
-
-  for(int cellNum = 0; cellNum < grid.numCells; cellNum++)
-  {
-    //std::cout<<"====cell: "<<cellNum<<std::endl;
-    for(int faceNum = 0; faceNum < grid.numFacesPerElement; faceNum++)
-    {
-      //std::cout<<"facenum: "<<faceNum<<" "<<diffusionCentralFluxValues[cellNum].row(faceNum)<<std::endl;
-      totalCellDiffusionFlux.row(cellNum) += diffusionCentralFluxValues[cellNum].row(faceNum);
-    }
-    //std::cout<<"totalDiffusion: "<<" "<<totalCellDiffusionFlux.row(cellNum)<<std::endl;
-  }
-
-}
-*/
 void DiffusionCentral::calculateGradients(CartesianGrid &grid, InterpolateUpwind& interp)
 {
 
@@ -245,7 +189,7 @@ void DiffusionCentral::calculateGradients(CartesianGrid &grid, InterpolateUpwind
         partialX.setZero(grid.nDim);
         partialY.setZero(grid.nDim);
         // No BCs
-        if(grid.cellHasVelocityBC(flatElemIdx) == 0)
+        if(grid.cellHasDirichletVelocityBC(flatElemIdx) == 0)
         {
           if(faceNum == 0)
           {
@@ -395,76 +339,6 @@ void DiffusionCentral::calculateGradients(CartesianGrid &grid, InterpolateUpwind
   }
 }
 
-void DiffusionCentral::calculateCentralGradients(CartesianGrid &grid)
-{
-  // For each cell calculate gradient based on surounding cells. If a boundary cell then do a forward/backward difference
-  // to calculate the gradient
-  if(centralGradients.size() == 0)
-    centralGradients.resize(grid.numCells);
-
-  for(int ii = 0; ii < grid.numCells; ii++)
-    centralGradients[ii].setZero(grid.nDim,grid.nDim);
-
-  // Part of gradient that is derivatives with respect to y. partialY(0) is delu/delY, partialY(1) is delv/delY
-  Eigen::VectorXd partialY;
-
-  // Part of gradient that is derivatives with respect to x. partialX(0) is delu/delX, partialX(2) is delv/delX
-  Eigen::VectorXd partialX;
-  for(int kk = 0; kk < grid.Ny; kk++)
-  {
-    for(int ii = 0; ii < grid.Nx; ii++)
-    {
-      int flatElemIdx = ii + kk*grid.Nx;
-      int eastElemIdx = flatElemIdx + 1;
-      int westElemIdx = flatElemIdx - 1;
-      int northElemIdx = flatElemIdx + grid.Nx;
-      int southElemIdx = flatElemIdx - grid.Nx;
-
-      partialY.setZero(grid.nDim);
-      partialX.setZero(grid.nDim);
-      // Left boundary
-      if(ii == 0)
-      {
-        partialX(0) = (grid.uVel(eastElemIdx) - grid.uVel(flatElemIdx))/grid.delX;
-        partialX(1) = (grid.vVel(eastElemIdx) - grid.vVel(flatElemIdx))/grid.delX;
-      }
-      // Right boundary
-      else if(ii == grid.Nx-1)
-      {
-        partialX(0) = (grid.uVel(flatElemIdx) - grid.uVel(westElemIdx))/grid.delX;
-        partialX(1) = (grid.vVel(flatElemIdx) - grid.vVel(westElemIdx))/grid.delX;
-      }
-      // Interior points, just use central difference with elements to left and right
-      else
-      {
-        partialX(0) = (grid.uVel(eastElemIdx) - grid.uVel(westElemIdx))/(2*grid.delX);
-        partialX(1) = (grid.vVel(westElemIdx) - grid.vVel(westElemIdx))/(2*grid.delX);
-      }
-
-      // Bottom boundary
-      if(kk == 0)
-      {
-        partialY(0) = (grid.uVel(northElemIdx) - grid.uVel(flatElemIdx))/grid.delY;
-        partialY(1) = (grid.vVel(northElemIdx) - grid.vVel(flatElemIdx))/grid.delY;
-      }
-      // Top boundary
-      else if(kk == grid.Ny-1)
-      {
-        partialY(0) = (grid.uVel(flatElemIdx) - grid.uVel(southElemIdx))/grid.delY;
-        partialY(1) = (grid.vVel(flatElemIdx) - grid.vVel(southElemIdx))/grid.delY;
-      }
-      else
-      {
-        partialY(0) = (grid.uVel(northElemIdx) - grid.uVel(southElemIdx))/(2*grid.delY);
-        partialY(1) = (grid.vVel(northElemIdx) - grid.vVel(southElemIdx))/(2*grid.delY);
-      }
-
-      centralGradients[flatElemIdx].col(0) = partialX;
-      centralGradients[flatElemIdx].col(1) = partialY;
-    }
-  }
-}
-
 void DiffusionCentral::clearData()
 {
   for(int ii = 0; ii < diffusionCentralFluxValues.size(); ii++)
@@ -479,4 +353,28 @@ void DiffusionCentral::clearData()
       faceVelocityGradients[ii][kk].setZero();
 
   totalCellDiffusionFlux.setZero();
+}
+
+void DiffusionCentral::applyNeumannBCs(CartesianGrid &grid)
+{
+  for(int cellNum = 0; cellNum < grid.numCells; cellNum++)
+  {
+    for(int faceNum = 0; faceNum < grid.numFacesPerElement; faceNum++)
+    {
+      int globalFaceIdx = grid.faceMap(faceNum,cellNum);
+      if(grid.faceHasNeumannVelocityBC(globalFaceIdx) > 0)
+      {
+        for(int kk = 0; kk < grid.nDim; kk++)
+        {
+          for(int ii = 0; ii < grid.nDim; ii++)
+          {
+            if(grid.faceVelocityNeumannBCs[globalFaceIdx](ii,kk) > 0)
+            {
+              faceVelocityGradients[cellNum][faceNum](ii,kk) = grid.uVelNeumannBCValue(grid.faceVelocityNeumannBCs[globalFaceIdx](ii,kk)-1);
+            }
+          }
+        }
+      }
+    }
+  }
 }

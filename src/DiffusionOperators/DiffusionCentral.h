@@ -10,9 +10,10 @@
 class DiffusionCentral : public DiffusionOperator {
 public:
     void calculateDiffusionFluxesCartesian(CartesianGrid &grid,InterpolateUpwind& interp);
-    void calculateCentralGradients(CartesianGrid &grid);
     void calculateGradients(CartesianGrid& grid, InterpolateUpwind& interp);
     void clearData();
+
+    void applyNeumannBCs(CartesianGrid& grid);
 
     void calculateGradients(CartesianGrid& grid);
 

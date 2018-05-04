@@ -66,7 +66,7 @@ void InterpolateQUICK::interpolateVelocities(CartesianGrid& grid)
       for(int faceNum = 0 ; faceNum < grid.numFacesPerElement; faceNum++)
       {
         // No BCs
-        if(grid.cellHasVelocityBC(flatElemIdx) == 0 && !surroundingHasBCs)
+        if(grid.cellHasDirichletVelocityBC(flatElemIdx) == 0 && !surroundingHasBCs)
         {
           if(faceNum == 0)
           {

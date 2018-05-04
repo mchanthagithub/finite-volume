@@ -58,6 +58,7 @@ public:
     Eigen::VectorXi mappingGlobalToActive;
     Eigen::VectorXi mappingActiveToGlobal;
     int totalDOF;
+    bool isAllNeumannPressureBCs;
 };
 
 

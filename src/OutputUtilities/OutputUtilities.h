@@ -18,6 +18,7 @@ public:
   std::string writeCellScalar(Eigen::VectorXi inputVector, int nDim, std::string inputString);
 
   std::string writeCellVector(Eigen::VectorXd inputVector, int nDim, std::string inputString);
+  std::string writeCellVector(Eigen::VectorXi inputVector, int nDim, std::string inputString);
 };
 
 

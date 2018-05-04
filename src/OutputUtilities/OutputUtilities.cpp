@@ -147,6 +147,16 @@ void OutputUtilities::writeCartesianFaceDataToVTU(CartesianGrid &grid, std::stri
       outputFp<<"    3\n";
   outputFp<<"    </DataArray>\n";
   outputFp<<"   </Cells>\n";
+  outputFp<<"   <CellData Vectors=\"vectors\">\n";
+  Eigen::VectorXi faceBCs;
+  faceBCs.setZero(grid.numFaces*2);
+  for(int ii = 0; ii < grid.numFaces; ii++)
+  {
+    faceBCs(ii*2) = grid.BCTypes(ii,0);
+    faceBCs(ii*2+1) = grid.BCTypes(ii,1);
+  }
+  outputFp<<writeCellVector(faceBCs,grid.nDim,"faceVelocityBCs");
+  outputFp<<"   </CellData>\n";
   outputFp<<"  </Piece>\n";
   outputFp<<" </UnstructuredGrid>\n";
   outputFp<<"</VTKFile>\n";
@@ -190,6 +200,17 @@ std::string OutputUtilities::writeCellVector(Eigen::VectorXd inputVector, int nD
   return outputStr;
 }
 
+std::string OutputUtilities::writeCellVector(Eigen::VectorXi inputVector, int nDim, std::string inputString)
+{
+  std::string outputStr;
+  outputStr = "<DataArray type=\"Int32\" Name=\""+inputString+"\" NumberOfComponents=\"3\" format=\"ascii\">\n";
+  for(int ii = 0; ii < inputVector.size()/nDim; ii++)
+  {
+    outputStr += std::to_string(inputVector(ii*nDim))+" "+std::to_string(inputVector(ii*nDim+1))+" 0\n";
+  }
+  outputStr += "</DataArray>\n";
+  return outputStr;
+}
 
 void OutputUtilities::writePlottingCartesianDataToVTU(CartesianGrid &grid, std::string fileName)
 {
