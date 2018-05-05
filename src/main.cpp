@@ -16,16 +16,18 @@ int main() {
   //double rho = 1.225; // density of air
   //double mu = 18.0*1e-6; // dynamic viscosity of air
   double rho = 1000.0; // density of air
-  double mu = 1.0*1e-3; // dynamic viscosity of air
+  //double mu = 1.0*1e-3; // dynamic viscosity of air
+  double mu = 1.0;
 
-  double nu = mu/rho; // kinematic viscosity
+  //double nu = mu/rho; // kinematic viscosity
+  double nu = 1.0;
   // Generate and initialize grid
-  int numX = 24;
-  int numY = 12;
+  int numX = 20;
+  int numY = 10;
   double minX = 0.0;
   double minY = 0.0;
-  double Lx = 8.0;
-  double Ly = 4.0;
+  double Lx = 10.0;
+  double Ly = 5.0;
   CartesianGrid grid(numX,numY,Lx,Ly, minX,minY);
   CartesianGrid plottingGrid(numX-1,numY-1,Lx-grid.delX,Ly-grid.delY,grid.delX/2.0,grid.delY/2.0);
   plottingGrid.nodeVelocities.setZero(grid.numCells*grid.nDim);
@@ -112,6 +114,9 @@ int main() {
     newPressureGradient.setZero(grid.numCells*grid.nDim);
     Eigen::VectorXd fluxTermsVector;
     fluxTermsVector.setZero(grid.numCells*grid.nDim);
+    Eigen::VectorXd faceVels;
+    faceVels.setZero(grid.numFaces*grid.nDim);
+    double tol = 1e-6;
     for(int ii = 0; ii < grid.numCells; ii++)
     {
       fluxTermsVector(ii*2) -= advectionObj.totalCellAdvectionFlux(ii,0);
@@ -120,7 +125,34 @@ int main() {
       fluxTermsVector(ii*2+1) += mu*diffusionObj.totalCellDiffusionFlux(ii,1);
       newPressureGradient(ii*2) += poissonPressObj.pressureGradient(ii,0);
       newPressureGradient(ii*2+1) += poissonPressObj.pressureGradient(ii,1);
+      for(int faceNum = 0; faceNum < grid.numFacesPerElement; faceNum++)
+      {
+        int globalFaceIdx = grid.faceMap(faceNum,ii);
+        if(std::abs(faceVels(globalFaceIdx*2)) > 0.0)
+        {
+          if(std::abs(faceVels(globalFaceIdx*2) - interpObj.uVelInterp(ii,faceNum)) > tol)
+          {
+            std::cout<<"cell: "<<ii<<" face: "<<faceNum<<" ERRORX==========================="<<std::endl;
+            std::cout<<faceVels(globalFaceIdx*2)<<" "<<interpObj.uVelInterp(ii,faceNum)<<std::endl;
+          }
+        }
+        if(std::abs(faceVels(globalFaceIdx*2+1)) > 0.0)
+        {
+          if(std::abs(faceVels(globalFaceIdx*2+1) - interpObj.vVelInterp(ii,faceNum)) > tol)
+          {
+            std::cout<<"cell: "<<ii<<" face: "<<faceNum<<" ERRORY==========================="<<std::endl;
+            std::cout<<faceVels(globalFaceIdx*2+1)<<" "<<interpObj.vVelInterp(ii,faceNum)<<std::endl;
+          }
+        }
+        faceVels(globalFaceIdx*2) = interpObj.uVelInterp(ii,faceNum);
+        faceVels(globalFaceIdx*2+1) = interpObj.vVelInterp(ii,faceNum);
+        //std::cout<<"face: "<<faceNum<<" "<<interpObj.uVelInterp(ii,faceNum)<<" "<<interpObj.vVelInterp(ii,faceNum)<<std::endl;
+      }
     }
+    grid.faceVels = faceVels;
+    grid.oldUVel = grid.uVel;
+    grid.oldVVel = grid.vVel;
+
     integrator.integrate(delT,grid,oldVelocities,newVelocities,newPressureGradient,fluxTermsVector);
     grid.pressure = poissonPressObj.pressure;
     grid.pressureGradient = poissonPressObj.pressureGradient;

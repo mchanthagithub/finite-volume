@@ -21,11 +21,16 @@ public:
 
   // Values of cell-averaged velocity and pressure at cell centers
   Eigen::VectorXd uVel;
+  Eigen::VectorXd oldUVel;
   Eigen::VectorXd vVel;
+  Eigen::VectorXd oldVVel;
   Eigen::VectorXd pressure;
   Eigen::MatrixXd pressureGradient;
   Eigen::MatrixXd advectionFluxes;
   Eigen::MatrixXd diffusionFluxes;
+
+  // Value of velocities at faces;
+  Eigen::VectorXd faceVels;
 
   // Hold the value of BCs
   // Are as long as the total number of different BCs for that field, ex. if there are BCs for uvel = 0 m/s, 2 m/s,

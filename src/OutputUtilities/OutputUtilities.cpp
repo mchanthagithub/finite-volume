@@ -38,19 +38,25 @@ void OutputUtilities::writeCartesianCellDataToVTU(CartesianGrid &grid, std::stri
   outputFp<<"    </DataArray>\n";
   outputFp<<"   </Cells>\n";
   outputFp<<"   <CellData Vectors=\"vectors\">\n";
-  Eigen::VectorXd cellVelocities;
+  Eigen::VectorXd cellOldVelocities;
+  Eigen::VectorXd cellNewVelocities;
   Eigen::VectorXd cellPressureGradients;
   Eigen::VectorXd cellAdvectionFlux;
   Eigen::VectorXd cellDiffusionFlux;
-  cellVelocities.setZero(grid.numCells*2);
+  cellNewVelocities.setZero(grid.numCells*2);
+  cellOldVelocities.setZero(grid.numCells*2);
   cellPressureGradients.setZero(grid.numCells*2);
   cellAdvectionFlux.setZero(grid.numCells*2);
   cellDiffusionFlux.setZero(grid.numCells*2);
 
+  cellOldVelocities.setZero(grid.numCells*2);
   for(int ii = 0; ii < grid.numCells; ii++)
   {
-    cellVelocities(ii*2) = grid.uVel(ii);
-    cellVelocities(ii*2+1) = grid.vVel(ii);
+    cellNewVelocities(ii*2) = grid.uVel(ii);
+    cellNewVelocities(ii*2+1) = grid.vVel(ii);
+
+    cellOldVelocities(ii*2) = grid.oldUVel(ii);
+    cellOldVelocities(ii*2+1) = grid.oldVVel(ii);
 
     cellPressureGradients(ii*2) = grid.pressureGradient(ii,0);
     cellPressureGradients(ii*2+1) = grid.pressureGradient(ii,1);
@@ -62,7 +68,8 @@ void OutputUtilities::writeCartesianCellDataToVTU(CartesianGrid &grid, std::stri
     cellDiffusionFlux(ii*2+1) = grid.diffusionFluxes(ii,1);
 
   }
-  outputFp<<writeCellVector(cellVelocities, grid.nDim,"cellCenteredVelocity");
+  outputFp<<writeCellVector(cellNewVelocities, grid.nDim,"cellCenteredVelocity");
+  outputFp<<writeCellVector(cellOldVelocities, grid.nDim,"oldCellCenteredVelocity");
   Eigen::VectorXi pressureBCs = grid.cellHasPressureBC.col(1);
   outputFp<<writeCellScalar(pressureBCs,grid.nDim,"pressureBC");
   outputFp<<writeCellScalar(grid.mappingGlobalToActive,grid.nDim,"dofNumber");
@@ -156,6 +163,7 @@ void OutputUtilities::writeCartesianFaceDataToVTU(CartesianGrid &grid, std::stri
     faceBCs(ii*2+1) = grid.BCTypes(ii,1);
   }
   outputFp<<writeCellVector(faceBCs,grid.nDim,"faceVelocityBCs");
+  outputFp<<writeCellVector(grid.faceVels,grid.nDim,"faceVelocities");
   outputFp<<"   </CellData>\n";
   outputFp<<"  </Piece>\n";
   outputFp<<" </UnstructuredGrid>\n";
