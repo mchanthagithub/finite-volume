@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/Grids/CartesianGrid.cpp" line="191" mnemonic="0" />
+    <bookmark url="file://$PROJECT_DIR$/src/Grids/CartesianGrid.cpp" line="1109" mnemonic="0" />
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
@@ -16,25 +16,36 @@
   <component name="ChangeListManager">
     <list default="true" id="f98b5831-ca57-466b-a0d8-e90ba7e88387" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/bin/finiteVolumeSolver" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/bin/finiteVolumeSolver" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/AdvectionOperators/AdvectionUpwind.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionCentral.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/DiffusionOperators/DiffusionCentral.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/Grids/CartesianGrid.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/Grids/CartesianGrid.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateUpwind.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/InterpolationOperators/InterpolateUpwind.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/OutputUtilities/OutputUtilities.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/OutputUtilities/OutputUtilities.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/PressureOperators/ExplicitPressure.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/ForwardEuler.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/TimeIntegrators/ForwardEuler.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/finiteVolumeSolver.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdvectionOperators/AdvectionUpwind.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdvectionOperators/AdvectionUpwind.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdvectionOperators/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdvectionOperators/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CalculusFunctions/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CalculusFunctions/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DiffusionOperators/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/DiffusionOperators/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DiffusionOperators/DiffusionCentral.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/DiffusionOperators/DiffusionCentral.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Grids/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grids/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Grids/CartesianGrid.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grids/CartesianGrid.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Grids/Grid.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grids/Grid.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Grids/CartesianGrid.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grids/CartesianGrid.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InterpolationOperators/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/InterpolationOperators/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/InterpolationOperators/InterpolateUpwind.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/InterpolationOperators/InterpolateUpwind.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OutputUtilities/OutputUtilities.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/OutputUtilities/OutputUtilities.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OutputUtilities/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/OutputUtilities/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PressureOperators/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/PressureOperators/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PressureOperators/ExplicitPressurePoisson.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/PressureOperators/ExplicitPressurePoisson.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PressureOperators/ExplicitPressurePoisson.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/PressureOperators/ExplicitPressurePoisson.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PressureOperators/PressureOperator.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/PressureOperators/PressureOperator.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TimeIntegrators/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/TimeIntegrators/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TimeIntegrators/ForwardEuler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/TimeIntegrators/ForwardEuler.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TimeIntegrators/ForwardEuler.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/TimeIntegrators/ForwardEuler.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TimeIntegrators/TimeIntegrator.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/TimeIntegrators/TimeIntegrator.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -51,11 +62,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+            <state relative-caret-position="435">
+              <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
               <folding>
                 <element signature="e#52#71#0" expanded="true" />
               </folding>
@@ -63,11 +74,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ForwardEuler.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TimeIntegrators/ForwardEuler.cpp">
+      <file leaf-file-name="AdvectionUpwind.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AdvectionOperators/AdvectionUpwind.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+            <state relative-caret-position="2526">
+              <caret line="255" column="6" selection-start-line="255" selection-start-column="6" selection-end-line="255" selection-end-column="6" />
+              <folding>
+                <element signature="e#40#68#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,29 +89,11 @@
       <file leaf-file-name="DiffusionCentral.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DiffusionOperators/DiffusionCentral.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-90">
-              <caret line="496" column="12" selection-start-line="496" selection-start-column="12" selection-end-line="496" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InterpolateUpwind.cpp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/InterpolationOperators/InterpolateUpwind.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1485">
-              <caret line="133" column="35" selection-start-line="133" selection-start-column="35" selection-end-line="133" selection-end-column="35" />
+            <state relative-caret-position="-330">
+              <caret line="47" column="7" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
               <folding>
-                <element signature="e#39#69#0" expanded="true" />
+                <element signature="e#40#69#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OutputUtilities.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OutputUtilities/OutputUtilities.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="57" selection-start-line="57" selection-end-line="57" />
             </state>
           </provider>
         </entry>
@@ -105,17 +101,20 @@
       <file leaf-file-name="CartesianGrid.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Grids/CartesianGrid.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="120" column="34" selection-start-line="120" selection-start-column="34" selection-end-line="120" selection-end-column="34" />
+            <state relative-caret-position="1500">
+              <caret line="964" column="23" selection-start-line="964" selection-start-column="23" selection-end-line="964" selection-end-column="23" />
+              <folding>
+                <element signature="e#40#66#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DiffusionCentral.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DiffusionOperators/DiffusionCentral.h">
+      <file leaf-file-name="CartesianGrid.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Grids/CartesianGrid.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="330">
+              <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -161,28 +160,28 @@
         <option value="$PROJECT_DIR$/src/Grids/PlottingCartesianGrid.h" />
         <option value="$PROJECT_DIR$/src/Grids/PlottingCartesianGrid.cpp" />
         <option value="$PROJECT_DIR$/src/InterpolationOperators/InterpolateQUICK.cpp" />
-        <option value="$PROJECT_DIR$/src/PressureOperators/PressureOperator.h" />
         <option value="$PROJECT_DIR$/src/PressureOperators/ExplicitPressure.h" />
-        <option value="$PROJECT_DIR$/src/TimeIntegrators/TimeIntegrator.h" />
-        <option value="$PROJECT_DIR$/src/TimeIntegrators/ForwardEuler.cpp" />
-        <option value="$PROJECT_DIR$/src/TimeIntegrators/ForwardEuler.h" />
         <option value="$PROJECT_DIR$/src/PressureOperators/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/PressureOperators/ExplictPressurePoisson.h" />
         <option value="$PROJECT_DIR$/src/PressureOperators/ExplictPressurePoisson.cpp" />
         <option value="$PROJECT_DIR$/src/PressureOperators/ExplicitPressure.cpp" />
-        <option value="$PROJECT_DIR$/src/PressureOperators/ExplicitPressurePoisson.h" />
         <option value="$PROJECT_DIR$/src/include/eigen/Eigen/src/Core/DenseCoeffsBase.h" />
-        <option value="$PROJECT_DIR$/src/Grids/CartesianGrid.h" />
         <option value="$PROJECT_DIR$/src/AdvectionOperators/AdvectionUpwind.h" />
         <option value="$PROJECT_DIR$/src/DiffusionOperators/DiffusionCentral.h" />
-        <option value="$PROJECT_DIR$/src/AdvectionOperators/AdvectionUpwind.cpp" />
         <option value="$PROJECT_DIR$/src/OutputUtilities/OutputUtilities.h" />
         <option value="$PROJECT_DIR$/src/Grids/Grid.h" />
         <option value="$PROJECT_DIR$/src/OutputUtilities/OutputUtilities.cpp" />
-        <option value="$PROJECT_DIR$/src/DiffusionOperators/DiffusionCentral.cpp" />
+        <option value="$PROJECT_DIR$/src/AdvectionOperators/AdvectionUpwind.cpp" />
         <option value="$PROJECT_DIR$/src/InterpolationOperators/InterpolateUpwind.cpp" />
-        <option value="$PROJECT_DIR$/src/Grids/CartesianGrid.cpp" />
+        <option value="$PROJECT_DIR$/src/TimeIntegrators/TimeIntegrator.h" />
+        <option value="$PROJECT_DIR$/src/TimeIntegrators/ForwardEuler.h" />
+        <option value="$PROJECT_DIR$/src/TimeIntegrators/ForwardEuler.cpp" />
+        <option value="$PROJECT_DIR$/src/PressureOperators/PressureOperator.h" />
+        <option value="$PROJECT_DIR$/src/PressureOperators/ExplicitPressurePoisson.h" />
         <option value="$PROJECT_DIR$/src/PressureOperators/ExplicitPressurePoisson.cpp" />
+        <option value="$PROJECT_DIR$/src/Grids/CartesianGrid.h" />
+        <option value="$PROJECT_DIR$/src/DiffusionOperators/DiffusionCentral.cpp" />
+        <option value="$PROJECT_DIR$/src/Grids/CartesianGrid.cpp" />
         <option value="$PROJECT_DIR$/src/main.cpp" />
       </list>
     </option>
@@ -195,10 +194,10 @@
   </component>
   <component name="OCFindUsagesOptions" text="false" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="24" />
-    <option name="width" value="959" />
-    <option name="height" value="744" />
+    <option name="x" value="127" />
+    <option name="y" value="73" />
+    <option name="width" value="1767" />
+    <option name="height" value="930" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -213,53 +212,6 @@
             <path>
               <item name="finiteVolumeSolver" type="b2602c69:ProjectViewProjectNode" />
               <item name="finiteVolumeSolver" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="finiteVolumeSolver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="finiteVolumeSolver" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="finiteVolumeSolver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="finiteVolumeSolver" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="AdvectionOperators" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="finiteVolumeSolver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="finiteVolumeSolver" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="CalculusFunctions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="finiteVolumeSolver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="finiteVolumeSolver" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="DiffusionOperators" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="finiteVolumeSolver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="finiteVolumeSolver" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Grids" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="finiteVolumeSolver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="finiteVolumeSolver" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="InterpolationOperators" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="finiteVolumeSolver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="finiteVolumeSolver" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="OutputUtilities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="finiteVolumeSolver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="finiteVolumeSolver" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="PressureOperators" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -506,28 +458,33 @@
       <workItem from="1525368447480" duration="27989000" />
       <workItem from="1525449115872" duration="25718000" />
       <workItem from="1525496838297" duration="1683000" />
-      <workItem from="1525536243268" duration="9384000" />
+      <workItem from="1525536243268" duration="10106000" />
+      <workItem from="1525647774831" duration="10009000" />
+      <workItem from="1525660011370" duration="2386000" />
+      <workItem from="1526053997209" duration="2642000" />
+      <workItem from="1526406054118" duration="8727000" />
+      <workItem from="1526470483464" duration="17829000" />
+      <workItem from="1526490885105" duration="1624000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202467000" />
+    <option name="totallyTimeSpent" value="246406000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="959" height="744" extended-state="0" />
-    <editor active="true" />
+    <frame x="127" y="73" width="1767" height="930" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32012513" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29315224" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3182504" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.31265208" />
       <window_info anchor="bottom" id="CMake" order="7" weight="0.328125" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3453997" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32238442" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4811321" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.38600725" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -568,11 +525,17 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="20" />
+      <option name="time" value="24" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/TimeIntegrators/CMakeLists.txt" />
+    <entry file="file://$PROJECT_DIR$/src/Grids/CartesianGrid.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="68" column="28" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/include/eigen/Eigen/src/Core/CommaInitializer.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -701,31 +664,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TimeIntegrators/TimeIntegrator.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TimeIntegrators/ForwardEuler.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PressureOperators/ExplicitPressure.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="209" column="7" selection-start-line="209" selection-start-column="7" selection-end-line="209" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -743,13 +685,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PressureOperators/PressureOperator.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/include/eigen/Eigen/src/Core/util/Memory.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
@@ -761,20 +696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="89" selection-start-line="89" selection-end-line="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdvectionOperators/AdvectionUpwind.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Grids/CartesianGrid.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="60" column="32" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -834,88 +755,139 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdvectionOperators/AdvectionUpwind.cpp">
+    <entry file="file://$PROJECT_DIR$/src/PressureOperators/ExplicitPressure.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3064">
-          <caret line="283" selection-start-line="283" selection-end-line="283" />
+        <state relative-caret-position="1920">
+          <caret line="209" column="7" selection-start-line="209" selection-start-column="7" selection-end-line="209" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdvectionOperators/AdvectionUpwind.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/InterpolationOperators/InterpolateUpwind.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1005">
+          <caret line="67" column="15" selection-start-line="67" selection-start-column="15" selection-end-line="67" selection-end-column="15" />
+          <folding>
+            <element signature="e#39#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TimeIntegrators/TimeIntegrator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="85" selection-start-line="11" selection-start-column="85" selection-end-line="11" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TimeIntegrators/ForwardEuler.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="86" selection-start-line="14" selection-start-column="86" selection-end-line="14" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Grids/Grid.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/include/eigen/Eigen/src/Core/DenseCoeffsBase.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="424" selection-start-line="424" selection-end-line="424" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PressureOperators/ExplicitPressurePoisson.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="330">
+          <caret line="363" selection-start-line="363" selection-end-line="363" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OutputUtilities/OutputUtilities.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Grids/Grid.h">
+    <entry file="file://$PROJECT_DIR$/src/PressureOperators/PressureOperator.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-315">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        <state relative-caret-position="210">
+          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PressureOperators/ExplicitPressurePoisson.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        <state relative-caret-position="9630">
+          <caret line="642" column="31" selection-start-line="642" selection-start-column="31" selection-end-line="642" selection-end-column="31" />
           <folding>
             <element signature="e#39#75#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TimeIntegrators/ForwardEuler.cpp">
+    <entry file="file://$PROJECT_DIR$/src/Grids/CartesianGrid.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        <state relative-caret-position="330">
+          <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+    <entry file="file://$PROJECT_DIR$/src/AdvectionOperators/AdvectionUpwind.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+        <state relative-caret-position="2526">
+          <caret line="255" column="6" selection-start-line="255" selection-start-column="6" selection-end-line="255" selection-end-column="6" />
           <folding>
-            <element signature="e#52#71#0" expanded="true" />
+            <element signature="e#40#68#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TimeIntegrators/ForwardEuler.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DiffusionOperators/DiffusionCentral.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="496" column="12" selection-start-line="496" selection-start-column="12" selection-end-line="496" selection-end-column="12" />
+        <state relative-caret-position="-330">
+          <caret line="47" column="7" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
+          <folding>
+            <element signature="e#40#69#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Grids/CartesianGrid.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="120" column="34" selection-start-line="120" selection-start-column="34" selection-end-line="120" selection-end-column="34" />
+        <state relative-caret-position="1500">
+          <caret line="964" column="23" selection-start-line="964" selection-start-column="23" selection-end-line="964" selection-end-column="23" />
+          <folding>
+            <element signature="e#40#66#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/InterpolationOperators/InterpolateUpwind.cpp">
+    <entry file="file://$PROJECT_DIR$/src/PressureOperators/ExplicitPressurePoisson.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1485">
-          <caret line="133" column="35" selection-start-line="133" selection-start-column="35" selection-end-line="133" selection-end-column="35" />
+        <state relative-caret-position="15">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
           <folding>
-            <element signature="e#39#69#0" expanded="true" />
+            <element signature="e#52#71#0" expanded="true" />
           </folding>
         </state>
       </provider>

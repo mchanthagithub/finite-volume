@@ -19,11 +19,14 @@ void ExplicitPressurePoisson::calculatePressure(CartesianGrid &grid, Eigen::Matr
 
   constructRHSVector(grid,H);
 
-  Eigen::SparseLU<Eigen::SparseMatrix<double>> solver;
+  //Eigen::SparseLU<Eigen::SparseMatrix<double>> solver;
   //Eigen::SparseQR<Eigen::SparseMatrix<double>, Eigen::COLAMDOrdering<int>> solver;
 
-  solver.compute(sparseA);
-
+  if(!haveComputedFactorization)
+  {
+    solver.compute(sparseA);
+    haveComputedFactorization = true;
+  }
   //Eigen::ConjugateGradient<Eigen::SparseMatrix<double>> solver;
   //solver.compute(sparseA);
   activePressure = solver.solve(RHS);
@@ -73,8 +76,8 @@ void ExplicitPressurePoisson::constructAMatrix(CartesianGrid& grid)
   double delY = grid.delY;
   double xFactor = 1.0/(grid.delX*grid.delX);
   double yFactor = 1.0/(grid.delY*grid.delY);
+  int eastActiveIdx, westActiveIdx, southActiveIdx, northActiveIdx;
 
-  double diagonalFactor = (grid.delY*grid.delY+grid.delX*grid.delX)/(grid.delX*grid.delX*grid.delY*grid.delY);
   for(int kk = 0; kk < grid.Ny; kk++)
   {
     for(int ii = 0; ii < grid.Nx; ii++)
@@ -92,7 +95,6 @@ void ExplicitPressurePoisson::constructAMatrix(CartesianGrid& grid)
       else if(mappingGlobalToActive(flatElemIdx) >= 0)
       {
         int activeIdx = mappingGlobalToActive(flatElemIdx);
-        int eastActiveIdx, westActiveIdx, southActiveIdx, northActiveIdx;
         if(ii == grid.Nx-1)
           eastActiveIdx = -3;
         else
@@ -135,7 +137,10 @@ void ExplicitPressurePoisson::constructAMatrix(CartesianGrid& grid)
               A(activeIdx,southActiveIdx) += yFactor;
             }
             //A(activeIdx,activeIdx) -= (xFactor + 2.0*yFactor);
-            A(activeIdx,activeIdx) -= (3.0*xFactor + 2.0*yFactor); // NOTE THIS IS SAYING 0 PRESSURE BC ON THE RIGHT
+            if(eastActiveIdx == -3)
+              A(activeIdx,activeIdx) -= (3.0*xFactor + 2.0*yFactor); // NOTE THIS IS SAYING 0 PRESSURE BC ON THE RIGHT
+            else
+              A(activeIdx,activeIdx) -= (xFactor + 2.0*yFactor);
           }
           // Condition on the y direction, no cell/masked out cell to top of current one
           else if(grid.cellHasPressureBC(flatElemIdx,1) == 3)
@@ -163,7 +168,10 @@ void ExplicitPressurePoisson::constructAMatrix(CartesianGrid& grid)
             A(activeIdx,westActiveIdx) = xFactor;
             A(activeIdx,northActiveIdx) = yFactor;
             //A(activeIdx,activeIdx) -= (xFactor + yFactor);
-            A(activeIdx,activeIdx) -= (3.0*xFactor + yFactor);  // NOTE THIS IS SAYING 0 PRESSURE BC ON THE RIGHT
+            if(eastActiveIdx == -3)
+              A(activeIdx,activeIdx) -= (3.0*xFactor + yFactor);  // NOTE THIS IS SAYING 0 PRESSURE BC ON THE RIGHT
+            else
+              A(activeIdx,activeIdx) -= (xFactor + yFactor);
           }
           // Neumann condition on both x and y direction, no cell/masked out cell to right and top of current
           else if(grid.cellHasPressureBC(flatElemIdx,1) == 6)
@@ -171,8 +179,12 @@ void ExplicitPressurePoisson::constructAMatrix(CartesianGrid& grid)
             A(activeIdx,westActiveIdx) = xFactor;
             A(activeIdx,southActiveIdx) = yFactor;
             //A(activeIdx,activeIdx) -= (xFactor + yFactor);
-            A(activeIdx,activeIdx) -= (3.0*xFactor + yFactor);  // NOTE THIS IS SAYING 0 PRESSURE BC ON THE RIGHT
-          }
+            if(eastActiveIdx == -3)
+              A(activeIdx,activeIdx) -= (3.0*xFactor + yFactor);  // NOTE THIS IS SAYING 0 PRESSURE BC ON THE RIGHT
+            else
+              A(activeIdx,activeIdx) -= (xFactor + yFactor);
+
+         }
           // Neumann condition on both x and y direction, no cell/masked out cell to left and top of current
           else if(grid.cellHasPressureBC(flatElemIdx,1) == 7)
           {
@@ -428,23 +440,31 @@ void ExplicitPressurePoisson::constructRHSVector(CartesianGrid &grid, Eigen::Mat
           {
             RHS(activeIdx) -= grid.pressureDirichletBCValue(grid.cellHasPressureBC(westElemIdx,0)-1)*xFactor;
             westActive = false;
+            std::cout<<"WEST"<<std::endl;
           }
           if(eastActiveIdx < 0)
           {
             RHS(activeIdx) -= grid.pressureDirichletBCValue(grid.cellHasPressureBC(eastElemIdx,0)-1)*xFactor;
             eastActive = false;
+            std::cout<<"EAST"<<std::endl;
           }
           if(northActiveIdx < 0)
           {
             RHS(activeIdx) -= grid.pressureDirichletBCValue(grid.cellHasPressureBC(northElemIdx,0)-1)*yFactor;
             northActive = false;
+            std::cout<<"NORTH"<<std::endl;
           }
           if(southActiveIdx < 0)
           {
             RHS(activeIdx) -= grid.pressureDirichletBCValue(grid.cellHasPressureBC(southElemIdx,0)-1)*yFactor;
             southActive = false;
+            std::cout<<"SOUTH"<<std::endl;
           }
+          //RHS(activeIdx) += (H(eastElemIdx,0) - H(flatElemIdx,0))/delX;
+          //RHS(activeIdx) += (H(northElemIdx,1) - H(flatElemIdx,1))/delY;
 
+          RHS(activeIdx) += (H(eastElemIdx,0) - H(westElemIdx,0))/(2.0*delX);
+          RHS(activeIdx) += (H(northElemIdx,1) - H(southElemIdx,1))/(2.0*delY);
         }
       }
     }
@@ -477,128 +497,6 @@ void ExplicitPressurePoisson::constructRHSVector(CartesianGrid &grid, Eigen::Mat
 
 
 }
-
-/*
-void ExplicitPressurePoisson::calculatePressureGradient(CartesianGrid &grid, Eigen::MatrixXd H)
-{
-  calculatePressure(grid,H);
-  double delX = grid.delX;
-  double delY = grid.delY;
-  pressureGradient.setZero(grid.numCells,grid.nDim);
-  for(int kk = 0; kk < grid.Ny; kk++)
-  {
-    for(int ii = 0; ii < grid.Nx; ii++)
-    {
-      int flatElemIdx = ii + kk*grid.Nx;
-      int northElemIdx = flatElemIdx + grid.Nx;
-      int southElemIdx = flatElemIdx - grid.Nx;
-      int eastElemIdx =flatElemIdx + 1;
-      int westElemIdx =flatElemIdx - 1;
-
-      // Is masked out cell
-      if(mappingGlobalToActive(flatElemIdx) == -2)
-        continue;
-      else if(mappingGlobalToActive(flatElemIdx) >= 0)
-      {
-        int activeIdx = mappingGlobalToActive(flatElemIdx);
-        int eastActiveIdx, westActiveIdx, southActiveIdx, northActiveIdx;
-        if(ii == grid.Nx-1)
-          eastActiveIdx = -3;
-        else
-          eastActiveIdx = mappingGlobalToActive(eastElemIdx);
-
-        if(ii == 0)
-          westActiveIdx = -3;
-        else
-          westActiveIdx = mappingGlobalToActive(westElemIdx);
-
-        if(kk == 0)
-          southActiveIdx = -3;
-        else
-          southActiveIdx = mappingGlobalToActive(southElemIdx);
-
-        if(kk == grid.Ny-1)
-          northActiveIdx = -3;
-        else
-          northActiveIdx = mappingGlobalToActive(northElemIdx);
-
-        // Cell has neumann condition
-        if(grid.cellHasPressureBC(flatElemIdx,0) < 0)
-        {
-          if(grid.cellHasPressureBC(flatElemIdx,1) == 1 || grid.cellHasPressureBC(flatElemIdx,1) == 3)
-          {
-            //std::cout<<"cellnum: "<<flatElemIdx<<std::endl;
-            //std::cout<<grid.pressureNeumannBCValue(-1*grid.cellHasPressureBC(flatElemIdx,0)-1)<<std::endl;
-            // 1: Condition on the y direction, no cell/masked out cell bellow current one
-            // 3: Condition on the y direction, no cell/masked out cell to top of current one
-            //pressureGradient(flatElemIdx,0) = (pressure(flatElemIdx) - pressure(westElemIdx))/delX;
-            pressureGradient(flatElemIdx,0) = (pressure(eastElemIdx) - pressure(westElemIdx))/(2.0*delX);
-            pressureGradient(flatElemIdx,1) = grid.pressureNeumannBCValue(-1*grid.cellHasPressureBC(flatElemIdx,0)-1);
-            //std::cout<<"13cellNum: "<<flatElemIdx<<" "<<pressureGradient(flatElemIdx,1)<<std::endl;
-          }
-          else if(grid.cellHasPressureBC(flatElemIdx,1) == 2 || grid.cellHasPressureBC(flatElemIdx,1) == 4)
-          {
-            // 2: Condition on the x direction, no cell/masked out cell to right of current one
-            // 4: Condition on the x direction, no cell/masked out cell to left of current one
-            pressureGradient(flatElemIdx,0) = grid.pressureNeumannBCValue(-1*grid.cellHasPressureBC(flatElemIdx,0)-1);
-            //pressureGradient(flatElemIdx,1) = (pressure(flatElemIdx) - pressure(southElemIdx))/delY;
-            pressureGradient(flatElemIdx,1) = (pressure(northElemIdx) - pressure(southElemIdx))/(2.0*delY);
-            //std::cout<<"24cellNum: "<<flatElemIdx<<" "<<pressureGradient(flatElemIdx,1)<<std::endl;
-          }
-          // Neumann condition on both x and y direction, no cell/masked out cell to right and bottom of current
-          else if(grid.cellHasPressureBC(flatElemIdx,1) >= 5 || grid.cellHasPressureBC(flatElemIdx,1) <= 8)
-          {
-            pressureGradient(flatElemIdx,0) = grid.pressureNeumannBCValue(-1*grid.cellHasPressureBC(flatElemIdx,0)-1);
-            pressureGradient(flatElemIdx,0) = grid.pressureNeumannBCValue(-1*grid.cellHasPressureBC(flatElemIdx,0)-1);
-            //std::cout<<"58cellNum: "<<flatElemIdx<<" "<<pressureGradient(flatElemIdx,1)<<std::endl;
-          }
-        }
-        // No neumann boundary conditions on current cell
-        else
-        {
-          bool westActive = true;
-          bool eastActive = true;
-          bool northActive = true;
-          bool southActive = true;
-
-          if(westActiveIdx < 0)
-            westActive = false;
-          if(eastActiveIdx < 0)
-            eastActive = false;
-          if(northActiveIdx < 0)
-            northActive = false;
-          if(southActiveIdx < 0)
-            southActive = false;
-
-
-          // Need to do a forward difference in x
-          if(!westActive)
-            pressureGradient(flatElemIdx,0) = (pressure(eastElemIdx) - pressure(flatElemIdx))/delX;
-          else
-          {
-            //pressureGradient(flatElemIdx,0) = (pressure(flatElemIdx) - pressure(westElemIdx))/delX;
-            pressureGradient(flatElemIdx,0) = (pressure(eastElemIdx) - pressure(westElemIdx))/(2.0*delX);
-          }
-
-          // Need to do a forward difference in y
-          if(!southActive)
-            pressureGradient(flatElemIdx,1) = (pressure(northElemIdx) - pressure(flatElemIdx))/delY;
-          else
-          {
-            //pressureGradient(flatElemIdx,1) = (pressure(flatElemIdx) - pressure(southElemIdx))/delY;
-            pressureGradient(flatElemIdx,1) = (pressure(northElemIdx) - pressure(southElemIdx))/(2.0*delY);
-          }
-          //std::cout<<"NoneumcellNum: "<<flatElemIdx<<" "<<pressureGradient(flatElemIdx,1)<<std::endl;
-
-
-        }
-      }
-    }
-  }
-  //std::cout<<"pressure gradient:"<<std::endl;
-  //std::cout<<pressureGradient<<std::endl;
-}
-*/
 
 void ExplicitPressurePoisson::calculatePressureGradient(CartesianGrid &grid, Eigen::MatrixXd H)
 {
@@ -738,11 +636,11 @@ void ExplicitPressurePoisson::createMappings(CartesianGrid &grid)
   std::cout<<totalDOF<<std::endl;
 }
 
-void ExplicitPressurePoisson::clearData()
+void ExplicitPressurePoisson::clearData(CartesianGrid& grid)
 {
   activePressure.setZero();
-  pressureGradient.setZero();
-  pressure.setZero();
+  pressureGradient.setZero(grid.numCells,grid.nDim);
+  pressure.setZero(grid.numCells);
   //totalDOF = 0;
   //mappingGlobalToActive.setZero();
   //mappingActiveToGlobal.setZero();

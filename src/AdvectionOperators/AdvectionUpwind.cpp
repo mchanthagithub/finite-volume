@@ -35,6 +35,9 @@ void AdvectionUpwind::calculateAdvectionFluxesCartesian(CartesianGrid &grid, Int
 
   for(int cellNum = 0; cellNum < grid.numCells; cellNum++)
   {
+    // Masked out cell
+    if(grid.mappingGlobalToActive(cellNum) == -2)
+      continue;
     /*
     // Are general formulas -> should move to a function in grid to calculate distances between nodes
     double southLength = grid.cornerXY(grid.cornerMap(0,cellNum)*grid.nDim) - grid.cornerXY(grid.cornerMap(1,cellNum)*grid.nDim);
@@ -60,8 +63,6 @@ void AdvectionUpwind::calculateAdvectionFluxesCartesian(CartesianGrid &grid, Int
       advectionFluxValues[cellNum].row(faceNum) += (faceVelocity *
         (faceVelocity.dot(faceNormals.col(faceNum)))*sideLengths(faceNum)).transpose()*(1.0/cellArea);
 
-      Eigen::VectorXd temp = (faceVelocity *
-        (faceVelocity.dot(faceNormals.col(faceNum)))*sideLengths(faceNum)).transpose();
 
     }
   }
@@ -71,55 +72,10 @@ void AdvectionUpwind::calculateAdvectionFluxesCartesian(CartesianGrid &grid, Int
     for(int ii = 0; ii < grid.Nx; ii++)
     {
       int flatElemIdx = ii + kk*grid.Nx;
-      int northElemIdx = flatElemIdx + grid.Nx;
-      int southElemIdx = flatElemIdx - grid.Nx;
-      int eastElemIdx = flatElemIdx + 1;
-      int westElemIdx = flatElemIdx - 1;
-
-      int nnElemIdx = flatElemIdx + 2*grid.Nx;
-      int ssElemIdx = flatElemIdx - 2*grid.Nx;
-      int eeElemIdx = flatElemIdx + 2;
-      int wwElemIdx = flatElemIdx - 2;
-
-      // Determine BCs in the current cell
-      int globalSouthFaceIdx = grid.faceMap(0,flatElemIdx);
-      int globalEastFaceIdx = grid.faceMap(1,flatElemIdx);
-      int globalNorthFaceIdx = grid.faceMap(2,flatElemIdx);
-      int globalWestFaceIdx = grid.faceMap(3,flatElemIdx);
-
-      bool southBoundary = false;
-      bool eastBoundary = false;
-      bool northBoundary = false;
-      bool westBoundary = false;
-
-      bool ssBoundary = false;
-      bool eeBoundary = false;
-      bool nnBoundary = false;
-      bool wwBoundary = false;
-      // BC to the south
-      if(grid.BCTypes(globalSouthFaceIdx,0) != 0 || grid.BCTypes(globalSouthFaceIdx,1) != 0)
-        southBoundary = true;
-      if(grid.BCTypes(globalEastFaceIdx,0) != 0 || grid.BCTypes(globalEastFaceIdx,1) != 0)
-        eastBoundary = true;
-      if(grid.BCTypes(globalNorthFaceIdx,0) != 0 || grid.BCTypes(globalNorthFaceIdx,1) != 0)
-        northBoundary = true;
-      if(grid.BCTypes(globalWestFaceIdx,0) != 0 || grid.BCTypes(globalWestFaceIdx,1) != 0)
-        westBoundary = true;
-
       for(int faceNum = 0 ; faceNum < grid.numFacesPerElement; faceNum++)
       {
         averagedFaceFluxes(grid.faceMap(faceNum,flatElemIdx),0) += std::abs(advectionFluxValues[flatElemIdx](faceNum,0)/2.0);
         averagedFaceFluxes(grid.faceMap(faceNum,flatElemIdx),1) += std::abs(advectionFluxValues[flatElemIdx](faceNum,1)/2.0);
-        // No BCs
-        if(grid.cellHasDirichletVelocityBC(flatElemIdx) == 0)
-        {
-          //averagedFaceFluxes(grid.faceMap(faceNum,flatElemIdx),0) += std::abs(advectionFluxValues[flatElemIdx](faceNum,0)/2.0);
-          //averagedFaceFluxes(grid.faceMap(faceNum,flatElemIdx),1) += std::abs(advectionFluxValues[flatElemIdx](faceNum,1)/2.0);
-        }
-        else
-        {
-
-        }
       }
     }
   }
@@ -135,10 +91,13 @@ void AdvectionUpwind::calculateAdvectionFluxesCartesian(CartesianGrid &grid, Int
   double signX, signY;
   for(int cellNum = 0; cellNum < grid.numCells; cellNum++)
   {
+    // Masked out cell
+    if(grid.mappingGlobalToActive(cellNum) == -2)
+      continue;
     for(int faceNum = 0; faceNum < grid.numFacesPerElement; faceNum++)
     {
-      signX = (advectionFluxValues[cellNum](faceNum,0) > 0) - (advectionFluxValues[cellNum](faceNum,0) < 0);
-      signY = (advectionFluxValues[cellNum](faceNum,1) > 0) - (advectionFluxValues[cellNum](faceNum,1) < 0);
+      //signX = (advectionFluxValues[cellNum](faceNum,0) > 0) - (advectionFluxValues[cellNum](faceNum,0) < 0);
+      //signY = (advectionFluxValues[cellNum](faceNum,1) > 0) - (advectionFluxValues[cellNum](faceNum,1) < 0);
       //totalCellAdvectionFlux(cellNum,0) += averagedFaceFluxes(grid.faceMap(faceNum,cellNum),0)*signX;
       //totalCellAdvectionFlux(cellNum,1) += averagedFaceFluxes(grid.faceMap(faceNum,cellNum),1)*signY;
       totalCellAdvectionFlux(cellNum,0) += advectionFluxValues[cellNum](faceNum,0);

@@ -13,7 +13,7 @@ public:
     // Note that H is the sum of the advective and diffusive flux
     void calculatePressure(CartesianGrid& grid, Eigen::MatrixXd H);
     void calculatePressureGradient(CartesianGrid& grid, Eigen::MatrixXd H);
-    void clearData();
+    void clearData(CartesianGrid& grid);
     void createMappings(CartesianGrid& grid);
     void constructAMatrix(CartesianGrid& grid);
     void constructRHSVector(CartesianGrid& grid, Eigen::MatrixXd H);
@@ -28,6 +28,8 @@ public:
     Eigen::VectorXd RHS;
     bool haveCreatedMappings = false;
     bool haveConstructedAMatrix = false;
+    bool haveComputedFactorization = false;
+    Eigen::SparseLU<Eigen::SparseMatrix<double>> solver;
 };
 
 

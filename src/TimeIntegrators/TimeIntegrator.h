@@ -9,7 +9,7 @@
 class TimeIntegrator {
 public:
     virtual void integrate(double delT, Grid& grid, Eigen::VectorXd& old_velocity, Eigen::VectorXd& newVelocity,
-              Eigen::VectorXd& pressureGradient, Eigen::VectorXd& fluxTerms) = 0;
+              Eigen::VectorXd& pressureGradient, Eigen::VectorXd& fluxTerms,double rho) = 0;
 };
 
 

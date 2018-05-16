@@ -26,7 +26,12 @@ CartesianGrid::CartesianGrid(int in_Nx, int in_Ny, double in_Lx, double in_Ly, d
 
   setVariableSizes(nElem,nFaces,nCorners);
   generateMesh();
-  setBCs();
+  //setChannel();
+  //setChannelWithObstacle();
+  //setChannelWithCylinder();
+  //setBurgers();
+  setDiffusion();
+
 
   std::cout<<"Centers:"<<std::endl;
   //std::cout<<centerXY.transpose()<<std::endl;
@@ -54,6 +59,920 @@ CartesianGrid::CartesianGrid(int in_Nx, int in_Ny, double in_Lx, double in_Ly, d
     //std::cout<<std::endl;
   }
   createMappings();
+}
+
+void CartesianGrid::setChannel()
+{
+  //uVel.setZero();
+  uVel.setOnes();
+  uVel = 0.25*uVel;
+  vVel.setZero();
+  pressure = 1000.0*Eigen::VectorXd::Ones(numCells);
+  isChannel = true;
+  for(int kk = 0; kk < Ny; kk++)
+  {
+    for(int ii = 0; ii < Nx; ii++)
+    {
+      int cellNum = ii + kk*Nx;
+      if(kk == 0)
+      {
+        // Bottom of cells
+        cellHasDirichletVelocityBC(cellNum) = 1;
+        BCTypes(faceMap(0, cellNum), 0) = 1; // No slip in x
+        BCTypes(faceMap(0, cellNum), 1) = 1; // No penetration in y
+
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 1;
+      }
+      else if(kk == Ny-1)
+      {
+        // Top of cells
+        cellHasDirichletVelocityBC(cellNum) = 1;
+        BCTypes(faceMap(2, cellNum), 0) = 1; // No slip in x
+        BCTypes(faceMap(2, cellNum), 1) = 1; // No penetration in y
+
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 3;
+      }
+
+      if(ii == 0)
+      {
+        // Left side
+        cellHasDirichletVelocityBC(cellNum) = 1;
+        BCTypes(faceMap(3, cellNum), 0) = 2; // No penetration in x
+        BCTypes(faceMap(3, cellNum), 1) = 1; // No slip in y
+
+        // Dirichlet pressure BC at inlet
+        //if(cellNum >= Nx && cellNum < numCells - Nx)
+        {
+          //cellHasPressureBC(cellNum, 0) = 1;
+          //cellHasPressureBC(cellNum, 1) = -1;
+        }
+
+        if(kk != Ny-1)
+        {
+          cellHasPressureBC(cellNum, 0) = -1;
+          cellHasPressureBC(cellNum, 1) = 4;
+        }
+
+      }
+      else if(ii == Nx-1)
+      {
+        // Right side
+        //cellHasPressureBC(cellNum) = 1;
+        //BCTypes(faceMap(1,cellNum),2) = 1; // Dirichlet presure at otulet
+
+        faceHasNeumannVelocityBC(faceMap(1,cellNum)) = 1;
+        BCTypes(faceMap(1, cellNum), 0) = -1; // No penetration in x
+        BCTypes(faceMap(1, cellNum), 1) = -1; // No slip in y
+
+        int temp = faceMap(1,cellNum);
+        int sizetep = faceVelocityNeumannBCs[0].size();
+        faceVelocityNeumannBCs[faceMap(1,cellNum)](0,0) = 1;
+        faceVelocityNeumannBCs[faceMap(1,cellNum)](1,0) = 1;
+
+        if(kk != Ny-1)
+        {
+          cellHasPressureBC(cellNum, 0) = -1;
+          cellHasPressureBC(cellNum, 1) = 2;
+        }
+
+      }
+
+      if (ii == Nx - 1 && kk == 0) {
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 5; // Bottom right
+      }
+      else if (ii == Nx - 1 && kk == Ny - 1)
+      {
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 6; // Top right
+      }
+      else if (ii == 0 && kk == Ny - 1)
+      {
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 7; // Top left
+      }
+
+      else if (ii == 0 && kk == 0)
+      {
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 8; // Bottom Left
+      }
+    }
+  }
+  isAllNeumannPressureBCs = false;
+
+  uVelBCValue.resize(3);
+  uVelBCValue(0) = 0.0;
+  uVelBCValue(1) = 2.0;
+  uVelBCValue(2) = -1.0;
+
+  uVelNeumannBCValue.resize(1);
+  uVelNeumannBCValue(0) = 0.0;
+
+  vVelNeumannBCValue.resize(1);
+  vVelNeumannBCValue(0) = 0.0;
+
+  vVelBCValue.resize(3);
+  vVelBCValue(0) = 0.0;
+  vVelBCValue(1) = 1.0;
+  vVelBCValue(2) = -1.0;
+
+  pressureDirichletBCValue.resize(2);
+  pressureDirichletBCValue(0) = 1000;
+  pressureDirichletBCValue(1) = 200;
+
+  pressureNeumannBCValue.resize(1);
+  pressureNeumannBCValue(0) = 0.0;
+}
+
+void CartesianGrid::setChannelWithObstacle()
+{
+  uVel.setZero();
+  uVel = 0.25*uVel;
+  vVel.setZero();
+  pressure = 1000.0*Eigen::VectorXd::Ones(numCells);
+  isChannel = true;
+   for(int kk = 0; kk < Ny; kk++)
+  {
+    for(int ii = 0; ii < Nx; ii++)
+    {
+      int cellNum = ii + kk*Nx;
+      if(kk == 0)
+      {
+        // Bottom of cells
+        cellHasDirichletVelocityBC(cellNum) = 1;
+        BCTypes(faceMap(0, cellNum), 0) = 1; // No slip in x
+        BCTypes(faceMap(0, cellNum), 1) = 1; // No penetration in y
+
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 1;
+      }
+      else if(kk == Ny-1)
+      {
+        // Top of cells
+        cellHasDirichletVelocityBC(cellNum) = 1;
+        BCTypes(faceMap(2, cellNum), 0) = 1; // No slip in x
+        BCTypes(faceMap(2, cellNum), 1) = 1; // No penetration in y
+
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 3;
+      }
+
+      if(ii == 0)
+      {
+        // Left side
+        cellHasDirichletVelocityBC(cellNum) = 1;
+        BCTypes(faceMap(3, cellNum), 0) = 2; // No penetration in x
+        BCTypes(faceMap(3, cellNum), 1) = 1; // No slip in y
+
+        // Dirichlet pressure BC at inlet
+        //if(cellNum >= Nx && cellNum < numCells - Nx)
+        {
+          //cellHasPressureBC(cellNum, 0) = 1;
+          //cellHasPressureBC(cellNum, 1) = -1;
+        }
+
+        if(kk != Ny-1)
+        {
+          cellHasPressureBC(cellNum, 0) = -1;
+          cellHasPressureBC(cellNum, 1) = 4;
+        }
+
+      }
+      else if(ii == Nx-1)
+      {
+        // Right side
+        //cellHasPressureBC(cellNum) = 1;
+        //BCTypes(faceMap(1,cellNum),2) = 1; // Dirichlet presure at otulet
+
+        faceHasNeumannVelocityBC(faceMap(1,cellNum)) = 1;
+        BCTypes(faceMap(1, cellNum), 0) = -1; // No penetration in x
+        BCTypes(faceMap(1, cellNum), 1) = -1; // No slip in y
+
+        int temp = faceMap(1,cellNum);
+        int sizetep = faceVelocityNeumannBCs[0].size();
+        faceVelocityNeumannBCs[faceMap(1,cellNum)](0,0) = 1;
+        faceVelocityNeumannBCs[faceMap(1,cellNum)](1,0) = 1;
+
+        if(kk != Ny-1)
+        {
+          cellHasPressureBC(cellNum, 0) = -1;
+          cellHasPressureBC(cellNum, 1) = 2;
+        }
+
+      }
+
+      if (ii == Nx - 1 && kk == 0) {
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 5; // Bottom right
+      }
+      else if (ii == Nx - 1 && kk == Ny - 1)
+      {
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 6; // Top right
+      }
+      else if (ii == 0 && kk == Ny - 1)
+      {
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 7; // Top left
+      }
+
+      else if (ii == 0 && kk == 0)
+      {
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 8; // Bottom Left
+      }
+    }
+  }
+  isAllNeumannPressureBCs = false;
+
+  /*
+  double height = 1.5;
+  double length = 1.5;
+  double minX = 1.25;
+  double minY = 1.25;
+
+  for(int kk = 0; kk < Ny; kk++)
+  {
+    for(int ii = 0; ii < Nx; ii++)
+    {
+      int flatElemIdx = ii + kk*Nx;
+      double xCoord = centerXY(flatElemIdx*2);
+      double yCoord = centerXY(flatElemIdx*2+1);
+      if(xCoord >= minX && xCoord <= minX+length && yCoord >= minY && yCoord <= minY+height)
+      {
+        cellHasDirichletVelocityBC(flatElemIdx,0) = 1;
+        cellHasPressureBC(flatElemIdx,0) = -1;
+        for(int faceNum = 0; faceNum < numFacesPerElement; faceNum++)
+        {
+          BCTypes(faceMap(faceNum,flatElemIdx),0) = 2;
+          BCTypes(faceMap(faceNum,flatElemIdx),1) = 1;
+        }
+      }
+    }
+  }
+  */
+
+  int xBegin = (2*Nx)/8;
+  int xEnd = (4*Nx)/8;
+
+  int yBegin = (2*Ny)/6;
+  int yEnd = (4*Ny)/6;
+
+  bool useSquare = true;
+  if (useSquare)
+  {
+    for(int kk = yBegin; kk <= yEnd; kk++)
+    {
+      for(int ii = xBegin; ii <= xEnd; ii++)
+      {
+        int flatElemIdx = ii + kk*Nx;
+        int eastElemIdx =flatElemIdx + 1;
+        int westElemIdx =flatElemIdx - 1;
+        int southElemIdx =flatElemIdx - Nx;
+        int northElemIdx = flatElemIdx + Nx;
+        if(kk == yBegin)
+        {
+          cellHasPressureBC(southElemIdx,0) = -1;
+          cellHasPressureBC(southElemIdx,1) = 3;
+
+          cellHasDirichletVelocityBC(southElemIdx) = 1;
+          BCTypes(faceMap(2, southElemIdx), 0) = 1; // No penetration in x
+          BCTypes(faceMap(2, southElemIdx), 1) = 1; // No slip in y
+        }
+        if(kk == yEnd)
+        {
+          cellHasPressureBC(northElemIdx,0) = -1;
+          cellHasPressureBC(northElemIdx,1) = 1;
+
+          cellHasDirichletVelocityBC(northElemIdx) = 1;
+          BCTypes(faceMap(0, northElemIdx), 0) = 1; // No penetration in x
+          BCTypes(faceMap(0, northElemIdx), 1) = 1; // No slip in y
+        }
+        if(ii == xBegin)
+        {
+          cellHasPressureBC(westElemIdx,0) = -1;
+          cellHasPressureBC(westElemIdx,1) = 2;
+
+          cellHasDirichletVelocityBC(westElemIdx) = 1;
+          BCTypes(faceMap(1, westElemIdx), 0) = 1; // No penetration in x
+          BCTypes(faceMap(1, westElemIdx), 1) = 1; // No slip in y
+        }
+        if(ii == xEnd)
+        {
+          cellHasPressureBC(eastElemIdx,0) = -1;
+          cellHasPressureBC(eastElemIdx,1) = 4;
+
+          cellHasDirichletVelocityBC(eastElemIdx) = 1;
+          BCTypes(faceMap(3, eastElemIdx), 0) = 1; // No penetration in x
+          BCTypes(faceMap(3, eastElemIdx), 1) = 1; // No slip in y
+        }
+      }
+    }
+
+    for(int kk = 0; kk < Ny; kk++)
+    {
+      for (int ii = 0; ii < Nx; ii++)
+      {
+        int flatElemIdx = ii + kk*Nx;
+
+        // Square
+        if(ii >= xBegin && ii <= xEnd && kk >= yBegin && kk <= yEnd)
+        {
+          cellHasDirichletVelocityBC(flatElemIdx) = 1;
+          cellHasPressureBC(flatElemIdx,0) = -1;
+          for(int faceNum = 0; faceNum < numFacesPerElement; faceNum++)
+          {
+            BCTypes(faceMap(faceNum, flatElemIdx), 0) = 1; // No slip in x
+            BCTypes(faceMap(faceNum, flatElemIdx), 1) = 1; // No penetration in y
+          }
+        }
+      }
+    }
+  }
+
+
+  uVelBCValue.resize(3);
+  uVelBCValue(0) = 0.0;
+  uVelBCValue(1) = 1.0;
+  uVelBCValue(2) = -1.0;
+
+  uVelNeumannBCValue.resize(1);
+  uVelNeumannBCValue(0) = 0.0;
+
+  vVelNeumannBCValue.resize(1);
+  vVelNeumannBCValue(0) = 0.0;
+
+  vVelBCValue.resize(3);
+  vVelBCValue(0) = 0.0;
+  vVelBCValue(1) = 1.0;
+  vVelBCValue(2) = -1.0;
+
+  pressureDirichletBCValue.resize(2);
+  pressureDirichletBCValue(0) = 0.0;
+  pressureDirichletBCValue(1) = 0.0;
+
+  pressureNeumannBCValue.resize(1);
+  pressureNeumannBCValue(0) = 0.0;
+}
+
+void CartesianGrid::setChannelWithCylinder()
+{
+  uVel.setZero();
+  vVel.setZero();
+  pressure = 1000.0*Eigen::VectorXd::Ones(numCells);
+  isChannel = true;
+  for(int kk = 0; kk < Ny; kk++)
+  {
+    for(int ii = 0; ii < Nx; ii++)
+    {
+      int globalIdx = ii + kk*Nx;
+      if(kk < Ny/2)
+        uVel(globalIdx) = 0.85;
+      else
+        uVel(globalIdx) = 0.80;
+    }
+  }
+  for(int kk = 0; kk < Ny; kk++)
+  {
+    for(int ii = 0; ii < Nx; ii++)
+    {
+      int cellNum = ii + kk*Nx;
+      if(kk == 0)
+      {
+        // Bottom of cells
+        cellHasDirichletVelocityBC(cellNum) = 1;
+        BCTypes(faceMap(0, cellNum), 0) = 1; // No slip in x
+        BCTypes(faceMap(0, cellNum), 1) = 1; // No penetration in y
+
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 1;
+      }
+      else if(kk == Ny-1)
+      {
+        // Top of cells
+        cellHasDirichletVelocityBC(cellNum) = 1;
+        BCTypes(faceMap(2, cellNum), 0) = 1; // No slip in x
+        BCTypes(faceMap(2, cellNum), 1) = 1; // No penetration in y
+
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 3;
+      }
+
+      if(ii == 0)
+      {
+        // Left side
+        cellHasDirichletVelocityBC(cellNum) = 1;
+        BCTypes(faceMap(3, cellNum), 0) = 2; // No penetration in x
+        BCTypes(faceMap(3, cellNum), 1) = 1; // No slip in y
+
+        // Dirichlet pressure BC at inlet
+        //if(cellNum >= Nx && cellNum < numCells - Nx)
+        {
+          //cellHasPressureBC(cellNum, 0) = 1;
+          //cellHasPressureBC(cellNum, 1) = -1;
+        }
+
+        if(kk != Ny-1)
+        {
+          cellHasPressureBC(cellNum, 0) = -1;
+          cellHasPressureBC(cellNum, 1) = 4;
+        }
+
+      }
+      else if(ii == Nx-1)
+      {
+        // Right side
+        //cellHasPressureBC(cellNum) = 1;
+        //BCTypes(faceMap(1,cellNum),2) = 1; // Dirichlet presure at otulet
+
+        faceHasNeumannVelocityBC(faceMap(1,cellNum)) = 1;
+        BCTypes(faceMap(1, cellNum), 0) = -1; // No penetration in x
+        BCTypes(faceMap(1, cellNum), 1) = -1; // No slip in y
+
+        int temp = faceMap(1,cellNum);
+        int sizetep = faceVelocityNeumannBCs[0].size();
+        faceVelocityNeumannBCs[faceMap(1,cellNum)](0,0) = 1;
+        faceVelocityNeumannBCs[faceMap(1,cellNum)](1,0) = 1;
+
+        if(kk != Ny-1)
+        {
+          cellHasPressureBC(cellNum, 0) = -1;
+          cellHasPressureBC(cellNum, 1) = 2;
+        }
+
+      }
+
+      if (ii == Nx - 1 && kk == 0) {
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 5; // Bottom right
+      }
+      else if (ii == Nx - 1 && kk == Ny - 1)
+      {
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 6; // Top right
+      }
+      else if (ii == 0 && kk == Ny - 1)
+      {
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 7; // Top left
+      }
+
+      else if (ii == 0 && kk == 0)
+      {
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 8; // Bottom Left
+      }
+    }
+  }
+  isAllNeumannPressureBCs = false;
+
+  double x0 = 0.80;
+  double y0 = 0.5;
+  double radius = 0.15;
+
+  for(int ii = 0; ii < Nx; ii++)
+  {
+    for(int kk = 0; kk < Ny; kk++)
+    {
+      int globalIdx = ii+kk*Nx;
+      double xCoord = centerXY(globalIdx*2);
+      double yCoord = centerXY(globalIdx*2+1);
+      double distance = sqrt((xCoord-x0)*(xCoord-x0) + (yCoord-y0)*(yCoord-y0) );
+      if(distance < radius)
+      {
+        // Mask out cells
+        uVel(globalIdx) = 0.0;
+        vVel(globalIdx) = 0.0;
+
+        cellHasDirichletVelocityBC(globalIdx) = 1;
+        cellHasPressureBC(globalIdx,0) = -1;
+        for(int faceNum = 0; faceNum < numFacesPerElement; faceNum++)
+        {
+          BCTypes(faceMap(faceNum, globalIdx), 0) = 1; // No slip in x
+          BCTypes(faceMap(faceNum, globalIdx), 1) = 1; // No penetration in y
+        }
+      }
+    }
+  }
+
+
+  for(int ii = 0; ii < Nx; ii++)
+  {
+    for(int kk = 0; kk < Ny; kk++)
+    {
+      int globalIdx = ii+kk*Nx;
+      int westIdx = globalIdx - 1;
+      int eastIdx = globalIdx + 1;
+      int northIdx = globalIdx + Nx;
+      int southIdx = globalIdx - Nx;
+
+      bool currentIsMasked = true;
+      bool westIsMasked = true;
+      bool eastIsMasked = true;
+      bool northIsMasked = true;
+      bool southIsMasked = true;
+      for(int faceNum = 0; faceNum < numFacesPerElement; faceNum++)
+      {
+        if( BCTypes(faceMap(faceNum, globalIdx), 0) == 0)
+          currentIsMasked = false;
+
+        if(ii != 0)
+          if( BCTypes(faceMap(faceNum, westIdx), 0) == 0)
+            westIsMasked = false;
+
+        if(ii != Nx-1)
+          if( BCTypes(faceMap(faceNum, eastIdx), 0) == 0)
+            eastIsMasked = false;
+
+        if(kk != 0)
+          if( BCTypes(faceMap(faceNum, southIdx), 0) == 0)
+            southIsMasked = false;
+
+        if(kk != Ny-1)
+          if( BCTypes(faceMap(faceNum, northIdx), 0) == 0)
+            northIsMasked = false;
+      }
+
+      if(currentIsMasked && westIsMasked && eastIsMasked && northIsMasked && southIsMasked)
+        continue;
+
+      if(currentIsMasked)
+      {
+        if(!westIsMasked)
+        {
+          if(cellHasPressureBC(westIdx,1) == 0)
+          {
+            cellHasPressureBC(westIdx,0) = -1;
+            cellHasPressureBC(westIdx,1) = 2;
+          }
+          else if (cellHasPressureBC(westIdx,1) == 1)
+          {
+            cellHasPressureBC(westIdx,0) = -1;
+            cellHasPressureBC(westIdx,1) = 5;
+          }
+          else if (cellHasPressureBC(westIdx,1) == 3)
+          {
+            cellHasPressureBC(westIdx,0) = -1;
+            cellHasPressureBC(westIdx,1) = 6;
+          }
+          cellHasDirichletVelocityBC(westIdx) = 1;
+          BCTypes(faceMap(1, westIdx), 0) = 1; // No penetration in x
+          BCTypes(faceMap(1, westIdx), 1) = 1; // No slip in y
+        }
+        if(!northIsMasked)
+        {
+          if(cellHasPressureBC(northIdx,1) == 0)
+          {
+            cellHasPressureBC(northIdx,0) = -1;
+            cellHasPressureBC(northIdx,1) = 1;
+          }
+          else if (cellHasPressureBC(northIdx,1) == 2)
+          {
+            cellHasPressureBC(northIdx,0) = -1;
+            cellHasPressureBC(northIdx,1) = 5;
+          }
+          else if (cellHasPressureBC(northIdx,1) == 4)
+          {
+            cellHasPressureBC(northIdx,0) = -1;
+            cellHasPressureBC(northIdx,1) = 8;
+          }
+          cellHasDirichletVelocityBC(northIdx) = 1;
+          BCTypes(faceMap(0, northIdx), 0) = 1; // No penetration in x
+          BCTypes(faceMap(0, northIdx), 1) = 1; // No slip in y
+        }
+        if(!eastIsMasked)
+        {
+          if(cellHasPressureBC(eastIdx,1) == 0)
+          {
+            cellHasPressureBC(eastIdx,0) = -1;
+            cellHasPressureBC(eastIdx,1) = 4;
+          }
+          else if (cellHasPressureBC(eastIdx,1) == 1)
+          {
+            cellHasPressureBC(eastIdx,0) = -1;
+            cellHasPressureBC(eastIdx,1) = 8;
+          }
+          else if (cellHasPressureBC(eastIdx,1) == 3)
+          {
+            cellHasPressureBC(eastIdx,0) = -1;
+            cellHasPressureBC(eastIdx,1) = 7;
+          }
+          cellHasDirichletVelocityBC(eastIdx) = 1;
+          BCTypes(faceMap(3, eastIdx), 0) = 1; // No penetration in x
+          BCTypes(faceMap(3, eastIdx), 1) = 1; // No slip in y
+        }
+
+        if(!southIsMasked)
+        {
+          if(cellHasPressureBC(southIdx,1) == 0)
+          {
+            cellHasPressureBC(southIdx,0) = -1;
+            cellHasPressureBC(southIdx,1) = 3;
+          }
+          else if (cellHasPressureBC(southIdx,1) == 2)
+          {
+            cellHasPressureBC(southIdx,0) = -1;
+            cellHasPressureBC(southIdx,1) = 6;
+          }
+          else if (cellHasPressureBC(southIdx,1) == 4)
+          {
+            cellHasPressureBC(southIdx,0) = -1;
+            cellHasPressureBC(southIdx,1) = 7;
+          }
+          cellHasDirichletVelocityBC(southIdx) = 1;
+          BCTypes(faceMap(2, southIdx), 0) = 1; // No penetration in x
+          BCTypes(faceMap(2, southIdx), 1) = 1; // No slip in y
+        }
+      }
+    }
+  }
+
+  uVelBCValue.resize(3);
+  uVelBCValue(0) = 0.0;
+  uVelBCValue(1) = 1.0;
+  uVelBCValue(2) = -1.0;
+
+  uVelNeumannBCValue.resize(1);
+  uVelNeumannBCValue(0) = 0.0;
+
+  vVelNeumannBCValue.resize(1);
+  vVelNeumannBCValue(0) = 0.0;
+
+  vVelBCValue.resize(3);
+  vVelBCValue(0) = 0.0;
+  vVelBCValue(1) = 1.0;
+  vVelBCValue(2) = -1.0;
+
+  pressureDirichletBCValue.resize(2);
+  pressureDirichletBCValue(0) = 0.0;
+  pressureDirichletBCValue(1) = 0.0;
+
+  pressureNeumannBCValue.resize(1);
+  pressureNeumannBCValue(0) = 0.0;
+}
+
+
+void CartesianGrid::setBurgers()
+{
+  uVel.setZero();
+  vVel.setZero();
+  pressure = 1000.0*Eigen::VectorXd::Ones(numCells);
+  for(int kk = 0; kk < Ny; kk++)
+  {
+    for(int ii = 0; ii < Nx; ii++)
+    {
+      int flatIdx = ii + kk*Nx;
+      double xCoord = centerXY(flatIdx*2);
+      double yCoord = centerXY(flatIdx*2+1);
+      double pi = 3.14159;
+      if(xCoord <= 1.0 && yCoord <= 1.0)
+      {
+        uVel(flatIdx) = 0.25*std::sin(pi*xCoord);
+        vVel(flatIdx) = 0.25*std::sin(pi*yCoord);
+      }
+      else if((xCoord <= 2.0 && xCoord >=1.0) && (yCoord <= 2.0 && yCoord >=1.0))
+      {
+        //uVel(flatIdx) = 0.5*std::sin(pi*(xCoord-1.0));
+        //vVel(flatIdx) = 0.5*std::sin(pi*(yCoord-1.0));
+      }
+    }
+  }
+
+  isBurgers = true;
+  for(int kk = 0; kk < Ny; kk++)
+  {
+    for(int ii = 0; ii < Nx; ii++)
+    {
+      int cellNum = ii + kk*Nx;
+      if(kk == 0)
+      {
+        // Bottom of cells
+        cellHasDirichletVelocityBC(cellNum) = 1;
+        BCTypes(faceMap(0, cellNum), 0) = 1; // No slip in x
+        BCTypes(faceMap(0, cellNum), 1) = 1; // No penetration in y
+
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 1;
+      }
+      else if(kk == Ny-1)
+      {
+        // Top of cells
+        cellHasDirichletVelocityBC(cellNum) = 1;
+        BCTypes(faceMap(2, cellNum), 0) = 1; // No slip in x
+        BCTypes(faceMap(2, cellNum), 1) = 1; // No penetration in y
+
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 3;
+      }
+
+      if(ii == 0)
+      {
+        // Left side
+        cellHasDirichletVelocityBC(cellNum) = 1;
+        BCTypes(faceMap(3, cellNum), 0) = 1; // No penetration in x
+        BCTypes(faceMap(3, cellNum), 1) = 1; // No slip in y
+
+        if(kk != Ny-1)
+        {
+          cellHasPressureBC(cellNum, 0) = -1;
+          cellHasPressureBC(cellNum, 1) = 4;
+        }
+
+      }
+      else if(ii == Nx-1)
+      {
+        // Right side
+        //cellHasPressureBC(cellNum) = 1;
+        //BCTypes(faceMap(1,cellNum),2) = 1; // Dirichlet presure at otulet
+
+        faceHasNeumannVelocityBC(faceMap(1,cellNum)) = 1;
+        BCTypes(faceMap(1, cellNum), 0) = -1; // No penetration in x
+        BCTypes(faceMap(1, cellNum), 1) = -1; // No slip in y
+
+        int temp = faceMap(1,cellNum);
+        int sizetep = faceVelocityNeumannBCs[0].size();
+        faceVelocityNeumannBCs[faceMap(1,cellNum)](0,0) = 1;
+        faceVelocityNeumannBCs[faceMap(1,cellNum)](1,0) = 1;
+
+        if(kk != Ny-1)
+        {
+          cellHasPressureBC(cellNum, 0) = -1;
+          cellHasPressureBC(cellNum, 1) = 2;
+        }
+
+      }
+
+      if (ii == Nx - 1 && kk == 0) {
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 5; // Bottom right
+      }
+      else if (ii == Nx - 1 && kk == Ny - 1)
+      {
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 6; // Top right
+      }
+      else if (ii == 0 && kk == Ny - 1)
+      {
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 7; // Top left
+      }
+
+      else if (ii == 0 && kk == 0)
+      {
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 8; // Bottom Left
+      }
+    }
+  }
+  isAllNeumannPressureBCs = false;
+
+  uVelBCValue.resize(3);
+  uVelBCValue(0) = 0.0;
+  uVelBCValue(1) = 1.0;
+  uVelBCValue(2) = -1.0;
+
+  uVelNeumannBCValue.resize(1);
+  uVelNeumannBCValue(0) = 0.0;
+
+  vVelNeumannBCValue.resize(1);
+  vVelNeumannBCValue(0) = 0.0;
+
+  vVelBCValue.resize(3);
+  vVelBCValue(0) = 0.0;
+  vVelBCValue(1) = 1.0;
+  vVelBCValue(2) = -1.0;
+
+  pressureDirichletBCValue.resize(2);
+  pressureDirichletBCValue(0) = 1000;
+  pressureDirichletBCValue(1) = 200;
+
+  pressureNeumannBCValue.resize(1);
+  pressureNeumannBCValue(0) = 0.0;
+}
+
+void CartesianGrid::setDiffusion()
+{
+  uVel.setZero();
+  vVel.setZero();
+  pressure = 1000.0*Eigen::VectorXd::Ones(numCells);
+
+  isDiffusion = true;
+  for(int kk = 0; kk < Ny; kk++)
+  {
+    for(int ii = 0; ii < Nx; ii++)
+    {
+      int cellNum = ii + kk*Nx;
+      if(kk == 0)
+      {
+        // Bottom of cells
+        cellHasDirichletVelocityBC(cellNum) = 1;
+        BCTypes(faceMap(0, cellNum), 0) = 1; // No slip in x
+        BCTypes(faceMap(0, cellNum), 1) = 1; // No penetration in y
+
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 1;
+      }
+      else if(kk == Ny-1)
+      {
+        // Top of cells
+        cellHasDirichletVelocityBC(cellNum) = 1;
+        BCTypes(faceMap(2, cellNum), 0) = 2; // No slip in x
+        BCTypes(faceMap(2, cellNum), 1) = 1; // No penetration in y
+
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 3;
+      }
+
+      if(ii == 0)
+      {
+        // Left side
+        cellHasDirichletVelocityBC(cellNum) = 1;
+        BCTypes(faceMap(3, cellNum), 0) = 1; // No penetration in x
+        BCTypes(faceMap(3, cellNum), 1) = 1; // No slip in y
+
+        if(kk != Ny-1)
+        {
+          cellHasPressureBC(cellNum, 0) = -1;
+          cellHasPressureBC(cellNum, 1) = 4;
+        }
+
+      }
+      else if(ii == Nx-1)
+      {
+        // Right side
+        //cellHasPressureBC(cellNum) = 1;
+        //BCTypes(faceMap(1,cellNum),2) = 1; // Dirichlet presure at otulet
+
+        cellHasDirichletVelocityBC(cellNum) = 1;
+        BCTypes(faceMap(1, cellNum), 0) = 1; // No penetration in x
+        BCTypes(faceMap(1, cellNum), 1) = 1; // No slip in y
+
+        //faceHasNeumannVelocityBC(faceMap(1,cellNum)) = 1;
+        //BCTypes(faceMap(1, cellNum), 0) = -1; // No penetration in x
+        //BCTypes(faceMap(1, cellNum), 1) = -1; // No slip in y
+
+        //int temp = faceMap(1,cellNum);
+        //int sizetep = faceVelocityNeumannBCs[0].size();
+        //faceVelocityNeumannBCs[faceMap(1,cellNum)](0,0) = 1;
+        //faceVelocityNeumannBCs[faceMap(1,cellNum)](1,0) = 1;
+
+        if(kk != Ny-1)
+        {
+          cellHasPressureBC(cellNum, 0) = -1;
+          cellHasPressureBC(cellNum, 1) = 2;
+        }
+
+      }
+
+      if (ii == Nx - 1 && kk == 0) {
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 5; // Bottom right
+      }
+      else if (ii == Nx - 1 && kk == Ny - 1)
+      {
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 6; // Top right
+      }
+      else if (ii == 0 && kk == Ny - 1)
+      {
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 7; // Top left
+      }
+
+      else if (ii == 0 && kk == 0)
+      {
+        cellHasPressureBC(cellNum, 0) = -1;
+        cellHasPressureBC(cellNum, 1) = 8; // Bottom Left
+      }
+    }
+  }
+  isAllNeumannPressureBCs = false;
+
+  uVelBCValue.resize(3);
+  uVelBCValue(0) = 0.0;
+  uVelBCValue(1) = 5.0;
+  uVelBCValue(2) = -1.0;
+
+  uVelNeumannBCValue.resize(1);
+  uVelNeumannBCValue(0) = 0.0;
+
+  vVelNeumannBCValue.resize(1);
+  vVelNeumannBCValue(0) = 0.0;
+
+  vVelBCValue.resize(3);
+  vVelBCValue(0) = 0.0;
+  vVelBCValue(1) = 1.0;
+  vVelBCValue(2) = -1.0;
+
+  pressureDirichletBCValue.resize(2);
+  pressureDirichletBCValue(0) = 1000;
+  pressureDirichletBCValue(1) = 200;
+
+  pressureNeumannBCValue.resize(1);
+  pressureNeumannBCValue(0) = 0.0;
 }
 
 void CartesianGrid::setBCs() {
@@ -180,14 +1099,13 @@ void CartesianGrid::setBCs() {
   }
   */
 
-  int xBegin = (2*Nx)/6;
-  int xEnd = (4*Nx)/6;
+  int xBegin = (1*Nx)/8;
+  int xEnd = (3*Nx)/8;
 
   int yBegin = (2*Ny)/6;
   int yEnd = (4*Ny)/6;
 
-  bool useSquare = false;
-  //bool useSquare = true;
+  bool useSquare = true;
   if (useSquare)
   {
     for(int kk = yBegin; kk <= yEnd; kk++)
@@ -203,21 +1121,37 @@ void CartesianGrid::setBCs() {
         {
           cellHasPressureBC(southElemIdx,0) = -1;
           cellHasPressureBC(southElemIdx,1) = 3;
+
+          cellHasDirichletVelocityBC(southElemIdx) = 1;
+          BCTypes(faceMap(2, southElemIdx), 0) = 1; // No penetration in x
+          BCTypes(faceMap(2, southElemIdx), 1) = 1; // No slip in y
         }
         if(kk == yEnd)
         {
           cellHasPressureBC(northElemIdx,0) = -1;
           cellHasPressureBC(northElemIdx,1) = 1;
+
+          cellHasDirichletVelocityBC(northElemIdx) = 1;
+          BCTypes(faceMap(0, northElemIdx), 0) = 1; // No penetration in x
+          BCTypes(faceMap(0, northElemIdx), 1) = 1; // No slip in y
         }
         if(ii == xBegin)
         {
           cellHasPressureBC(westElemIdx,0) = -1;
           cellHasPressureBC(westElemIdx,1) = 2;
+
+          cellHasDirichletVelocityBC(westElemIdx) = 1;
+          BCTypes(faceMap(1, westElemIdx), 0) = 1; // No penetration in x
+          BCTypes(faceMap(1, westElemIdx), 1) = 1; // No slip in y
         }
         if(ii == xEnd)
         {
           cellHasPressureBC(eastElemIdx,0) = -1;
           cellHasPressureBC(eastElemIdx,1) = 4;
+
+          cellHasDirichletVelocityBC(eastElemIdx) = 1;
+          BCTypes(faceMap(3, eastElemIdx), 0) = 1; // No penetration in x
+          BCTypes(faceMap(3, eastElemIdx), 1) = 1; // No slip in y
         }
       }
     }
@@ -227,10 +1161,6 @@ void CartesianGrid::setBCs() {
       for (int ii = 0; ii < Nx; ii++)
       {
         int flatElemIdx = ii + kk*Nx;
-        int eastElemIdx =flatElemIdx + 1;
-        int westElemIdx =flatElemIdx + 1;
-        int southElemIdx =flatElemIdx - Nx;
-        int northElemIdx = flatElemIdx + Nx;
 
         // Square
         if(ii >= xBegin && ii <= xEnd && kk >= yBegin && kk <= yEnd)
@@ -239,8 +1169,8 @@ void CartesianGrid::setBCs() {
           cellHasPressureBC(flatElemIdx,0) = -1;
           for(int faceNum = 0; faceNum < numFacesPerElement; faceNum++)
           {
-            BCTypes(faceMap(faceNum,flatElemIdx),0) = 2;
-            BCTypes(faceMap(faceNum,flatElemIdx),1) = 1;
+            BCTypes(faceMap(faceNum, flatElemIdx), 0) = 1; // No slip in x
+            BCTypes(faceMap(faceNum, flatElemIdx), 1) = 1; // No penetration in y
           }
         }
       }
@@ -250,7 +1180,7 @@ void CartesianGrid::setBCs() {
 
   uVelBCValue.resize(3);
   uVelBCValue(0) = 0.0;
-  uVelBCValue(1) = 10.0;
+  uVelBCValue(1) = 1.0;
   uVelBCValue(2) = -1.0;
 
   uVelNeumannBCValue.resize(1);
@@ -395,10 +1325,10 @@ void CartesianGrid::createMappings()
     else
     {
       // Is a dirichlet BC
-      if(cellHasPressureBC(cellNum,0) > 0)
-        mappingGlobalToActive(cellNum) = -1;
+      //if(cellHasPressureBC(cellNum,0) > 0)
+      //  mappingGlobalToActive(cellNum) = -1;
       // Is a Neumann BC
-      else
+      //else
       {
         mappingGlobalToActive(cellNum) = dofCtr;
         mappingActiveToGlobalVector.push_back(cellNum);
@@ -411,4 +1341,5 @@ void CartesianGrid::createMappings()
   for(int ii = 0; ii < dofCtr; ii++)
     mappingActiveToGlobal(ii) = mappingActiveToGlobalVector[ii];
 
+  //pressure.setZero(numCells);
 }

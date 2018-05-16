@@ -44,6 +44,13 @@ public:
     void setBCs() override;
     void setInitialValues() override;
 
+
+    void setChannel();
+    void setChannelWithObstacle();
+    void setChannelWithCylinder();
+    void setBurgers();
+    void setDiffusion();
+
     int Nx;
     int Ny;
     double Lx;
@@ -59,7 +66,12 @@ public:
     Eigen::VectorXi mappingActiveToGlobal;
     int totalDOF;
     bool isAllNeumannPressureBCs;
+    bool isChannel = false;
+    bool isBurgers = false;
+    bool isDiffusion = false;
 };
+
+
 
 
 #endif //PROJECT_STRUCTUREDGRID_H

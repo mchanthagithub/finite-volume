@@ -13,7 +13,7 @@ public:
     // Note that H is the sum of the advective and diffusive flux
     virtual void calculatePressure(CartesianGrid& grid, Eigen::MatrixXd H) = 0;
     virtual void calculatePressureGradient(CartesianGrid& grid, Eigen::MatrixXd H) = 0;
-    virtual void clearData() = 0;
+    virtual void clearData(CartesianGrid& grid) = 0;
 
 
     Eigen::VectorXd pressure;
